@@ -1,0 +1,23 @@
+Context:
+- Repo: {{repo}}
+- Branch: {{branch}}
+- Run ID: {{run_id}}
+
+Task:
+Analyze the CI/CD log below and produce:
+
+1) Root cause (one line)
+2) Explanation (3–6 short lines)
+3) Exact actionable fix (bullet list with precise file/line/YAML keys or commands)
+4) (Optional) A minimal patch or code/YAML snippet to apply
+
+Instructions:
+- Be specific about file names, line numbers, and exact changes needed
+- Focus on the most likely cause based on error patterns
+- Provide step-by-step instructions for implementing the fix
+- If suggesting environment variable changes, specify where to set them
+- For GitHub Actions issues, mention the exact YAML path
+- For code issues, provide the exact code changes needed
+
+Log:
+{{log_text}}

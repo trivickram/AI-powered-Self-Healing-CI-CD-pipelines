@@ -1,0 +1,413 @@
+name: Self-Healing CI/CD Pipeline with ML Anomaly Detection
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+    inputs:
+      force_heal:
+        description: 'Force healing actions even for normal builds'
+        required: false
+        default: 'false'
+      ml_service_url:
+        description: 'ML Service URL (if different from default)'
+        required: false
+        default: 'http://localhost:5000'
+
+env:
+  NODE_VERSION: '18'
+  PYTHON_VERSION: '3.11'
+  ML_SERVICE_URL: ${{ github.event.inputs.ml_service_url || 'http://localhost:5000' }}
+  HEALING_ORCHESTRATOR_URL: 'http://localhost:3000'
+
+jobs:
+  # Start self-healing services
+  start-services:
+    runs-on: ubuntu-latest
+    outputs:
+      ml-service-started: ${{ steps.ml-service.outputs.started }}
+      orchestrator-started: ${{ steps.orchestrator.outputs.started }}
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: 'npm'
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+
+      - name: Install Node.js dependencies
+        working-directory: ./backend
+        run: |
+          npm ci
+          npm run build --if-present
+
+      - name: Install Python ML dependencies
+        working-directory: ./ml
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Start ML Anomaly Detection Service
+        id: ml-service
+        working-directory: ./ml
+        run: |
+          echo "🤖 Starting ML Service..."
+          nohup python service.py > ml_service.log 2>&1 &
+          sleep 10
+          
+          # Check if service is running
+          if curl -f http://localhost:5000/health; then
+            echo "✅ ML Service started successfully"
+            echo "started=true" >> $GITHUB_OUTPUT
+          else
+            echo "❌ ML Service failed to start"
+            echo "started=false" >> $GITHUB_OUTPUT
+            cat ml_service.log
+            exit 1
+          fi
+
+      - name: Start Healing Orchestrator
+        id: orchestrator
+        working-directory: ./backend
+        run: |
+          echo "🎯 Starting Healing Orchestrator..."
+          nohup npm start > orchestrator.log 2>&1 &
+          sleep 5
+          
+          # Check if service is running
+          if curl -f http://localhost:3000/health; then
+            echo "✅ Orchestrator started successfully"
+            echo "started=true" >> $GITHUB_OUTPUT
+          else
+            echo "❌ Orchestrator failed to start"
+            echo "started=false" >> $GITHUB_OUTPUT
+            cat orchestrator.log
+            exit 1
+          fi
+
+  # Build and test with self-healing
+  build-and-test:
+    needs: start-services
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        component: ['backend', 'ml']
+      fail-fast: false
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js (for backend)
+        if: matrix.component == 'backend'
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: 'npm'
+
+      - name: Setup Python (for ML)
+        if: matrix.component == 'ml'
+        uses: actions/setup-python@v4
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+
+      - name: Install dependencies (backend)
+        if: matrix.component == 'backend'
+        working-directory: ./backend
+        run: |
+          npm ci
+          
+      - name: Install dependencies (ML)
+        if: matrix.component == 'ml'
+        working-directory: ./ml
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Run tests with anomaly detection
+        id: run-tests
+        continue-on-error: true
+        run: |
+          echo "🧪 Running tests for ${{ matrix.component }}..."
+          
+          # Capture test output for anomaly analysis
+          if [ "${{ matrix.component }}" == "backend" ]; then
+            cd backend
+            npm test 2>&1 | tee test_output.log
+            TEST_EXIT_CODE=${PIPESTATUS[0]}
+          else
+            cd ml
+            python -m pytest tests/ -v 2>&1 | tee test_output.log || true
+            TEST_EXIT_CODE=${PIPESTATUS[0]}
+          fi
+          
+          echo "test_exit_code=$TEST_EXIT_CODE" >> $GITHUB_OUTPUT
+          
+          # Send test logs for ML analysis
+          echo "📊 Analyzing test results with ML..."
+          
+          LOG_CONTENT=$(cat test_output.log | head -50 | tr '\n' ' ')
+          
+          ANALYSIS_RESPONSE=$(curl -s -X POST ${{ env.ML_SERVICE_URL }}/predict \
+            -H "Content-Type: application/json" \
+            -d "{\"log_message\": \"$LOG_CONTENT\"}" || echo '{"prediction": "normal", "confidence": 0.5}')
+          
+          echo "ML Analysis: $ANALYSIS_RESPONSE"
+          echo "analysis_result=$ANALYSIS_RESPONSE" >> $GITHUB_OUTPUT
+          
+          exit $TEST_EXIT_CODE
+
+      - name: Self-healing action on failure
+        if: steps.run-tests.outputs.test_exit_code != '0'
+        run: |
+          echo "🚨 Test failure detected! Initiating self-healing..."
+          
+          ANALYSIS_RESULT='${{ steps.run-tests.outputs.analysis_result }}'
+          TEST_LOGS=$(cat ${{ matrix.component }}/test_output.log | head -20 | tr '\n' ' ')
+          
+          # Trigger healing via orchestrator
+          HEALING_RESPONSE=$(curl -s -X POST ${{ env.HEALING_ORCHESTRATOR_URL }}/heal \
+            -H "Content-Type: application/json" \
+            -d "{
+              \"component\": \"${{ matrix.component }}\",
+              \"error_type\": \"test_failure\", 
+              \"logs\": \"$TEST_LOGS\",
+              \"ml_analysis\": $ANALYSIS_RESULT,
+              \"context\": {
+                \"workflow\": \"${{ github.workflow }}\",
+                \"run_id\": \"${{ github.run_id }}\",
+                \"commit\": \"${{ github.sha }}\"
+              }
+            }" || echo '{"success": false}')
+          
+          echo "🔧 Healing Response: $HEALING_RESPONSE"
+          
+          # Wait for healing to complete
+          sleep 30
+          
+          echo "🔄 Retrying tests after healing..."
+          if [ "${{ matrix.component }}" == "backend" ]; then
+            cd backend && npm test
+          else
+            cd ml && python -m pytest tests/ -v
+          fi
+
+      - name: Upload test artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: test-results-${{ matrix.component }}
+          path: |
+            ${{ matrix.component }}/test_output.log
+            ${{ matrix.component }}/coverage/
+            ${{ matrix.component }}/test-results.xml
+          retention-days: 7
+
+  # Security and quality checks
+  security-scan:
+    needs: start-services
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Run security scan
+        id: security-scan
+        continue-on-error: true
+        run: |
+          echo "🔒 Running security scan..."
+          
+          # Simulate security scan (replace with actual tools like Snyk, SAST, etc.)
+          # npm audit --audit-level high 2>&1 | tee security_scan.log
+          
+          # For demo, create a sample security log
+          echo "Found 3 vulnerabilities (2 moderate, 1 high)" > security_scan.log
+          echo "High: Prototype pollution in lodash@4.17.19" >> security_scan.log
+          echo "Moderate: Regular expression denial of service in axios@0.18.1" >> security_scan.log
+          echo "Moderate: Path traversal in express@4.16.4" >> security_scan.log
+          
+          # Send to ML for analysis
+          LOG_CONTENT=$(cat security_scan.log | tr '\n' ' ')
+          
+          ANALYSIS_RESPONSE=$(curl -s -X POST ${{ env.ML_SERVICE_URL }}/predict \
+            -H "Content-Type: application/json" \
+            -d "{\"log_message\": \"Security scan: $LOG_CONTENT\"}")
+          
+          echo "Security ML Analysis: $ANALYSIS_RESPONSE"
+          echo "analysis_result=$ANALYSIS_RESPONSE" >> $GITHUB_OUTPUT
+          
+          # Simulate failure for high vulnerabilities
+          if grep -q "High:" security_scan.log; then
+            exit 1
+          fi
+
+      - name: Auto-fix security issues
+        if: failure() && steps.security-scan.outputs.analysis_result != ''
+        run: |
+          echo "🔧 Auto-fixing security vulnerabilities..."
+          
+          # Trigger security healing
+          curl -X POST ${{ env.HEALING_ORCHESTRATOR_URL }}/heal \
+            -H "Content-Type: application/json" \
+            -d "{
+              \"component\": \"security\",
+              \"error_type\": \"vulnerability\",
+              \"logs\": \"$(cat security_scan.log | head -10 | tr '\n' ' ')\",
+              \"ml_analysis\": ${{ steps.security-scan.outputs.analysis_result }},
+              \"healing_actions\": [\"update_dependencies\", \"apply_patches\"]
+            }"
+          
+          echo "🚀 Security healing initiated"
+
+  # Deploy with monitoring
+  deploy:
+    needs: [build-and-test, security-scan]
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main' && success()
+    environment: production
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Deploy to staging
+        id: deploy-staging
+        run: |
+          echo "🚀 Deploying to staging environment..."
+          
+          # Simulate deployment
+          echo "Deployment started at $(date)" > deployment.log
+          echo "Deploying backend service..." >> deployment.log
+          echo "Deploying ML service..." >> deployment.log
+          
+          # Simulate potential deployment issues
+          if [ "${{ github.event.inputs.force_heal }}" == "true" ]; then
+            echo "ERROR: Connection refused to database" >> deployment.log
+            echo "ERROR: Service health check failed" >> deployment.log
+            exit 1
+          fi
+          
+          echo "✅ Deployment completed successfully" >> deployment.log
+
+      - name: Monitor deployment health
+        id: health-check
+        run: |
+          echo "🩺 Performing post-deployment health checks..."
+          
+          # Simulate health checks
+          sleep 5
+          
+          # Check service endpoints
+          HEALTH_STATUS="healthy"
+          
+          # Send deployment logs for ML analysis
+          LOG_CONTENT=$(cat deployment.log | tr '\n' ' ')
+          
+          ANALYSIS_RESPONSE=$(curl -s -X POST ${{ env.ML_SERVICE_URL }}/predict \
+            -H "Content-Type: application/json" \
+            -d "{\"log_message\": \"Deployment: $LOG_CONTENT\"}")
+          
+          echo "Deployment ML Analysis: $ANALYSIS_RESPONSE"
+          echo "analysis_result=$ANALYSIS_RESPONSE" >> $GITHUB_OUTPUT
+
+      - name: Rollback on deployment failure
+        if: failure()
+        run: |
+          echo "🔄 Deployment failed! Initiating rollback..."
+          
+          # Trigger rollback healing
+          curl -X POST ${{ env.HEALING_ORCHESTRATOR_URL }}/heal \
+            -H "Content-Type: application/json" \
+            -d "{
+              \"component\": \"deployment\",
+              \"error_type\": \"deployment_failure\",
+              \"logs\": \"$(cat deployment.log | tr '\n' ' ')\",
+              \"healing_actions\": [\"rollback\", \"restart_services\"],
+              \"priority\": \"high\"
+            }"
+          
+          echo "🚨 Rollback initiated"
+
+  # Continuous monitoring and learning
+  post-deployment-monitoring:
+    needs: deploy
+    runs-on: ubuntu-latest
+    if: always()
+    
+    steps:
+      - name: Setup monitoring
+        run: |
+          echo "📊 Setting up post-deployment monitoring..."
+          
+          # Send workflow completion data to ML service for learning
+          curl -X POST ${{ env.ML_SERVICE_URL }}/batch_predict \
+            -H "Content-Type: application/json" \
+            -d "{
+              \"log_messages\": [
+                \"Workflow ${{ github.workflow }} completed with status: ${{ job.status }}\",
+                \"Build matrix completed for components: backend, ml\",
+                \"Security scan status: ${{ needs.security-scan.result }}\", 
+                \"Deployment status: ${{ needs.deploy.result }}\"
+              ]
+            }"
+
+      - name: Generate healing report
+        run: |
+          echo "📋 Generating self-healing report..."
+          
+          # Get orchestrator status
+          ORCHESTRATOR_STATUS=$(curl -s ${{ env.HEALING_ORCHESTRATOR_URL }}/status || echo '{"active_healings": 0}')
+          
+          echo "## 🤖 Self-Healing CI/CD Report" >> $GITHUB_STEP_SUMMARY
+          echo "**Workflow:** ${{ github.workflow }}" >> $GITHUB_STEP_SUMMARY
+          echo "**Run ID:** ${{ github.run_id }}" >> $GITHUB_STEP_SUMMARY
+          echo "**Commit:** ${{ github.sha }}" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "### Component Status" >> $GITHUB_STEP_SUMMARY
+          echo "- **Backend Tests:** ${{ needs.build-and-test.result }}" >> $GITHUB_STEP_SUMMARY
+          echo "- **ML Tests:** ${{ needs.build-and-test.result }}" >> $GITHUB_STEP_SUMMARY
+          echo "- **Security Scan:** ${{ needs.security-scan.result }}" >> $GITHUB_STEP_SUMMARY
+          echo "- **Deployment:** ${{ needs.deploy.result }}" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "### Healing Actions" >> $GITHUB_STEP_SUMMARY
+          echo "\`\`\`json" >> $GITHUB_STEP_SUMMARY
+          echo "$ORCHESTRATOR_STATUS" >> $GITHUB_STEP_SUMMARY
+          echo "\`\`\`" >> $GITHUB_STEP_SUMMARY
+
+      - name: Update ML model with new data
+        if: always()
+        run: |
+          echo "🧠 Updating ML model with workflow data..."
+          
+          # Trigger model retraining with new workflow data
+          curl -X POST ${{ env.ML_SERVICE_URL }}/retrain \
+            -H "Content-Type: application/json" \
+            -d "{\"trigger\": \"workflow_completion\"}"
+
+  # Cleanup
+  cleanup:
+    needs: [post-deployment-monitoring]
+    runs-on: ubuntu-latest
+    if: always()
+    
+    steps:
+      - name: Stop services
+        run: |
+          echo "🧹 Cleaning up services..."
+          
+          # Stop orchestrator
+          curl -X POST ${{ env.HEALING_ORCHESTRATOR_URL }}/shutdown || true
+          
+          # Stop ML service  
+          curl -X POST ${{ env.ML_SERVICE_URL }}/shutdown || true
+          
+          echo "✅ Cleanup completed"

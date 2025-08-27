@@ -1,0 +1,1001 @@
+timestamp,log_message,status,service,environment,severity,component,duration_ms,success,message_length,word_count,contains_error,contains_warning,contains_timeout,contains_memory,contains_network,hour_of_day,day_of_week,is_weekend,is_business_hours,duration_category
+2025-08-28T08:11:25.792218,Dependencies installed successfully in 194s,normal,worker,production,INFO,build,2140,True,43,5,False,False,False,False,False,8,3,False,False,medium
+2025-08-28T11:11:25.792218,ERROR: Terraform apply failed,anomaly,frontend,dev,WARN,build,15444,False,29,4,True,False,False,False,False,11,3,False,True,slow
+2025-08-27T01:11:25.792218,Health check passed,normal,scheduler,production,TRACE,monitor,4462,True,19,3,False,False,False,False,False,1,2,False,False,medium
+2025-08-27T10:11:25.792218,Initializing build environment,normal,cache,staging,DEBUG,monitor,4586,True,30,3,False,False,False,False,False,10,2,False,True,medium
+2025-08-27T11:11:25.792218,Response time: 154ms,normal,auth,production,INFO,deploy,4610,True,20,3,False,False,False,False,False,11,2,False,True,medium
+2025-08-28T20:11:25.792218,Webpack build completed,normal,database,test,DEBUG,monitor,610,True,23,3,False,False,False,False,False,20,3,False,False,fast
+2025-08-27T02:11:25.792218,Pod status: Running,normal,worker,production,INFO,test,3967,True,19,3,False,False,False,False,False,2,2,False,False,medium
+2025-08-27T17:11:25.792218,Service is healthy and responding,normal,backend,qa,DEBUG,deploy,119,True,33,5,False,False,False,False,False,17,2,False,True,fast
+2025-08-28T08:11:25.792218,All tests passed successfully,normal,auth,qa,TRACE,build,1717,True,29,4,False,False,False,False,False,8,3,False,False,medium
+2025-08-28T14:11:25.792218,FATAL: Out of memory during compilation,anomaly,database,test,ERROR,test,12641,False,39,6,False,False,False,True,False,14,3,False,True,slow
+2025-08-27T07:11:25.792218,ERROR: Container registry authentication failed,anomaly,worker,production,ERROR,monitor,5567,False,47,5,True,False,False,False,False,7,2,False,False,slow
+2025-08-27T23:11:25.792218,Rollout completed: 100% traffic routed,normal,scheduler,test,TRACE,build,469,True,38,5,False,False,False,False,False,23,2,False,False,fast
+2025-08-27T04:11:25.792218,Installing dependencies from package.json,normal,worker,test,INFO,monitor,3173,True,41,4,False,False,False,False,False,4,2,False,False,medium
+2025-08-27T05:11:25.792218,Running npm install,normal,frontend,production,INFO,monitor,1570,True,19,3,False,False,False,False,False,5,2,False,False,medium
+2025-08-27T05:11:25.792218,Health check passed,normal,worker,sandbox,TRACE,build,3385,True,19,3,False,False,False,False,False,5,2,False,False,medium
+2025-08-28T14:11:25.792218,Health check passed,normal,worker,dev,TRACE,build,785,True,19,3,False,False,False,False,False,14,3,False,True,fast
+2025-08-27T05:11:25.792218,Load balancer health check passed,normal,scheduler,test,DEBUG,deploy,165,True,33,5,False,False,False,False,False,5,2,False,False,fast
+2025-08-28T12:11:25.792218,Pod status: Running,normal,frontend,dev,DEBUG,deploy,706,True,19,3,False,False,False,False,False,12,3,False,True,fast
+2025-08-27T21:11:25.792218,Starting deployment to staging,normal,api,staging,DEBUG,build,4357,True,30,4,False,False,False,False,False,21,2,False,False,medium
+2025-08-27T20:11:25.792218,Linting completed with no issues,normal,cache,sandbox,TRACE,build,3758,True,32,5,False,False,False,False,False,20,2,False,False,medium
+2025-08-28T06:11:25.792218,Running integration tests,normal,backend,test,TRACE,monitor,1173,True,25,3,False,False,False,False,False,6,3,False,False,medium
+2025-08-27T09:11:25.792218,Initializing build environment,normal,database,sandbox,TRACE,test,1129,True,30,3,False,False,False,False,False,9,2,False,True,medium
+2025-08-27T19:11:25.792218,Ingress rules applied,normal,worker,qa,DEBUG,build,407,True,21,3,False,False,False,False,False,19,2,False,False,fast
+2025-08-28T10:11:25.792218,Commit 2f2fb5d validated,normal,cache,production,INFO,monitor,3452,True,24,3,False,False,False,False,False,10,3,False,True,medium
+2025-08-27T11:11:25.792218,Image tagged as v2.13.25,normal,cache,test,TRACE,deploy,837,True,24,4,False,False,False,False,False,11,2,False,True,fast
+2025-08-27T09:11:25.792218,Dashboard metrics refreshed,normal,backend,qa,TRACE,monitor,4714,True,27,3,False,False,False,False,False,9,2,False,True,medium
+2025-08-28T06:11:25.792218,Throughput: 582 req/s,normal,frontend,dev,DEBUG,build,2990,True,21,3,False,False,False,False,False,6,3,False,False,medium
+2025-08-28T06:11:25.792218,CRITICAL: Security vulnerability found,anomaly,cache,test,FATAL,deploy,15060,False,38,4,False,False,False,False,False,6,3,False,False,slow
+2025-08-28T16:11:25.792218,Load balancer health check passed,normal,backend,staging,TRACE,build,1174,True,33,5,False,False,False,False,False,16,3,False,True,medium
+2025-08-27T22:11:25.792218,Dashboard metrics refreshed,normal,scheduler,test,DEBUG,build,4466,True,27,3,False,False,False,False,False,22,2,False,False,medium
+2025-08-27T17:11:25.792218,Docker image built successfully,normal,frontend,staging,TRACE,build,2901,True,31,4,False,False,False,False,False,17,2,False,True,medium
+2025-08-27T01:11:25.792218,Metrics collection enabled,normal,api,production,TRACE,monitor,3355,True,26,3,False,False,False,False,False,1,2,False,False,medium
+2025-08-28T01:11:25.792218,CRITICAL: Malware signature detected,anomaly,backend,qa,FATAL,test,16953,False,36,4,False,False,False,False,False,1,3,False,False,slow
+2025-08-27T23:11:25.792218,Email report generated,normal,worker,test,TRACE,monitor,4810,True,22,3,False,False,False,False,False,23,2,False,False,medium
+2025-08-26T23:11:25.792218,Installing dependencies from package.json,normal,backend,qa,INFO,monitor,3905,True,41,4,False,False,False,False,False,23,1,False,False,medium
+2025-08-27T00:11:25.792218,Error rate: 0.87%,normal,database,dev,TRACE,deploy,987,True,17,3,True,False,False,False,False,0,2,False,False,fast
+2025-08-27T04:11:25.792218,ERROR: Canary deployment showing errors,anomaly,cache,staging,ERROR,test,17035,False,39,5,True,False,False,False,False,4,2,False,False,slow
+2025-08-27T21:11:25.792218,Service is healthy and responding,normal,auth,qa,DEBUG,deploy,3989,True,33,5,False,False,False,False,False,21,2,False,False,medium
+2025-08-28T17:11:25.792218,CRITICAL: Regression detected in test suite,anomaly,auth,qa,WARN,test,8499,False,43,6,False,False,False,False,False,17,3,False,True,slow
+2025-08-27T06:11:25.792218,CRITICAL: Payment gateway failure,anomaly,database,staging,FATAL,build,15859,False,33,4,True,False,False,False,False,6,2,False,False,slow
+2025-08-27T03:11:25.792218,Response time: 125ms,normal,frontend,sandbox,DEBUG,test,1707,True,20,3,False,False,False,False,False,3,2,False,False,medium
+2025-08-27T13:11:25.792218,Service mesh health check passed,normal,frontend,production,INFO,build,1751,True,32,5,False,False,False,False,False,13,2,False,True,medium
+2025-08-27T02:11:25.792218,Commit 738b8fd validated,normal,api,dev,INFO,monitor,1003,True,24,3,False,False,False,False,False,2,2,False,False,medium
+2025-08-27T05:11:25.792218,Application started successfully,normal,api,production,TRACE,build,375,True,32,3,False,False,False,False,False,5,2,False,False,fast
+2025-08-28T14:11:25.792218,Installing dependencies from package.json,normal,database,qa,INFO,monitor,4963,True,41,4,False,False,False,False,False,14,3,False,True,medium
+2025-08-28T08:11:25.792218,Email report generated,normal,database,staging,DEBUG,test,1560,True,22,3,False,False,False,False,False,8,3,False,False,medium
+2025-08-28T11:11:25.792218,Running end-to-end tests,normal,cache,dev,INFO,deploy,3975,True,24,3,False,False,False,False,False,11,3,False,True,medium
+2025-08-28T10:11:25.792218,Rollout completed: 100% traffic routed,normal,frontend,production,DEBUG,build,183,True,38,5,False,False,False,False,False,10,3,False,True,fast
+2025-08-28T06:11:25.792218,Status badge updated,normal,scheduler,sandbox,DEBUG,test,980,True,20,3,False,False,False,False,False,6,3,False,False,fast
+2025-08-27T05:11:25.792218,Volume mounted successfully,normal,cache,qa,INFO,test,1968,True,27,3,False,False,False,False,False,5,2,False,False,medium
+2025-08-28T05:11:25.792218,Running end-to-end tests,normal,cache,test,TRACE,build,4349,True,24,3,False,False,False,False,False,5,3,False,False,medium
+2025-08-27T02:11:25.792218,Data backup completed,normal,backend,staging,INFO,test,2958,True,21,3,False,False,False,False,False,2,2,False,False,medium
+2025-08-28T09:11:25.792218,Starting build process for commit 0984efe,normal,frontend,qa,TRACE,test,4070,True,41,6,False,False,False,False,False,9,3,False,True,medium
+2025-08-27T18:11:25.792218,CRITICAL: Security vulnerability found,anomaly,worker,production,WARN,test,22263,False,38,4,False,False,False,False,False,18,2,False,False,slow
+2025-08-27T21:11:25.792218,Running end-to-end tests,normal,scheduler,sandbox,INFO,deploy,3985,True,24,3,False,False,False,False,False,21,2,False,False,medium
+2025-08-27T21:11:25.792218,Performance tests passed,normal,auth,staging,INFO,test,452,True,24,3,False,False,False,False,False,21,2,False,False,fast
+2025-08-28T20:11:25.792218,Service endpoints updated,normal,worker,sandbox,TRACE,build,500,True,25,3,False,False,False,False,False,20,3,False,False,fast
+2025-08-28T12:11:25.792218,Teams webhook delivered,normal,database,production,TRACE,test,3328,True,23,3,False,False,False,False,False,12,3,False,True,medium
+2025-08-28T14:11:25.792218,FATAL: Scheduler service failure,anomaly,frontend,sandbox,FATAL,build,4725,False,32,4,True,False,False,False,False,14,3,False,True,medium
+2025-08-27T12:11:25.792218,Running end-to-end tests,normal,auth,sandbox,TRACE,test,4238,True,24,3,False,False,False,False,False,12,2,False,True,medium
+2025-08-27T04:11:25.792218,Query performance within limits,normal,worker,production,DEBUG,deploy,2772,True,31,4,False,False,False,False,False,4,2,False,False,medium
+2025-08-28T07:11:25.792218,Merged pull request #479,normal,backend,sandbox,INFO,test,4419,True,24,4,False,False,False,False,False,7,3,False,False,medium
+2025-08-27T05:11:25.792218,Initializing build environment,normal,database,staging,DEBUG,test,809,True,30,3,False,False,False,False,False,5,2,False,False,fast
+2025-08-27T01:11:25.792218,Application started successfully,normal,auth,qa,DEBUG,monitor,4901,True,32,3,False,False,False,False,False,1,2,False,False,medium
+2025-08-28T07:11:25.792218,ERROR: Authentication service unavailable,anomaly,api,test,CRITICAL,test,13278,False,41,4,True,False,False,False,False,7,3,False,False,slow
+2025-08-27T06:11:25.792218,Metrics collection enabled,normal,worker,staging,TRACE,build,4982,True,26,3,False,False,False,False,False,6,2,False,False,medium
+2025-08-28T01:11:25.792218,ERROR: Canary deployment showing errors,anomaly,database,production,CRITICAL,deploy,18787,False,39,5,True,False,False,False,False,1,3,False,False,slow
+2025-08-26T20:11:25.792218,Cache warmed up successfully,normal,api,dev,DEBUG,build,3770,True,28,4,False,False,False,False,False,20,1,False,False,medium
+2025-08-27T22:11:25.792218,Test execution completed in 35s,normal,scheduler,production,INFO,test,3565,True,31,5,False,False,False,False,False,22,2,False,False,medium
+2025-08-28T08:11:25.792218,FATAL: Message broker connection lost,anomaly,worker,sandbox,CRITICAL,deploy,24944,False,37,5,False,False,False,False,True,8,3,False,False,slow
+2025-08-28T07:11:25.792218,Starting test suite execution,normal,auth,test,INFO,monitor,4989,True,29,4,False,False,False,False,False,7,3,False,False,medium
+2025-08-28T08:11:25.792218,Logging configured successfully,normal,cache,sandbox,DEBUG,deploy,293,True,31,3,False,False,False,False,False,8,3,False,False,fast
+2025-08-28T09:11:25.792218,Installing dependencies from requirements.txt,normal,scheduler,dev,DEBUG,deploy,772,True,45,4,False,False,False,False,False,9,3,False,True,fast
+2025-08-28T15:11:25.792218,Ingress rules applied,normal,backend,qa,INFO,deploy,3931,True,21,3,False,False,False,False,False,15,3,False,True,medium
+2025-08-28T20:11:25.792218,Webhook triggered successfully,normal,cache,test,INFO,test,2089,True,30,3,False,False,False,False,False,20,3,False,False,medium
+2025-08-27T20:11:25.792218,ERROR: Performance test failed - response time 27522ms,anomaly,api,staging,WARN,build,14363,False,54,8,True,False,False,False,False,20,2,False,False,slow
+2025-08-28T17:11:25.792218,Build completed successfully in 291s,normal,database,sandbox,TRACE,monitor,3600,True,36,5,False,False,False,False,False,17,3,False,True,medium
+2025-08-28T10:11:25.792218,Compiling TypeScript files,normal,api,production,INFO,test,1333,True,26,3,False,False,False,False,False,10,3,False,True,medium
+2025-08-28T20:11:25.792218,Teams webhook delivered,normal,scheduler,dev,INFO,deploy,3992,True,23,3,False,False,False,False,False,20,3,False,False,medium
+2025-08-28T07:11:25.792218,Docker image built successfully,normal,api,qa,INFO,monitor,5000,True,31,4,False,False,False,False,False,7,3,False,False,slow
+2025-08-27T09:11:25.792218,ERROR: External API service unavailable,anomaly,scheduler,test,FATAL,test,8158,False,39,5,True,False,False,False,False,9,2,False,True,slow
+2025-08-27T08:11:25.792218,Cache warmed up successfully,normal,auth,dev,DEBUG,build,2695,True,28,4,False,False,False,False,False,8,2,False,False,medium
+2025-08-27T20:11:25.792218,Indexes optimized,normal,database,qa,TRACE,monitor,2486,True,17,2,False,False,False,False,False,20,2,False,False,medium
+2025-08-26T23:11:25.792218,Installing dependencies from package.json,normal,database,qa,TRACE,test,1802,True,41,4,False,False,False,False,False,23,1,False,False,medium
+2025-08-28T19:11:25.792218,ERROR: DNS resolution failure,anomaly,cache,production,WARN,test,28528,False,29,4,True,False,False,False,False,19,3,False,False,slow
+2025-08-28T14:11:25.792218,ERROR: TypeScript compilation failed,anomaly,worker,dev,ERROR,test,10625,False,36,4,True,False,False,False,False,14,3,False,True,slow
+2025-08-28T14:11:25.792218,Indexes optimized,normal,database,dev,DEBUG,build,1216,True,17,2,False,False,False,False,False,14,3,False,True,medium
+2025-08-28T17:11:25.792218,Service mesh health check passed,normal,scheduler,staging,INFO,test,3209,True,32,5,False,False,False,False,False,17,3,False,True,medium
+2025-08-27T05:11:25.792218,Installing dependencies from requirements.txt,normal,database,staging,DEBUG,monitor,448,True,45,4,False,False,False,False,False,5,2,False,False,fast
+2025-08-27T22:11:25.792218,Compiling TypeScript files,normal,api,staging,TRACE,test,4206,True,26,3,False,False,False,False,False,22,2,False,False,medium
+2025-08-28T11:11:25.792218,Indexes optimized,normal,worker,production,INFO,deploy,1411,True,17,2,False,False,False,False,False,11,3,False,True,medium
+2025-08-27T01:11:25.792218,Volume mounted successfully,normal,database,qa,DEBUG,test,718,True,27,3,False,False,False,False,False,1,2,False,False,fast
+2025-08-27T12:11:25.792218,ERROR: Network connectivity issues detected,anomaly,backend,sandbox,WARN,build,20509,False,43,5,True,False,False,False,True,12,2,False,True,slow
+2025-08-27T22:11:25.792218,Metrics collection enabled,normal,database,staging,TRACE,deploy,4799,True,26,3,False,False,False,False,False,22,2,False,False,medium
+2025-08-28T19:11:25.792218,Starting deployment to qa,normal,frontend,dev,INFO,monitor,2564,True,25,4,False,False,False,False,False,19,3,False,False,medium
+2025-08-27T00:11:25.792218,Throughput: 215 req/s,normal,api,dev,TRACE,build,2692,True,21,3,False,False,False,False,False,0,2,False,False,medium
+2025-08-27T11:11:25.792218,FATAL: Message broker connection lost,anomaly,scheduler,dev,CRITICAL,build,26912,False,37,5,False,False,False,False,True,11,2,False,True,slow
+2025-08-27T14:11:25.792218,Dependencies installed successfully in 71s,normal,scheduler,qa,TRACE,build,3134,True,42,5,False,False,False,False,False,14,2,False,True,medium
+2025-08-28T10:11:25.792218,Transaction completed successfully,normal,frontend,production,INFO,build,3607,True,34,3,False,False,False,False,False,10,3,False,True,medium
+2025-08-28T16:11:25.792218,Metrics collection enabled,normal,worker,production,TRACE,test,4358,True,26,3,False,False,False,False,False,16,3,False,True,medium
+2025-08-27T20:11:25.792218,Service mesh health check passed,normal,cache,sandbox,DEBUG,monitor,3871,True,32,5,False,False,False,False,False,20,2,False,False,medium
+2025-08-28T18:11:25.792218,CRITICAL: Data consistency violation,anomaly,cache,staging,WARN,monitor,7665,False,36,4,False,False,False,False,False,18,3,False,False,slow
+2025-08-27T02:11:25.792218,Security scan completed - no vulnerabilities found,normal,backend,production,TRACE,deploy,3234,True,50,7,False,False,False,False,False,2,2,False,False,medium
+2025-08-28T20:11:25.792218,Cache warmed up successfully,normal,worker,sandbox,DEBUG,test,3646,True,28,4,False,False,False,False,False,20,3,False,False,medium
+2025-08-27T23:11:25.792218,Code coverage: 94%,normal,frontend,sandbox,INFO,build,2518,True,18,3,False,False,False,False,False,23,2,False,False,medium
+2025-08-28T17:11:25.792218,Rollout completed: 100% traffic routed,normal,database,sandbox,INFO,test,4590,True,38,5,False,False,False,False,False,17,3,False,True,medium
+2025-08-27T16:11:25.792218,Code coverage: 89%,normal,auth,production,DEBUG,build,4410,True,18,3,False,False,False,False,False,16,2,False,True,medium
+2025-08-28T04:11:25.792218,Running npm install,normal,cache,production,DEBUG,build,3159,True,19,3,False,False,False,False,False,4,3,False,False,medium
+2025-08-27T07:11:25.792218,ERROR: Load balancer health check timeout,anomaly,database,dev,WARN,test,22428,False,41,6,True,False,True,False,False,7,2,False,False,slow
+2025-08-27T04:11:25.792218,Running pip install -r requirements.txt,normal,scheduler,test,INFO,build,1689,True,39,5,False,False,False,False,False,4,2,False,False,medium
+2025-08-27T01:11:25.792218,Compilation successful,normal,scheduler,dev,INFO,deploy,2993,True,22,2,False,False,False,False,False,1,2,False,False,medium
+2025-08-27T08:11:25.792218,ERROR: External API service unavailable,anomaly,frontend,qa,CRITICAL,test,10919,False,39,5,True,False,False,False,False,8,2,False,False,slow
+2025-08-28T11:11:25.792218,Starting deployment to dev,normal,api,dev,INFO,deploy,4968,True,26,4,False,False,False,False,False,11,3,False,True,medium
+2025-08-27T06:11:25.792218,Health check passed,normal,scheduler,dev,DEBUG,monitor,3288,True,19,3,False,False,False,False,False,6,2,False,False,medium
+2025-08-28T20:11:25.792218,Test execution completed in 435s,normal,scheduler,test,DEBUG,build,441,True,32,5,False,False,False,False,False,20,3,False,False,fast
+2025-08-28T06:11:25.792218,Slack notification sent,normal,frontend,dev,DEBUG,deploy,4246,True,23,3,False,False,False,False,False,6,3,False,False,medium
+2025-08-27T04:11:25.792218,Logging configured successfully,normal,backend,qa,TRACE,monitor,4703,True,31,3,False,False,False,False,False,4,2,False,False,medium
+2025-08-27T09:11:25.792218,Logging configured successfully,normal,api,staging,INFO,monitor,4583,True,31,3,False,False,False,False,False,9,2,False,True,medium
+2025-08-26T23:11:25.792218,Indexes optimized,normal,worker,test,DEBUG,test,4203,True,17,2,False,False,False,False,False,23,1,False,False,medium
+2025-08-28T06:11:25.792218,Commit eb3cc2d validated,normal,worker,staging,INFO,monitor,2134,True,24,3,False,False,False,False,False,6,3,False,False,medium
+2025-08-27T11:11:25.792218,Schema validation passed,normal,auth,sandbox,TRACE,build,1635,True,24,3,False,False,False,False,False,11,2,False,True,medium
+2025-08-28T09:11:25.792218,Volume mounted successfully,normal,cache,dev,DEBUG,test,2525,True,27,3,False,False,False,False,False,9,3,False,True,medium
+2025-08-27T01:11:25.792218,ERROR: pip install failed - package not found,anomaly,scheduler,qa,WARN,deploy,27943,False,45,8,True,False,False,False,False,1,2,False,False,slow
+2025-08-28T13:11:25.792218,Starting test suite execution,normal,auth,production,INFO,build,4868,True,29,4,False,False,False,False,False,13,3,False,True,medium
+2025-08-27T15:11:25.792218,All tests passed successfully,normal,backend,sandbox,DEBUG,monitor,2642,True,29,4,False,False,False,False,False,15,2,False,True,medium
+2025-08-27T04:11:25.792218,Security scan completed - no vulnerabilities found,normal,auth,qa,TRACE,test,1124,True,50,7,False,False,False,False,False,4,2,False,False,medium
+2025-08-26T21:11:25.792218,Cache warmed up successfully,normal,auth,test,INFO,build,2376,True,28,4,False,False,False,False,False,21,1,False,False,medium
+2025-08-27T05:11:25.792218,FATAL: Test data corruption detected,anomaly,cache,qa,CRITICAL,deploy,23067,False,36,5,False,False,False,False,False,5,2,False,False,slow
+2025-08-27T03:11:25.792218,Running npm install,normal,auth,sandbox,DEBUG,monitor,4793,True,19,3,False,False,False,False,False,3,2,False,False,medium
+2025-08-27T04:11:25.792218,Compilation successful,normal,database,production,TRACE,build,2024,True,22,2,False,False,False,False,False,4,2,False,False,medium
+2025-08-28T09:11:25.792218,Code coverage: 92%,normal,scheduler,staging,TRACE,test,3854,True,18,3,False,False,False,False,False,9,3,False,True,medium
+2025-08-27T19:11:25.792218,Commit 69f094b validated,normal,api,sandbox,INFO,build,3492,True,24,3,False,False,False,False,False,19,2,False,False,medium
+2025-08-27T04:11:25.792218,Email report generated,normal,auth,sandbox,TRACE,test,2633,True,22,3,False,False,False,False,False,4,2,False,False,medium
+2025-08-28T04:11:25.792218,FATAL: End-to-end test environment unreachable,anomaly,api,qa,WARN,test,1696,False,46,5,False,False,False,False,False,4,3,False,False,medium
+2025-08-26T23:11:25.792218,Load testing completed successfully,normal,backend,sandbox,DEBUG,test,2228,True,35,4,False,False,False,False,False,23,1,False,False,medium
+2025-08-28T06:11:25.792218,FATAL: Cache cluster failure,anomaly,worker,test,FATAL,test,8955,False,28,4,True,False,False,False,False,6,3,False,False,slow
+2025-08-28T20:11:25.792218,Test execution completed in 90s,normal,backend,production,TRACE,test,889,True,31,5,False,False,False,False,False,20,3,False,False,fast
+2025-08-27T21:11:25.792218,Teams webhook delivered,normal,worker,dev,INFO,monitor,4547,True,23,3,False,False,False,False,False,21,2,False,False,medium
+2025-08-28T15:11:25.792218,Transaction completed successfully,normal,backend,test,DEBUG,build,3990,True,34,3,False,False,False,False,False,15,3,False,True,medium
+2025-08-27T14:11:25.792218,DEPLOY FAILED: Unable to connect to staging,anomaly,auth,dev,ERROR,build,9512,False,43,7,True,False,False,False,False,14,2,False,True,slow
+2025-08-28T14:11:25.792218,Starting deployment to test,normal,api,production,DEBUG,build,1181,True,27,4,False,False,False,False,False,14,3,False,True,medium
+2025-08-27T01:11:25.792218,Linting completed with no issues,normal,scheduler,staging,TRACE,monitor,1144,True,32,5,False,False,False,False,False,1,2,False,False,medium
+2025-08-28T03:11:25.792218,Service mesh health check passed,normal,auth,dev,DEBUG,monitor,774,True,32,5,False,False,False,False,False,3,3,False,False,fast
+2025-08-28T12:11:25.792218,ERROR: Module 'numpy' not found,anomaly,database,dev,CRITICAL,monitor,8173,False,31,5,True,False,False,False,False,12,3,False,True,slow
+2025-08-28T17:11:25.792218,Commit 4f23237 validated,normal,auth,production,DEBUG,test,2706,True,24,3,False,False,False,False,False,17,3,False,True,medium
+2025-08-28T01:11:25.792218,CPU usage: 66%,normal,scheduler,test,TRACE,test,2042,True,14,3,False,False,False,False,False,1,3,False,False,medium
+2025-08-28T20:11:25.792218,Running npm install,normal,api,staging,TRACE,deploy,2446,True,19,3,False,False,False,False,False,20,3,False,False,medium
+2025-08-27T03:11:25.792218,Service mesh health check passed,normal,frontend,staging,TRACE,test,3628,True,32,5,False,False,False,False,False,3,2,False,False,medium
+2025-08-26T21:11:25.792218,Merged pull request #216,normal,frontend,production,INFO,test,2775,True,24,4,False,False,False,False,False,21,1,False,False,medium
+2025-08-28T08:11:25.792218,Deployment completed successfully,normal,database,production,TRACE,deploy,2756,True,33,3,False,False,False,False,False,8,3,False,False,medium
+2025-08-27T11:11:25.792218,Compilation successful,normal,worker,staging,TRACE,monitor,3480,True,22,2,False,False,False,False,False,11,2,False,True,medium
+2025-08-27T22:11:25.792218,Deploying to production environment,normal,cache,staging,TRACE,monitor,982,True,35,4,False,False,False,False,False,22,2,False,False,fast
+2025-08-27T02:11:25.792218,Pod status: Running,normal,worker,dev,DEBUG,deploy,1942,True,19,3,False,False,False,False,False,2,2,False,False,medium
+2025-08-27T16:11:25.792218,Load testing completed successfully,normal,backend,staging,TRACE,deploy,1400,True,35,4,False,False,False,False,False,16,2,False,True,medium
+2025-08-27T02:11:25.792218,Running npm install,normal,database,production,TRACE,test,805,True,19,3,False,False,False,False,False,2,2,False,False,fast
+2025-08-27T03:11:25.792218,Deployment completed successfully,normal,scheduler,production,INFO,build,262,True,33,3,False,False,False,False,False,3,2,False,False,fast
+2025-08-28T03:11:25.792218,FATAL: Out of memory during compilation,anomaly,database,test,WARN,test,16934,False,39,6,False,False,False,True,False,3,3,False,False,slow
+2025-08-27T17:11:25.792218,Throughput: 552 req/s,normal,scheduler,staging,INFO,test,2952,True,21,3,False,False,False,False,False,17,2,False,True,medium
+2025-08-28T14:11:25.792218,Cache warmed up successfully,normal,worker,test,INFO,test,4236,True,28,4,False,False,False,False,False,14,3,False,True,medium
+2025-08-27T21:11:25.792218,Metrics collection enabled,normal,cache,dev,TRACE,test,1336,True,26,3,False,False,False,False,False,21,2,False,False,medium
+2025-08-27T16:11:25.792218,Email report generated,normal,frontend,dev,INFO,monitor,3355,True,22,3,False,False,False,False,False,16,2,False,True,medium
+2025-08-27T05:11:25.792218,TEST FAILED: 7 tests failed,anomaly,database,production,CRITICAL,deploy,5152,False,27,5,True,False,False,False,False,5,2,False,False,slow
+2025-08-28T10:11:25.792218,Running end-to-end tests,normal,frontend,production,DEBUG,test,2919,True,24,3,False,False,False,False,False,10,3,False,True,medium
+2025-08-27T15:11:25.792218,ERROR: Message queue overflow,anomaly,auth,production,ERROR,test,27276,False,29,4,True,False,False,False,False,15,2,False,True,slow
+2025-08-27T01:11:25.792218,All tests passed successfully,normal,backend,test,INFO,test,3682,True,29,4,False,False,False,False,False,1,2,False,False,medium
+2025-08-27T03:11:25.792218,Memory usage: 69%,normal,api,production,DEBUG,test,3646,True,17,3,False,False,False,True,False,3,2,False,False,medium
+2025-08-28T07:11:25.792218,Security scan completed - no vulnerabilities found,normal,frontend,test,INFO,build,2160,True,50,7,False,False,False,False,False,7,3,False,False,medium
+2025-08-27T21:11:25.792218,Email report generated,normal,scheduler,production,DEBUG,monitor,1010,True,22,3,False,False,False,False,False,21,2,False,False,medium
+2025-08-27T20:11:25.792218,Code coverage: 90%,normal,scheduler,test,DEBUG,deploy,864,True,18,3,False,False,False,False,False,20,2,False,False,fast
+2025-08-28T01:11:25.792218,Compilation successful,normal,worker,test,INFO,test,4622,True,22,2,False,False,False,False,False,1,3,False,False,medium
+2025-08-28T11:11:25.792218,ERROR: Container failed to start,anomaly,backend,dev,ERROR,build,22673,False,32,5,True,False,False,False,False,11,3,False,True,slow
+2025-08-28T19:11:25.792218,Installing dependencies from package.json,normal,frontend,staging,DEBUG,monitor,4179,True,41,4,False,False,False,False,False,19,3,False,False,medium
+2025-08-27T21:11:25.792218,ERROR: Docker build failed - base image not found,anomaly,frontend,production,FATAL,monitor,14432,False,49,9,True,False,False,False,False,21,2,False,False,slow
+2025-08-28T06:11:25.792218,Security scan completed - no vulnerabilities found,normal,database,production,INFO,build,4526,True,50,7,False,False,False,False,False,6,3,False,False,medium
+2025-08-27T07:11:25.792218,Data backup completed,normal,scheduler,test,INFO,test,2546,True,21,3,False,False,False,False,False,7,2,False,False,medium
+2025-08-27T09:11:25.792218,FATAL: SSL certificate validation failed,anomaly,auth,production,FATAL,deploy,29934,False,40,5,True,False,False,False,False,9,2,False,True,slow
+2025-08-27T08:11:25.792218,Compiling TypeScript files,normal,auth,staging,TRACE,monitor,4705,True,26,3,False,False,False,False,False,8,2,False,False,medium
+2025-08-27T22:11:25.792218,Cache warmed up successfully,normal,auth,test,DEBUG,test,4048,True,28,4,False,False,False,False,False,22,2,False,False,medium
+2025-08-27T05:11:25.792218,Query performance within limits,normal,cache,sandbox,TRACE,build,346,True,31,4,False,False,False,False,False,5,2,False,False,fast
+2025-08-28T09:11:25.792218,Load testing completed successfully,normal,database,dev,TRACE,deploy,3675,True,35,4,False,False,False,False,False,9,3,False,True,medium
+2025-08-26T20:11:25.792218,Code coverage: 83%,normal,database,dev,INFO,test,1092,True,18,3,False,False,False,False,False,20,1,False,False,medium
+2025-08-27T20:11:25.792218,Commit c75e3a0 validated,normal,api,staging,INFO,build,4866,True,24,3,False,False,False,False,False,20,2,False,False,medium
+2025-08-28T14:11:25.792218,Test execution completed in 197s,normal,database,sandbox,INFO,build,1689,True,32,5,False,False,False,False,False,14,3,False,True,medium
+2025-08-27T18:11:25.792218,Database connection established,normal,frontend,dev,DEBUG,test,770,True,31,3,False,False,False,False,True,18,2,False,False,fast
+2025-08-28T02:11:25.792218,Load testing completed successfully,normal,frontend,sandbox,TRACE,build,247,True,35,4,False,False,False,False,False,2,3,False,False,fast
+2025-08-27T05:11:25.792218,Service endpoints updated,normal,auth,test,DEBUG,monitor,3681,True,25,3,False,False,False,False,False,5,2,False,False,medium
+2025-08-27T06:11:25.792218,Deployment completed successfully,normal,scheduler,production,INFO,deploy,2981,True,33,3,False,False,False,False,False,6,2,False,False,medium
+2025-08-28T12:11:25.792218,Indexes optimized,normal,api,staging,DEBUG,test,2779,True,17,2,False,False,False,False,False,12,3,False,True,medium
+2025-08-28T02:11:25.792218,Starting build process for commit d99119d,normal,cache,dev,TRACE,test,4372,True,41,6,False,False,False,False,False,2,3,False,False,medium
+2025-08-27T05:11:25.792218,Response time: 73ms,normal,worker,sandbox,INFO,monitor,4458,True,19,3,False,False,False,False,False,5,2,False,False,medium
+2025-08-28T03:11:25.792218,Installing dependencies from requirements.txt,normal,auth,sandbox,DEBUG,deploy,3740,True,45,4,False,False,False,False,False,3,3,False,False,medium
+2025-08-28T11:11:25.792218,Starting deployment to test,normal,scheduler,staging,DEBUG,test,2840,True,27,4,False,False,False,False,False,11,3,False,True,medium
+2025-08-26T22:11:25.792218,Cache warmed up successfully,normal,api,dev,TRACE,test,1330,True,28,4,False,False,False,False,False,22,1,False,False,medium
+2025-08-28T01:11:25.792218,Rollout completed: 100% traffic routed,normal,cache,staging,DEBUG,monitor,2259,True,38,5,False,False,False,False,False,1,3,False,False,medium
+2025-08-27T05:11:25.792218,Throughput: 466 req/s,normal,worker,dev,TRACE,test,3830,True,21,3,False,False,False,False,False,5,2,False,False,medium
+2025-08-28T04:11:25.792218,Schema validation passed,normal,scheduler,sandbox,INFO,monitor,4369,True,24,3,False,False,False,False,False,4,3,False,False,medium
+2025-08-27T00:11:25.792218,CPU usage: 48%,normal,cache,staging,DEBUG,deploy,2777,True,14,3,False,False,False,False,False,0,2,False,False,medium
+2025-08-28T06:11:25.792218,Container started successfully,normal,database,qa,DEBUG,test,4358,True,30,3,False,False,False,False,False,6,3,False,False,medium
+2025-08-28T00:11:25.792218,Data backup completed,normal,scheduler,production,DEBUG,monitor,4655,True,21,3,False,False,False,False,False,0,3,False,False,medium
+2025-08-28T16:11:25.792218,Transaction completed successfully,normal,backend,staging,DEBUG,monitor,1079,True,34,3,False,False,False,False,False,16,3,False,True,medium
+2025-08-27T11:11:25.792218,Webpack build completed,normal,worker,sandbox,TRACE,monitor,1218,True,23,3,False,False,False,False,False,11,2,False,True,medium
+2025-08-27T21:11:25.792218,Container started successfully,normal,auth,test,DEBUG,monitor,4699,True,30,3,False,False,False,False,False,21,2,False,False,medium
+2025-08-27T10:11:25.792218,Code coverage: 89%,normal,scheduler,production,TRACE,build,1185,True,18,3,False,False,False,False,False,10,2,False,True,medium
+2025-08-27T15:11:25.792218,Secrets loaded successfully,normal,scheduler,sandbox,DEBUG,deploy,3483,True,27,3,False,False,False,False,False,15,2,False,True,medium
+2025-08-28T15:11:25.792218,Image tagged as v10.13.42,normal,worker,qa,INFO,deploy,1268,True,25,4,False,False,False,False,False,15,3,False,True,medium
+2025-08-27T01:11:25.792218,Test execution completed in 227s,normal,scheduler,dev,TRACE,monitor,2840,True,32,5,False,False,False,False,False,1,2,False,False,medium
+2025-08-28T09:11:25.792218,Application started successfully,normal,backend,qa,DEBUG,monitor,4737,True,32,3,False,False,False,False,False,9,3,False,True,medium
+2025-08-28T14:11:25.792218,Starting build process for commit 2c21de4,normal,database,dev,INFO,build,4904,True,41,6,False,False,False,False,False,14,3,False,True,medium
+2025-08-27T20:11:25.792218,Query performance within limits,normal,cache,qa,INFO,test,4650,True,31,4,False,False,False,False,False,20,2,False,False,medium
+2025-08-27T13:11:25.792218,FATAL: Message broker connection lost,anomaly,cache,dev,CRITICAL,deploy,16240,False,37,5,False,False,False,False,True,13,2,False,True,slow
+2025-08-27T04:11:25.792218,Slack notification sent,normal,cache,test,INFO,deploy,4590,True,23,3,False,False,False,False,False,4,2,False,False,medium
+2025-08-27T01:11:25.792218,Running unit tests,normal,api,staging,DEBUG,build,4518,True,18,3,False,False,False,False,False,1,2,False,False,medium
+2025-08-28T00:11:25.792218,Metrics collection enabled,normal,frontend,staging,TRACE,monitor,1121,True,26,3,False,False,False,False,False,0,3,False,False,medium
+2025-08-28T06:11:25.792218,Merged pull request #285,normal,scheduler,test,INFO,build,913,True,24,4,False,False,False,False,False,6,3,False,False,fast
+2025-08-28T12:11:25.792218,Running unit tests,normal,scheduler,dev,INFO,build,132,True,18,3,False,False,False,False,False,12,3,False,True,fast
+2025-08-26T22:11:25.792218,Health check passed,normal,backend,test,TRACE,build,1793,True,19,3,False,False,False,False,False,22,1,False,False,medium
+2025-08-27T01:11:25.792218,Running integration tests,normal,frontend,qa,INFO,build,2414,True,25,3,False,False,False,False,False,1,2,False,False,medium
+2025-08-27T07:11:25.792218,Application started successfully,normal,auth,dev,TRACE,monitor,2050,True,32,3,False,False,False,False,False,7,2,False,False,medium
+2025-08-27T12:11:25.792218,Docker image built successfully,normal,worker,sandbox,TRACE,deploy,3338,True,31,4,False,False,False,False,False,12,2,False,True,medium
+2025-08-28T15:11:25.792218,ERROR: Worker process crashed,anomaly,worker,dev,WARN,build,14364,False,29,4,True,False,False,False,False,15,3,False,True,slow
+2025-08-27T03:11:25.792218,CRITICAL: Regression detected in test suite,anomaly,backend,staging,ERROR,test,21785,False,43,6,False,False,False,False,False,3,2,False,False,slow
+2025-08-27T18:11:25.792218,Load testing completed successfully,normal,backend,sandbox,DEBUG,monitor,3072,True,35,4,False,False,False,False,False,18,2,False,False,medium
+2025-08-28T12:11:25.792218,Memory usage: 50%,normal,scheduler,production,DEBUG,monitor,2827,True,17,3,False,False,False,True,False,12,3,False,True,medium
+2025-08-27T18:11:25.792218,Security scan completed - no vulnerabilities found,normal,api,staging,INFO,deploy,3925,True,50,7,False,False,False,False,False,18,2,False,False,medium
+2025-08-28T05:11:25.792218,Memory usage: 41%,normal,worker,qa,INFO,deploy,4545,True,17,3,False,False,False,True,False,5,3,False,False,medium
+2025-08-28T00:11:25.792218,Deployment completed successfully,normal,database,qa,DEBUG,build,1681,True,33,3,False,False,False,False,False,0,3,False,False,medium
+2025-08-26T23:11:25.792218,Branch protection rules satisfied,normal,scheduler,staging,DEBUG,build,1608,True,33,4,False,False,False,False,False,23,1,False,False,medium
+2025-08-28T09:11:25.792218,Starting deployment to staging,normal,worker,test,DEBUG,test,1561,True,30,4,False,False,False,False,False,9,3,False,True,medium
+2025-08-28T01:11:25.792218,FATAL: Out of memory during compilation,anomaly,frontend,production,CRITICAL,monitor,9902,False,39,6,False,False,False,True,False,1,3,False,False,slow
+2025-08-27T07:11:25.792218,Code quality gate passed,normal,scheduler,staging,INFO,monitor,521,True,24,4,False,False,False,False,False,7,2,False,False,fast
+2025-08-27T00:11:25.792218,Image tagged as v4.1.48,normal,cache,staging,DEBUG,deploy,2877,True,23,4,False,False,False,False,False,0,2,False,False,medium
+2025-08-27T10:11:25.792218,Test execution completed in 98s,normal,api,staging,TRACE,deploy,4045,True,31,5,False,False,False,False,False,10,2,False,True,medium
+2025-08-28T02:11:25.792218,CRITICAL: DDoS attack detected,anomaly,api,production,CRITICAL,test,28829,False,30,4,False,False,False,False,False,2,3,False,False,slow
+2025-08-26T22:11:25.792218,Cache warmed up successfully,normal,worker,sandbox,DEBUG,monitor,1480,True,28,4,False,False,False,False,False,22,1,False,False,medium
+2025-08-28T06:11:25.792218,Service mesh health check passed,normal,worker,sandbox,INFO,monitor,3068,True,32,5,False,False,False,False,False,6,3,False,False,medium
+2025-08-28T11:11:25.792218,Running npm install,normal,worker,sandbox,DEBUG,test,631,True,19,3,False,False,False,False,False,11,3,False,True,fast
+2025-08-28T12:11:25.792218,Initializing build environment,normal,scheduler,production,DEBUG,monitor,1316,True,30,3,False,False,False,False,False,12,3,False,True,medium
+2025-08-28T12:11:25.792218,Logging configured successfully,normal,auth,dev,DEBUG,monitor,466,True,31,3,False,False,False,False,False,12,3,False,True,fast
+2025-08-27T10:11:25.792218,Starting build process for commit 594447a,normal,cache,dev,INFO,test,2563,True,41,6,False,False,False,False,False,10,2,False,True,medium
+2025-08-27T22:11:25.792218,Running npm install,normal,worker,production,INFO,build,1500,True,19,3,False,False,False,False,False,22,2,False,False,medium
+2025-08-28T04:11:25.792218,Performance tests passed,normal,backend,staging,TRACE,monitor,1537,True,24,3,False,False,False,False,False,4,3,False,False,medium
+2025-08-27T15:11:25.792218,Image tagged as v2.16.38,normal,backend,test,INFO,monitor,4316,True,24,4,False,False,False,False,False,15,2,False,True,medium
+2025-08-28T02:11:25.792218,Application started successfully,normal,worker,staging,DEBUG,monitor,3808,True,32,3,False,False,False,False,False,2,3,False,False,medium
+2025-08-27T03:11:25.792218,Health check passed,normal,scheduler,sandbox,TRACE,monitor,3026,True,19,3,False,False,False,False,False,3,2,False,False,medium
+2025-08-28T19:11:25.792218,Performance tests passed,normal,cache,qa,INFO,monitor,4016,True,24,3,False,False,False,False,False,19,3,False,False,medium
+2025-08-27T00:11:25.792218,Query performance within limits,normal,auth,test,TRACE,build,2266,True,31,4,False,False,False,False,False,0,2,False,False,medium
+2025-08-28T18:11:25.792218,All tests passed successfully,normal,api,production,TRACE,test,2310,True,29,4,False,False,False,False,False,18,3,False,False,medium
+2025-08-27T12:11:25.792218,CPU usage: 65%,normal,worker,test,INFO,build,341,True,14,3,False,False,False,False,False,12,2,False,True,fast
+2025-08-26T23:11:25.792218,Email report generated,normal,worker,staging,TRACE,monitor,3768,True,22,3,False,False,False,False,False,23,1,False,False,medium
+2025-08-27T14:11:25.792218,Running end-to-end tests,normal,frontend,staging,INFO,monitor,4593,True,24,3,False,False,False,False,False,14,2,False,True,medium
+2025-08-28T16:11:25.792218,Installing dependencies from requirements.txt,normal,backend,dev,INFO,monitor,2611,True,45,4,False,False,False,False,False,16,3,False,True,medium
+2025-08-28T02:11:25.792218,Dashboard metrics refreshed,normal,api,staging,DEBUG,monitor,539,True,27,3,False,False,False,False,False,2,3,False,False,fast
+2025-08-26T20:11:25.792218,Logging configured successfully,normal,worker,qa,INFO,build,3306,True,31,3,False,False,False,False,False,20,1,False,False,medium
+2025-08-27T21:11:25.792218,Assets bundled successfully,normal,worker,staging,DEBUG,build,121,True,27,3,False,False,False,False,False,21,2,False,False,fast
+2025-08-26T20:11:25.792218,Test execution completed in 514s,normal,api,staging,DEBUG,build,2793,True,32,5,False,False,False,False,False,20,1,False,False,medium
+2025-08-28T12:11:25.792218,Service endpoints updated,normal,api,production,TRACE,monitor,1178,True,25,3,False,False,False,False,False,12,3,False,True,medium
+2025-08-27T02:11:25.792218,Data backup completed,normal,cache,test,TRACE,monitor,4499,True,21,3,False,False,False,False,False,2,2,False,False,medium
+2025-08-28T02:11:25.792218,Build completed successfully in 288s,normal,backend,staging,DEBUG,monitor,2333,True,36,5,False,False,False,False,False,2,3,False,False,medium
+2025-08-28T09:11:25.792218,Teams webhook delivered,normal,api,test,DEBUG,deploy,2676,True,23,3,False,False,False,False,False,9,3,False,True,medium
+2025-08-28T19:11:25.792218,Load testing completed successfully,normal,api,qa,DEBUG,build,3823,True,35,4,False,False,False,False,False,19,3,False,False,medium
+2025-08-27T07:11:25.792218,FATAL: Message broker connection lost,anomaly,cache,staging,ERROR,monitor,1897,False,37,5,False,False,False,False,True,7,2,False,False,medium
+2025-08-26T22:11:25.792218,Dependencies installed successfully in 150s,normal,auth,test,DEBUG,monitor,523,True,43,5,False,False,False,False,False,22,1,False,False,fast
+2025-08-27T01:11:25.792218,Starting test suite execution,normal,cache,qa,DEBUG,deploy,3766,True,29,4,False,False,False,False,False,1,2,False,False,medium
+2025-08-27T01:11:25.792218,ERROR: Build tool version mismatch,anomaly,api,sandbox,FATAL,test,9044,False,34,5,True,False,False,False,False,1,2,False,False,slow
+2025-08-27T12:11:25.792218,Merged pull request #265,normal,frontend,production,TRACE,test,887,True,24,4,False,False,False,False,False,12,2,False,True,fast
+2025-08-28T03:11:25.792218,Linting completed with no issues,normal,api,test,TRACE,test,4801,True,32,5,False,False,False,False,False,3,3,False,False,medium
+2025-08-27T00:11:25.792218,Logging configured successfully,normal,frontend,qa,DEBUG,build,4216,True,31,3,False,False,False,False,False,0,2,False,False,medium
+2025-08-28T03:11:25.792218,ERROR: Message queue overflow,anomaly,database,dev,FATAL,monitor,20589,False,29,4,True,False,False,False,False,3,3,False,False,slow
+2025-08-28T18:11:25.792218,Status badge updated,normal,database,production,INFO,test,1970,True,20,3,False,False,False,False,False,18,3,False,False,medium
+2025-08-27T10:11:25.792218,Installing dependencies from package.json,normal,api,dev,TRACE,monitor,3106,True,41,4,False,False,False,False,False,10,2,False,True,medium
+2025-08-27T14:11:25.792218,Test execution completed in 58s,normal,database,qa,DEBUG,deploy,1955,True,31,5,False,False,False,False,False,14,2,False,True,medium
+2025-08-27T01:11:25.792218,CRITICAL: Health check failed after deployment,anomaly,database,dev,ERROR,deploy,15138,False,46,6,True,False,False,False,False,1,2,False,False,slow
+2025-08-28T04:11:25.792218,"Test suite completed: 141 passed, 0 failed",normal,frontend,sandbox,TRACE,monitor,1447,True,42,7,True,False,False,False,False,4,3,False,False,medium
+2025-08-28T18:11:25.792218,DEPLOY FAILED: Unable to connect to staging,anomaly,cache,staging,ERROR,build,4555,False,43,7,True,False,False,False,False,18,3,False,False,medium
+2025-08-28T19:11:25.792218,Build completed successfully in 59s,normal,backend,qa,TRACE,monitor,835,True,35,5,False,False,False,False,False,19,3,False,False,fast
+2025-08-27T14:11:25.792218,Query performance within limits,normal,api,qa,DEBUG,deploy,1295,True,31,4,False,False,False,False,False,14,2,False,True,medium
+2025-08-27T22:11:25.792218,Query performance within limits,normal,backend,staging,DEBUG,build,4954,True,31,4,False,False,False,False,False,22,2,False,False,medium
+2025-08-26T22:11:25.792218,Running pip install -r requirements.txt,normal,database,test,TRACE,monitor,2148,True,39,5,False,False,False,False,False,22,1,False,False,medium
+2025-08-27T21:11:25.792218,Starting deployment to production,normal,backend,staging,TRACE,deploy,2933,True,33,4,False,False,False,False,False,21,2,False,False,medium
+2025-08-26T22:11:25.792218,Linting completed with no issues,normal,frontend,staging,TRACE,monitor,1137,True,32,5,False,False,False,False,False,22,1,False,False,medium
+2025-08-27T18:11:25.792218,Logging configured successfully,normal,api,production,INFO,build,3124,True,31,3,False,False,False,False,False,18,2,False,False,medium
+2025-08-28T14:11:25.792218,ERROR: TypeScript compilation failed,anomaly,api,test,CRITICAL,test,25674,False,36,4,True,False,False,False,False,14,3,False,True,slow
+2025-08-27T09:11:25.792218,Starting deployment to staging,normal,scheduler,test,INFO,test,2832,True,30,4,False,False,False,False,False,9,2,False,True,medium
+2025-08-27T19:11:25.792218,Pod status: Running,normal,auth,test,TRACE,test,811,True,19,3,False,False,False,False,False,19,2,False,False,fast
+2025-08-27T11:11:25.792218,Database connection established,normal,frontend,production,DEBUG,test,3311,True,31,3,False,False,False,False,True,11,2,False,True,medium
+2025-08-28T13:11:25.792218,Code coverage: 96%,normal,frontend,qa,TRACE,test,2660,True,18,3,False,False,False,False,False,13,3,False,True,medium
+2025-08-27T23:11:25.792218,Service mesh health check passed,normal,scheduler,sandbox,INFO,deploy,1977,True,32,5,False,False,False,False,False,23,2,False,False,medium
+2025-08-27T11:11:25.792218,Response time: 190ms,normal,backend,staging,DEBUG,test,1151,True,20,3,False,False,False,False,False,11,2,False,True,medium
+2025-08-28T17:11:25.792218,FATAL: Out of memory during compilation,anomaly,scheduler,production,FATAL,monitor,20983,False,39,6,False,False,False,True,False,17,3,False,True,slow
+2025-08-27T07:11:25.792218,Dashboard metrics refreshed,normal,database,dev,DEBUG,build,2569,True,27,3,False,False,False,False,False,7,2,False,False,medium
+2025-08-28T18:11:25.792218,Deployment completed successfully,normal,frontend,dev,TRACE,monitor,2373,True,33,3,False,False,False,False,False,18,3,False,False,medium
+2025-08-27T01:11:25.792218,Deploying to production environment,normal,worker,sandbox,DEBUG,test,3019,True,35,4,False,False,False,False,False,1,2,False,False,medium
+2025-08-28T00:11:25.792218,Merged pull request #736,normal,cache,qa,TRACE,test,3207,True,24,4,False,False,False,False,False,0,3,False,False,medium
+2025-08-27T14:11:25.792218,Initializing build environment,normal,auth,test,INFO,test,817,True,30,3,False,False,False,False,False,14,2,False,True,fast
+2025-08-26T21:11:25.792218,Compilation successful,normal,scheduler,staging,DEBUG,test,1471,True,22,2,False,False,False,False,False,21,1,False,False,medium
+2025-08-27T09:11:25.792218,Running end-to-end tests,normal,cache,dev,DEBUG,test,3007,True,24,3,False,False,False,False,False,9,2,False,True,medium
+2025-08-27T21:11:25.792218,ERROR: Load balancer health check timeout,anomaly,api,dev,CRITICAL,deploy,5597,False,41,6,True,False,True,False,False,21,2,False,False,slow
+2025-08-27T19:11:25.792218,Compilation successful,normal,database,sandbox,TRACE,monitor,4217,True,22,2,False,False,False,False,False,19,2,False,False,medium
+2025-08-28T19:11:25.792218,Pod status: Running,normal,worker,qa,INFO,monitor,2146,True,19,3,False,False,False,False,False,19,3,False,False,medium
+2025-08-27T12:11:25.792218,"Test suite completed: 105 passed, 0 failed",normal,backend,production,TRACE,build,2230,True,42,7,True,False,False,False,False,12,2,False,True,medium
+2025-08-28T11:11:25.792218,Dashboard metrics refreshed,normal,database,staging,INFO,build,275,True,27,3,False,False,False,False,False,11,3,False,True,fast
+2025-08-28T14:11:25.792218,Dashboard metrics refreshed,normal,database,staging,DEBUG,test,3837,True,27,3,False,False,False,False,False,14,3,False,True,medium
+2025-08-28T03:11:25.792218,ERROR: Worker process crashed,anomaly,api,staging,FATAL,monitor,13453,False,29,4,True,False,False,False,False,3,3,False,False,slow
+2025-08-27T14:11:25.792218,Starting test suite execution,normal,cache,test,TRACE,build,4837,True,29,4,False,False,False,False,False,14,2,False,True,medium
+2025-08-28T06:11:25.792218,All tests passed successfully,normal,backend,production,TRACE,build,4280,True,29,4,False,False,False,False,False,6,3,False,False,medium
+2025-08-27T13:11:25.792218,ERROR: Network latency spike: 5607ms,anomaly,database,qa,WARN,test,26505,False,36,5,True,False,False,False,True,13,2,False,True,slow
+2025-08-28T10:11:25.792218,Commit 9dfb658 validated,normal,api,dev,DEBUG,monitor,2484,True,24,3,False,False,False,False,False,10,3,False,True,medium
+2025-08-27T13:11:25.792218,DEPLOY FAILED: Unable to connect to sandbox,anomaly,scheduler,staging,ERROR,build,17780,False,43,7,True,False,False,False,False,13,2,False,True,slow
+2025-08-28T03:11:25.792218,Service mesh health check passed,normal,scheduler,qa,TRACE,deploy,1724,True,32,5,False,False,False,False,False,3,3,False,False,medium
+2025-08-27T13:11:25.792218,Image tagged as v8.10.42,normal,frontend,test,TRACE,test,880,True,24,4,False,False,False,False,False,13,2,False,True,fast
+2025-08-28T07:11:25.792218,Starting deployment to qa,normal,database,test,INFO,deploy,557,True,25,4,False,False,False,False,False,7,3,False,False,fast
+2025-08-28T17:11:25.792218,Starting build process for commit a4a9908,normal,database,qa,INFO,deploy,2236,True,41,6,False,False,False,False,False,17,3,False,True,medium
+2025-08-27T09:11:25.792218,Installing dependencies from package.json,normal,frontend,qa,TRACE,monitor,3613,True,41,4,False,False,False,False,False,9,2,False,True,medium
+2025-08-26T23:11:25.792218,Database migration completed,normal,scheduler,sandbox,TRACE,monitor,2529,True,28,3,False,False,False,False,False,23,1,False,False,medium
+2025-08-28T07:11:25.792218,Transaction completed successfully,normal,frontend,production,DEBUG,monitor,4986,True,34,3,False,False,False,False,False,7,3,False,False,medium
+2025-08-28T01:11:25.792218,Dashboard metrics refreshed,normal,worker,dev,TRACE,build,2859,True,27,3,False,False,False,False,False,1,3,False,False,medium
+2025-08-27T18:11:25.792218,Docker image built successfully,normal,frontend,sandbox,TRACE,test,3181,True,31,4,False,False,False,False,False,18,2,False,False,medium
+2025-08-28T07:11:25.792218,Error rate: 1.86%,normal,backend,staging,INFO,monitor,546,True,17,3,True,False,False,False,False,7,3,False,False,fast
+2025-08-27T08:11:25.792218,FATAL: Scheduler service failure,anomaly,database,test,CRITICAL,monitor,21282,False,32,4,True,False,False,False,False,8,2,False,False,slow
+2025-08-27T17:11:25.792218,Code coverage: 98%,normal,cache,test,TRACE,monitor,2862,True,18,3,False,False,False,False,False,17,2,False,True,medium
+2025-08-28T10:11:25.792218,Running pip install -r requirements.txt,normal,auth,production,DEBUG,build,4907,True,39,5,False,False,False,False,False,10,3,False,True,medium
+2025-08-27T21:11:25.792218,Transaction completed successfully,normal,backend,sandbox,DEBUG,deploy,2238,True,34,3,False,False,False,False,False,21,2,False,False,medium
+2025-08-28T20:11:25.792218,Image tagged as v3.2.20,normal,frontend,production,INFO,build,497,True,23,4,False,False,False,False,False,20,3,False,False,fast
+2025-08-27T02:11:25.792218,Initializing build environment,normal,cache,qa,DEBUG,deploy,1741,True,30,3,False,False,False,False,False,2,2,False,False,medium
+2025-08-28T13:11:25.792218,Dependencies installed successfully in 48s,normal,frontend,sandbox,DEBUG,build,1579,True,42,5,False,False,False,False,False,13,3,False,True,medium
+2025-08-28T12:11:25.792218,Service is healthy and responding,normal,database,sandbox,DEBUG,test,3768,True,33,5,False,False,False,False,False,12,3,False,True,medium
+2025-08-28T18:11:25.792218,Security scan completed - no vulnerabilities found,normal,auth,sandbox,DEBUG,test,4624,True,50,7,False,False,False,False,False,18,3,False,False,medium
+2025-08-26T23:11:25.792218,Dependencies installed successfully in 569s,normal,frontend,production,INFO,test,2709,True,43,5,False,False,False,False,False,23,1,False,False,medium
+2025-08-27T07:11:25.792218,CPU usage: 62%,normal,scheduler,qa,INFO,deploy,910,True,14,3,False,False,False,False,False,7,2,False,False,fast
+2025-08-27T05:11:25.792218,Deployment completed successfully,normal,database,qa,INFO,monitor,4155,True,33,3,False,False,False,False,False,5,2,False,False,medium
+2025-08-27T10:11:25.792218,Webhook triggered successfully,normal,cache,dev,TRACE,deploy,3044,True,30,3,False,False,False,False,False,10,2,False,True,medium
+2025-08-27T15:11:25.792218,Running pip install -r requirements.txt,normal,database,test,INFO,monitor,795,True,39,5,False,False,False,False,False,15,2,False,True,fast
+2025-08-28T06:11:25.792218,ERROR: DNS resolution failure,anomaly,api,qa,CRITICAL,test,29361,False,29,4,True,False,False,False,False,6,3,False,False,slow
+2025-08-27T05:11:25.792218,ERROR: Canary deployment showing errors,anomaly,backend,qa,CRITICAL,deploy,11216,False,39,5,True,False,False,False,False,5,2,False,False,slow
+2025-08-26T21:11:25.792218,Webpack build completed,normal,api,production,INFO,test,104,True,23,3,False,False,False,False,False,21,1,False,False,fast
+2025-08-27T01:11:25.792218,Running end-to-end tests,normal,database,qa,TRACE,deploy,375,True,24,3,False,False,False,False,False,1,2,False,False,fast
+2025-08-26T23:11:25.792218,Compilation successful,normal,scheduler,production,INFO,monitor,2077,True,22,2,False,False,False,False,False,23,1,False,False,medium
+2025-08-28T15:11:25.792218,Code quality gate passed,normal,scheduler,production,DEBUG,build,4090,True,24,4,False,False,False,False,False,15,3,False,True,medium
+2025-08-28T04:11:25.792218,Build completed successfully in 109s,normal,scheduler,sandbox,DEBUG,test,2316,True,36,5,False,False,False,False,False,4,3,False,False,medium
+2025-08-28T14:11:25.792218,Compilation successful,normal,backend,sandbox,TRACE,deploy,1488,True,22,2,False,False,False,False,False,14,3,False,True,medium
+2025-08-27T15:11:25.792218,Logging configured successfully,normal,cache,test,TRACE,deploy,3080,True,31,3,False,False,False,False,False,15,2,False,True,medium
+2025-08-28T13:11:25.792218,TEST FAILED: 13 tests failed,anomaly,scheduler,sandbox,FATAL,deploy,5541,False,28,5,True,False,False,False,False,13,3,False,True,slow
+2025-08-27T02:11:25.792218,Starting deployment to dev,normal,backend,sandbox,INFO,deploy,215,True,26,4,False,False,False,False,False,2,2,False,False,fast
+2025-08-27T13:11:25.792218,Deploying to staging environment,normal,database,qa,TRACE,build,1839,True,32,4,False,False,False,False,False,13,2,False,True,medium
+2025-08-28T08:11:25.792218,Merged pull request #294,normal,database,production,INFO,test,3726,True,24,4,False,False,False,False,False,8,3,False,False,medium
+2025-08-27T23:11:25.792218,Memory usage: 37%,normal,auth,qa,INFO,monitor,4361,True,17,3,False,False,False,True,False,23,2,False,False,medium
+2025-08-27T07:11:25.792218,CRITICAL: Configuration file corrupted,anomaly,scheduler,staging,FATAL,monitor,8890,False,38,4,False,False,False,False,False,7,2,False,False,slow
+2025-08-27T14:11:25.792218,Deploying to staging environment,normal,api,dev,TRACE,deploy,2942,True,32,4,False,False,False,False,False,14,2,False,True,medium
+2025-08-28T19:11:25.792218,Data backup completed,normal,frontend,qa,INFO,test,4277,True,21,3,False,False,False,False,False,19,3,False,False,medium
+2025-08-28T20:11:25.792218,Branch protection rules satisfied,normal,scheduler,dev,INFO,test,3857,True,33,4,False,False,False,False,False,20,3,False,False,medium
+2025-08-28T15:11:25.792218,Service endpoints updated,normal,scheduler,qa,INFO,test,2504,True,25,3,False,False,False,False,False,15,3,False,True,medium
+2025-08-27T13:11:25.792218,CRITICAL: License check failed - invalid license,anomaly,worker,qa,ERROR,deploy,15477,False,48,7,True,False,False,False,False,13,2,False,True,slow
+2025-08-28T18:11:25.792218,ERROR: Service dependency unavailable,anomaly,frontend,staging,ERROR,test,25037,False,37,4,True,False,False,False,False,18,3,False,False,slow
+2025-08-27T10:11:25.792218,Service endpoints updated,normal,auth,dev,TRACE,build,1480,True,25,3,False,False,False,False,False,10,2,False,True,medium
+2025-08-28T19:11:25.792218,Starting test suite execution,normal,database,sandbox,TRACE,test,1064,True,29,4,False,False,False,False,False,19,3,False,False,medium
+2025-08-28T18:11:25.792218,Running npm install,normal,worker,production,DEBUG,monitor,1087,True,19,3,False,False,False,False,False,18,3,False,False,medium
+2025-08-28T00:11:25.792218,Application started successfully,normal,scheduler,staging,TRACE,build,1716,True,32,3,False,False,False,False,False,0,3,False,False,medium
+2025-08-27T21:11:25.792218,Load testing completed successfully,normal,worker,dev,INFO,deploy,1241,True,35,4,False,False,False,False,False,21,2,False,False,medium
+2025-08-27T19:11:25.792218,Commit a86a809 validated,normal,backend,staging,TRACE,build,2361,True,24,3,False,False,False,False,False,19,2,False,False,medium
+2025-08-27T01:11:25.792218,Running integration tests,normal,cache,production,INFO,test,2680,True,25,3,False,False,False,False,False,1,2,False,False,medium
+2025-08-28T07:11:25.792218,Checked out branch feature/auth,normal,api,qa,INFO,monitor,834,True,31,4,False,False,False,False,False,7,3,False,False,fast
+2025-08-28T08:11:25.792218,Docker image built successfully,normal,worker,staging,INFO,deploy,4255,True,31,4,False,False,False,False,False,8,3,False,False,medium
+2025-08-28T11:11:25.792218,Installing dependencies from package.json,normal,backend,qa,DEBUG,deploy,3680,True,41,4,False,False,False,False,False,11,3,False,True,medium
+2025-08-28T03:11:25.792218,ERROR: Resource limits exceeded,anomaly,auth,test,WARN,monitor,14838,False,31,4,True,False,False,False,False,3,3,False,False,slow
+2025-08-27T08:11:25.792218,Health check passed,normal,auth,test,TRACE,build,684,True,19,3,False,False,False,False,False,8,2,False,False,fast
+2025-08-27T08:11:25.792218,DEPLOY FAILED: Unable to connect to qa,anomaly,cache,dev,ERROR,test,8683,False,38,7,True,False,False,False,False,8,2,False,False,slow
+2025-08-27T11:11:25.792218,CRITICAL: API rate limit exceeded,anomaly,database,production,ERROR,build,20094,False,33,5,False,False,False,False,False,11,2,False,True,slow
+2025-08-27T05:11:25.792218,Starting build process for commit 4994b51,normal,worker,staging,DEBUG,monitor,1194,True,41,6,False,False,False,False,False,5,2,False,False,medium
+2025-08-27T09:11:25.792218,Database connection established,normal,scheduler,qa,INFO,deploy,1427,True,31,3,False,False,False,False,True,9,2,False,True,medium
+2025-08-27T16:11:25.792218,Metrics collection enabled,normal,backend,staging,TRACE,monitor,1469,True,26,3,False,False,False,False,False,16,2,False,True,medium
+2025-08-27T17:11:25.792218,Webhook triggered successfully,normal,worker,test,TRACE,monitor,445,True,30,3,False,False,False,False,False,17,2,False,True,fast
+2025-08-28T15:11:25.792218,Data backup completed,normal,worker,test,DEBUG,build,3237,True,21,3,False,False,False,False,False,15,3,False,True,medium
+2025-08-28T09:11:25.792218,Image tagged as v3.17.37,normal,frontend,qa,TRACE,deploy,3861,True,24,4,False,False,False,False,False,9,3,False,True,medium
+2025-08-27T13:11:25.792218,Deploying to production environment,normal,database,production,INFO,monitor,4857,True,35,4,False,False,False,False,False,13,2,False,True,medium
+2025-08-27T12:11:25.792218,Email report generated,normal,backend,qa,INFO,monitor,4024,True,22,3,False,False,False,False,False,12,2,False,True,medium
+2025-08-27T05:11:25.792218,Compilation successful,normal,frontend,qa,DEBUG,build,162,True,22,2,False,False,False,False,False,5,2,False,False,fast
+2025-08-27T09:11:25.792218,FATAL: Cache cluster failure,anomaly,backend,test,CRITICAL,deploy,23268,False,28,4,True,False,False,False,False,9,2,False,True,slow
+2025-08-27T18:11:25.792218,Running end-to-end tests,normal,frontend,sandbox,DEBUG,monitor,773,True,24,3,False,False,False,False,False,18,2,False,False,fast
+2025-08-28T12:11:25.792218,Deployment completed successfully,normal,cache,sandbox,DEBUG,build,3323,True,33,3,False,False,False,False,False,12,3,False,True,medium
+2025-08-27T20:11:25.792218,Load balancer health check passed,normal,frontend,test,DEBUG,deploy,3321,True,33,5,False,False,False,False,False,20,2,False,False,medium
+2025-08-28T19:11:25.792218,Performance tests passed,normal,api,production,INFO,build,626,True,24,3,False,False,False,False,False,19,3,False,False,fast
+2025-08-27T15:11:25.792218,Webpack build completed,normal,auth,qa,INFO,build,4345,True,23,3,False,False,False,False,False,15,2,False,True,medium
+2025-08-28T20:11:25.792218,Starting deployment to test,normal,cache,staging,INFO,deploy,636,True,27,4,False,False,False,False,False,20,3,False,False,fast
+2025-08-28T06:11:25.792218,FATAL: Disk space critical: 1% remaining,anomaly,api,production,ERROR,deploy,12491,False,40,6,False,False,False,False,False,6,3,False,False,slow
+2025-08-28T01:11:25.792218,Branch protection rules satisfied,normal,backend,sandbox,INFO,build,1184,True,33,4,False,False,False,False,False,1,3,False,False,medium
+2025-08-27T05:11:25.792218,CRITICAL: Rollback failed - system in inconsistent state,anomaly,api,production,CRITICAL,monitor,10353,False,56,8,True,False,False,False,False,5,2,False,False,slow
+2025-08-27T20:11:25.792218,Webhook triggered successfully,normal,backend,test,INFO,build,1608,True,30,3,False,False,False,False,False,20,2,False,False,medium
+2025-08-28T09:11:25.792218,Running end-to-end tests,normal,frontend,test,INFO,deploy,3739,True,24,3,False,False,False,False,False,9,3,False,True,medium
+2025-08-28T01:11:25.792218,ERROR: DNS resolution failure,anomaly,auth,qa,CRITICAL,deploy,10559,False,29,4,True,False,False,False,False,1,3,False,False,slow
+2025-08-28T12:11:25.792218,FATAL: Load test crashed the system,anomaly,backend,sandbox,ERROR,monitor,22197,False,35,6,False,False,False,False,False,12,3,False,True,slow
+2025-08-28T07:11:25.792218,Pod status: Running,normal,scheduler,staging,TRACE,monitor,2814,True,19,3,False,False,False,False,False,7,3,False,False,medium
+2025-08-28T15:11:25.792218,ERROR: pip install failed - package not found,anomaly,auth,qa,ERROR,build,13737,False,45,8,True,False,False,False,False,15,3,False,True,slow
+2025-08-27T18:11:25.792218,Installing dependencies from package.json,normal,cache,test,DEBUG,monitor,4119,True,41,4,False,False,False,False,False,18,2,False,False,medium
+2025-08-27T03:11:25.792218,Running pip install -r requirements.txt,normal,api,staging,INFO,monitor,244,True,39,5,False,False,False,False,False,3,2,False,False,fast
+2025-08-27T13:11:25.792218,Response time: 71ms,normal,worker,staging,DEBUG,monitor,356,True,19,3,False,False,False,False,False,13,2,False,True,fast
+2025-08-27T11:11:25.792218,Test execution completed in 366s,normal,frontend,sandbox,DEBUG,deploy,789,True,32,5,False,False,False,False,False,11,2,False,True,fast
+2025-08-28T06:11:25.792218,Webhook triggered successfully,normal,cache,production,INFO,deploy,3222,True,30,3,False,False,False,False,False,6,3,False,False,medium
+2025-08-27T04:11:25.792218,"Test suite completed: 191 passed, 0 failed",normal,cache,production,DEBUG,test,1537,True,42,7,True,False,False,False,False,4,2,False,False,medium
+2025-08-27T02:11:25.792218,Pod status: Running,normal,api,sandbox,TRACE,deploy,502,True,19,3,False,False,False,False,False,2,2,False,False,fast
+2025-08-28T16:11:25.792218,Database connection established,normal,backend,production,TRACE,build,4276,True,31,3,False,False,False,False,True,16,3,False,True,medium
+2025-08-28T18:11:25.792218,Memory usage: 70%,normal,database,production,DEBUG,test,2977,True,17,3,False,False,False,True,False,18,3,False,False,medium
+2025-08-28T05:11:25.792218,Indexes optimized,normal,database,qa,INFO,deploy,1685,True,17,2,False,False,False,False,False,5,3,False,False,medium
+2025-08-28T04:11:25.792218,Ingress rules applied,normal,frontend,sandbox,INFO,deploy,2497,True,21,3,False,False,False,False,False,4,3,False,False,medium
+2025-08-28T00:11:25.792218,Linting completed with no issues,normal,database,dev,INFO,test,430,True,32,5,False,False,False,False,False,0,3,False,False,fast
+2025-08-28T02:11:25.792218,Cache warmed up successfully,normal,frontend,test,INFO,deploy,2946,True,28,4,False,False,False,False,False,2,3,False,False,medium
+2025-08-27T04:11:25.792218,ERROR: Authentication service unavailable,anomaly,scheduler,staging,ERROR,deploy,19716,False,41,4,True,False,False,False,False,4,2,False,False,slow
+2025-08-27T05:11:25.792218,Webhook triggered successfully,normal,scheduler,dev,INFO,build,2088,True,30,3,False,False,False,False,False,5,2,False,False,medium
+2025-08-28T14:11:25.792218,Test execution completed in 354s,normal,backend,qa,INFO,monitor,804,True,32,5,False,False,False,False,False,14,3,False,True,fast
+2025-08-26T22:11:25.792218,Starting deployment to sandbox,normal,scheduler,production,INFO,test,3126,True,30,4,False,False,False,False,False,22,1,False,False,medium
+2025-08-27T12:11:25.792218,Status badge updated,normal,api,production,TRACE,deploy,388,True,20,3,False,False,False,False,False,12,2,False,True,fast
+2025-08-27T16:11:25.792218,Metrics collection enabled,normal,database,test,DEBUG,monitor,3755,True,26,3,False,False,False,False,False,16,2,False,True,medium
+2025-08-27T09:11:25.792218,Dashboard metrics refreshed,normal,api,production,INFO,monitor,3946,True,27,3,False,False,False,False,False,9,2,False,True,medium
+2025-08-27T04:11:25.792218,FATAL: Test data corruption detected,anomaly,database,production,FATAL,test,23081,False,36,5,False,False,False,False,False,4,2,False,False,slow
+2025-08-28T01:11:25.792218,Pod status: Running,normal,worker,dev,TRACE,deploy,528,True,19,3,False,False,False,False,False,1,3,False,False,fast
+2025-08-27T00:11:25.792218,Compilation successful,normal,scheduler,qa,DEBUG,build,1253,True,22,2,False,False,False,False,False,0,2,False,False,medium
+2025-08-27T18:11:25.792218,Dashboard metrics refreshed,normal,cache,production,TRACE,build,1971,True,27,3,False,False,False,False,False,18,2,False,False,medium
+2025-08-27T05:11:25.792218,FATAL: Encryption key rotation failed,anomaly,frontend,dev,WARN,test,29892,False,37,5,True,False,False,False,False,5,2,False,False,slow
+2025-08-27T11:11:25.792218,FATAL: Build environment corrupted,anomaly,backend,sandbox,CRITICAL,test,23656,False,34,4,False,False,False,False,False,11,2,False,True,slow
+2025-08-27T09:11:25.792218,Security scan completed - no vulnerabilities found,normal,cache,sandbox,DEBUG,test,4130,True,50,7,False,False,False,False,False,9,2,False,True,medium
+2025-08-27T09:11:25.792218,Webhook triggered successfully,normal,cache,qa,DEBUG,test,4917,True,30,3,False,False,False,False,False,9,2,False,True,medium
+2025-08-28T13:11:25.792218,Running unit tests,normal,auth,sandbox,TRACE,deploy,1535,True,18,3,False,False,False,False,False,13,3,False,True,medium
+2025-08-28T17:11:25.792218,ERROR: Memory usage critical: 97%,anomaly,cache,production,ERROR,test,25358,False,33,5,True,False,False,True,False,17,3,False,True,slow
+2025-08-27T22:11:25.792218,CPU usage: 48%,normal,auth,sandbox,DEBUG,deploy,498,True,14,3,False,False,False,False,False,22,2,False,False,fast
+2025-08-27T05:11:25.792218,Checked out branch main,normal,backend,qa,DEBUG,monitor,4076,True,23,4,False,False,False,False,False,5,2,False,False,medium
+2025-08-27T19:11:25.792218,Webpack build completed,normal,scheduler,sandbox,TRACE,test,109,True,23,3,False,False,False,False,False,19,2,False,False,fast
+2025-08-28T13:11:25.792218,Deploying to staging environment,normal,database,production,TRACE,monitor,3415,True,32,4,False,False,False,False,False,13,3,False,True,medium
+2025-08-28T04:11:25.792218,FATAL: Test data corruption detected,anomaly,backend,staging,FATAL,monitor,3708,False,36,5,False,False,False,False,False,4,3,False,False,medium
+2025-08-27T01:11:25.792218,Merged pull request #604,normal,worker,test,DEBUG,deploy,2548,True,24,4,False,False,False,False,False,1,2,False,False,medium
+2025-08-28T08:11:25.792218,Performance tests passed,normal,worker,sandbox,TRACE,monitor,500,True,24,3,False,False,False,False,False,8,3,False,False,fast
+2025-08-27T01:11:25.792218,Webpack build completed,normal,scheduler,test,DEBUG,monitor,2193,True,23,3,False,False,False,False,False,1,2,False,False,medium
+2025-08-28T07:11:25.792218,ERROR: Module 'lodash' not found,anomaly,frontend,dev,WARN,test,2021,False,32,5,True,False,False,False,False,7,3,False,False,medium
+2025-08-28T05:11:25.792218,Cache warmed up successfully,normal,backend,production,DEBUG,monitor,2250,True,28,4,False,False,False,False,False,5,3,False,False,medium
+2025-08-27T23:11:25.792218,CRITICAL: High CPU usage detected: 88%,anomaly,auth,qa,FATAL,test,22998,False,38,6,False,False,False,False,False,23,2,False,False,slow
+2025-08-28T11:11:25.792218,Database migration completed,normal,worker,test,DEBUG,monitor,2304,True,28,3,False,False,False,False,False,11,3,False,True,medium
+2025-08-27T22:11:25.792218,Logging configured successfully,normal,auth,qa,INFO,build,1749,True,31,3,False,False,False,False,False,22,2,False,False,medium
+2025-08-26T23:11:25.792218,Response time: 155ms,normal,database,production,TRACE,monitor,1091,True,20,3,False,False,False,False,False,23,1,False,False,medium
+2025-08-28T02:11:25.792218,Indexes optimized,normal,api,production,TRACE,test,3543,True,17,2,False,False,False,False,False,2,3,False,False,medium
+2025-08-27T00:11:25.792218,Running unit tests,normal,backend,dev,TRACE,deploy,1936,True,18,3,False,False,False,False,False,0,2,False,False,medium
+2025-08-27T08:11:25.792218,Volume mounted successfully,normal,database,test,TRACE,monitor,253,True,27,3,False,False,False,False,False,8,2,False,False,fast
+2025-08-28T10:11:25.792218,Starting build process for commit 3473b9f,normal,backend,test,INFO,monitor,2696,True,41,6,False,False,False,False,False,10,3,False,True,medium
+2025-08-26T22:11:25.792218,Throughput: 638 req/s,normal,auth,test,INFO,test,822,True,21,3,False,False,False,False,False,22,1,False,False,fast
+2025-08-27T19:11:25.792218,Running integration tests,normal,frontend,qa,DEBUG,deploy,3364,True,25,3,False,False,False,False,False,19,2,False,False,medium
+2025-08-28T05:11:25.792218,Code quality gate passed,normal,cache,qa,TRACE,deploy,2748,True,24,4,False,False,False,False,False,5,3,False,False,medium
+2025-08-27T10:11:25.792218,ERROR: Database migration failed,anomaly,worker,dev,WARN,test,16902,False,32,4,True,False,False,False,False,10,2,False,True,slow
+2025-08-27T11:11:25.792218,CRITICAL: Deployment timeout after 79 minutes,anomaly,backend,dev,FATAL,deploy,28746,False,45,6,False,False,True,False,False,11,2,False,True,slow
+2025-08-27T10:11:25.792218,Ingress rules applied,normal,worker,staging,DEBUG,monitor,2258,True,21,3,False,False,False,False,False,10,2,False,True,medium
+2025-08-27T00:11:25.792218,SECURITY: Suspicious activity in logs,anomaly,cache,test,CRITICAL,build,21914,False,37,5,False,False,False,False,False,0,2,False,False,slow
+2025-08-28T05:11:25.792218,ERROR: Terraform apply failed,anomaly,auth,qa,ERROR,deploy,14443,False,29,4,True,False,False,False,False,5,3,False,False,slow
+2025-08-27T17:11:25.792218,Email report generated,normal,cache,dev,DEBUG,build,4419,True,22,3,False,False,False,False,False,17,2,False,True,medium
+2025-08-28T11:11:25.792218,Logging configured successfully,normal,worker,dev,INFO,deploy,2610,True,31,3,False,False,False,False,False,11,3,False,True,medium
+2025-08-28T01:11:25.792218,Pod status: Running,normal,scheduler,test,TRACE,deploy,3182,True,19,3,False,False,False,False,False,1,3,False,False,medium
+2025-08-27T19:11:25.792218,Deploying to staging environment,normal,frontend,production,TRACE,deploy,929,True,32,4,False,False,False,False,False,19,2,False,False,fast
+2025-08-27T18:11:25.792218,Rollout completed: 100% traffic routed,normal,cache,qa,TRACE,test,3075,True,38,5,False,False,False,False,False,18,2,False,False,medium
+2025-08-27T04:11:25.792218,Ingress rules applied,normal,backend,qa,INFO,build,2960,True,21,3,False,False,False,False,False,4,2,False,False,medium
+2025-08-28T00:11:25.792218,Merged pull request #825,normal,database,dev,INFO,deploy,1301,True,24,4,False,False,False,False,False,0,3,False,False,medium
+2025-08-27T02:11:25.792218,Security scan completed - no vulnerabilities found,normal,api,staging,INFO,build,837,True,50,7,False,False,False,False,False,2,2,False,False,fast
+2025-08-28T11:11:25.792218,Volume mounted successfully,normal,backend,sandbox,TRACE,build,494,True,27,3,False,False,False,False,False,11,3,False,True,fast
+2025-08-26T21:11:25.792218,Code quality gate passed,normal,backend,sandbox,TRACE,deploy,4998,True,24,4,False,False,False,False,False,21,1,False,False,medium
+2025-08-27T21:11:25.792218,Deploying to staging environment,normal,frontend,staging,TRACE,build,3805,True,32,4,False,False,False,False,False,21,2,False,False,medium
+2025-08-28T07:11:25.792218,CRITICAL: Payment gateway failure,anomaly,api,qa,ERROR,deploy,16445,False,33,4,True,False,False,False,False,7,3,False,False,slow
+2025-08-27T02:11:25.792218,Pod status: Running,normal,database,staging,TRACE,build,3011,True,19,3,False,False,False,False,False,2,2,False,False,medium
+2025-08-27T02:11:25.792218,Status badge updated,normal,frontend,production,INFO,deploy,4079,True,20,3,False,False,False,False,False,2,2,False,False,medium
+2025-08-28T01:11:25.792218,Dependencies installed successfully in 365s,normal,frontend,staging,INFO,deploy,1450,True,43,5,False,False,False,False,False,1,3,False,False,medium
+2025-08-27T21:11:25.792218,Starting deployment to production,normal,api,production,TRACE,monitor,3038,True,33,4,False,False,False,False,False,21,2,False,False,medium
+2025-08-27T11:11:25.792218,Deploying to production environment,normal,frontend,sandbox,TRACE,deploy,956,True,35,4,False,False,False,False,False,11,2,False,True,fast
+2025-08-28T17:11:25.792218,Memory usage: 32%,normal,backend,qa,TRACE,monitor,4975,True,17,3,False,False,False,True,False,17,3,False,True,medium
+2025-08-28T01:11:25.792218,Response time: 150ms,normal,cache,sandbox,TRACE,test,1502,True,20,3,False,False,False,False,False,1,3,False,False,medium
+2025-08-27T12:11:25.792218,Slack notification sent,normal,auth,staging,INFO,build,3433,True,23,3,False,False,False,False,False,12,2,False,True,medium
+2025-08-27T11:11:25.792218,Image tagged as v2.1.9,normal,scheduler,qa,INFO,build,3026,True,22,4,False,False,False,False,False,11,2,False,True,medium
+2025-08-27T12:11:25.792218,Starting deployment to staging,normal,backend,dev,DEBUG,monitor,3940,True,30,4,False,False,False,False,False,12,2,False,True,medium
+2025-08-28T10:11:25.792218,CRITICAL: Storage backend failure,anomaly,auth,qa,WARN,build,5018,False,33,4,True,False,False,False,False,10,3,False,True,slow
+2025-08-28T00:11:25.792218,Volume mounted successfully,normal,backend,qa,INFO,build,1426,True,27,3,False,False,False,False,False,0,3,False,False,medium
+2025-08-26T23:11:25.792218,FATAL: Encryption key rotation failed,anomaly,api,test,CRITICAL,build,15908,False,37,5,True,False,False,False,False,23,1,False,False,slow
+2025-08-26T21:11:25.792218,Code quality gate passed,normal,scheduler,sandbox,INFO,deploy,1177,True,24,4,False,False,False,False,False,21,1,False,False,medium
+2025-08-27T12:11:25.792218,Secrets loaded successfully,normal,scheduler,staging,INFO,build,3805,True,27,3,False,False,False,False,False,12,2,False,True,medium
+2025-08-28T13:11:25.792218,Starting test suite execution,normal,database,sandbox,INFO,deploy,1666,True,29,4,False,False,False,False,False,13,3,False,True,medium
+2025-08-27T15:11:25.792218,Starting deployment to dev,normal,scheduler,production,DEBUG,test,2826,True,26,4,False,False,False,False,False,15,2,False,True,medium
+2025-08-27T02:11:25.792218,Commit 3041289 validated,normal,cache,test,DEBUG,monitor,1783,True,24,3,False,False,False,False,False,2,2,False,False,medium
+2025-08-27T17:11:25.792218,Linting completed with no issues,normal,database,staging,TRACE,monitor,2417,True,32,5,False,False,False,False,False,17,2,False,True,medium
+2025-08-28T08:11:25.792218,Pod status: Running,normal,frontend,production,DEBUG,monitor,696,True,19,3,False,False,False,False,False,8,3,False,False,fast
+2025-08-26T23:11:25.792218,Running unit tests,normal,worker,staging,DEBUG,build,4343,True,18,3,False,False,False,False,False,23,1,False,False,medium
+2025-08-28T00:11:25.792218,Commit 1e08941 validated,normal,api,staging,TRACE,test,4417,True,24,3,False,False,False,False,False,0,3,False,False,medium
+2025-08-27T08:11:25.792218,Error rate: 0.44%,normal,frontend,staging,INFO,deploy,4363,True,17,3,True,False,False,False,False,8,2,False,False,medium
+2025-08-27T01:11:25.792218,Code quality gate passed,normal,api,production,TRACE,build,3747,True,24,4,False,False,False,False,False,1,2,False,False,medium
+2025-08-26T23:11:25.792218,Running npm install,normal,api,qa,INFO,deploy,3444,True,19,3,False,False,False,False,False,23,1,False,False,medium
+2025-08-28T13:11:25.792218,Compilation successful,normal,database,qa,INFO,test,351,True,22,2,False,False,False,False,False,13,3,False,True,fast
+2025-08-27T13:11:25.792218,Webhook triggered successfully,normal,api,test,DEBUG,test,3340,True,30,3,False,False,False,False,False,13,2,False,True,medium
+2025-08-27T10:11:25.792218,All tests passed successfully,normal,scheduler,sandbox,TRACE,monitor,4296,True,29,4,False,False,False,False,False,10,2,False,True,medium
+2025-08-28T10:11:25.792218,Initializing build environment,normal,auth,dev,TRACE,build,147,True,30,3,False,False,False,False,False,10,3,False,True,fast
+2025-08-28T20:11:25.792218,Pod status: Running,normal,backend,dev,INFO,test,482,True,19,3,False,False,False,False,False,20,3,False,False,fast
+2025-08-27T10:11:25.792218,Throughput: 561 req/s,normal,api,qa,INFO,monitor,1527,True,21,3,False,False,False,False,False,10,2,False,True,medium
+2025-08-27T21:11:25.792218,Database connection established,normal,cache,test,INFO,build,1188,True,31,3,False,False,False,False,True,21,2,False,False,medium
+2025-08-27T18:11:25.792218,CRITICAL: License check failed - invalid license,anomaly,worker,sandbox,WARN,test,12787,False,48,7,True,False,False,False,False,18,2,False,False,slow
+2025-08-27T07:11:25.792218,Initializing build environment,normal,worker,production,DEBUG,deploy,1630,True,30,3,False,False,False,False,False,7,2,False,False,medium
+2025-08-28T19:11:25.792218,Running integration tests,normal,backend,dev,TRACE,test,3025,True,25,3,False,False,False,False,False,19,3,False,False,medium
+2025-08-27T00:11:25.792218,Logging configured successfully,normal,database,sandbox,INFO,build,2042,True,31,3,False,False,False,False,False,0,2,False,False,medium
+2025-08-28T00:11:25.792218,Branch protection rules satisfied,normal,frontend,staging,TRACE,test,2652,True,33,4,False,False,False,False,False,0,3,False,False,medium
+2025-08-27T15:11:25.792218,Running npm install,normal,scheduler,production,INFO,build,3548,True,19,3,False,False,False,False,False,15,2,False,True,medium
+2025-08-28T17:11:25.792218,BUILD FAILED: Compilation errors detected,anomaly,cache,test,CRITICAL,deploy,12962,False,41,5,True,False,False,False,False,17,3,False,True,slow
+2025-08-27T15:11:25.792218,Health check passed,normal,database,production,DEBUG,monitor,508,True,19,3,False,False,False,False,False,15,2,False,True,fast
+2025-08-28T10:11:25.792218,ERROR: Docker build failed - base image not found,anomaly,auth,test,CRITICAL,deploy,1762,False,49,9,True,False,False,False,False,10,3,False,True,medium
+2025-08-28T09:11:25.792218,Database migration completed,normal,scheduler,test,DEBUG,monitor,3811,True,28,3,False,False,False,False,False,9,3,False,True,medium
+2025-08-28T08:11:25.792218,ERROR: Container registry authentication failed,anomaly,worker,test,ERROR,deploy,18832,False,47,5,True,False,False,False,False,8,3,False,False,slow
+2025-08-27T23:11:25.792218,Indexes optimized,normal,worker,test,DEBUG,monitor,4401,True,17,2,False,False,False,False,False,23,2,False,False,medium
+2025-08-27T14:11:25.792218,FATAL: Load test crashed the system,anomaly,backend,sandbox,ERROR,deploy,3175,False,35,6,False,False,False,False,False,14,2,False,True,medium
+2025-08-28T09:11:25.792218,Starting deployment to production,normal,auth,production,DEBUG,build,1944,True,33,4,False,False,False,False,False,9,3,False,True,medium
+2025-08-27T09:11:25.792218,Database migration completed,normal,cache,production,DEBUG,monitor,3706,True,28,3,False,False,False,False,False,9,2,False,True,medium
+2025-08-28T12:11:25.792218,Image tagged as v3.8.24,normal,cache,production,INFO,deploy,1094,True,23,4,False,False,False,False,False,12,3,False,True,medium
+2025-08-28T06:11:25.792218,Query performance within limits,normal,auth,dev,INFO,test,3573,True,31,4,False,False,False,False,False,6,3,False,False,medium
+2025-08-27T09:11:25.792218,Running end-to-end tests,normal,cache,dev,DEBUG,deploy,563,True,24,3,False,False,False,False,False,9,2,False,True,fast
+2025-08-28T14:11:25.792218,ERROR: Worker process crashed,anomaly,backend,test,WARN,build,12420,False,29,4,True,False,False,False,False,14,3,False,True,slow
+2025-08-27T13:11:25.792218,Rollout completed: 100% traffic routed,normal,scheduler,dev,INFO,monitor,3748,True,38,5,False,False,False,False,False,13,2,False,True,medium
+2025-08-27T15:11:25.792218,Running npm install,normal,cache,staging,DEBUG,test,4831,True,19,3,False,False,False,False,False,15,2,False,True,medium
+2025-08-27T19:11:25.792218,Deployment completed successfully,normal,frontend,test,INFO,monitor,2931,True,33,3,False,False,False,False,False,19,2,False,False,medium
+2025-08-28T09:11:25.792218,Installing dependencies from requirements.txt,normal,database,dev,TRACE,monitor,1175,True,45,4,False,False,False,False,False,9,3,False,True,medium
+2025-08-27T02:11:25.792218,Dependencies installed successfully in 408s,normal,worker,sandbox,INFO,deploy,4363,True,43,5,False,False,False,False,False,2,2,False,False,medium
+2025-08-28T17:11:25.792218,Secrets loaded successfully,normal,database,staging,TRACE,build,3201,True,27,3,False,False,False,False,False,17,3,False,True,medium
+2025-08-27T19:11:25.792218,Load testing completed successfully,normal,auth,sandbox,TRACE,monitor,3972,True,35,4,False,False,False,False,False,19,2,False,False,medium
+2025-08-27T18:11:25.792218,Installing dependencies from package.json,normal,worker,test,TRACE,monitor,3853,True,41,4,False,False,False,False,False,18,2,False,False,medium
+2025-08-28T18:11:25.792218,Installing dependencies from package.json,normal,database,sandbox,INFO,monitor,517,True,41,4,False,False,False,False,False,18,3,False,False,fast
+2025-08-27T04:11:25.792218,Running pip install -r requirements.txt,normal,database,test,INFO,deploy,4197,True,39,5,False,False,False,False,False,4,2,False,False,medium
+2025-08-28T03:11:25.792218,Code quality gate passed,normal,database,production,DEBUG,test,2233,True,24,4,False,False,False,False,False,3,3,False,False,medium
+2025-08-27T11:11:25.792218,SECURITY ALERT: Unauthorized access attempt,anomaly,scheduler,sandbox,FATAL,deploy,25213,False,43,5,False,False,False,False,False,11,2,False,True,slow
+2025-08-27T20:11:25.792218,ERROR: Resource limits exceeded,anomaly,database,test,CRITICAL,deploy,6970,False,31,4,True,False,False,False,False,20,2,False,False,slow
+2025-08-26T22:11:25.792218,Schema validation passed,normal,backend,qa,INFO,monitor,663,True,24,3,False,False,False,False,False,22,1,False,False,fast
+2025-08-27T07:11:25.792218,Image tagged as v4.5.45,normal,auth,sandbox,INFO,test,537,True,23,4,False,False,False,False,False,7,2,False,False,fast
+2025-08-28T06:11:25.792218,Database connection established,normal,worker,staging,TRACE,monitor,2142,True,31,3,False,False,False,False,True,6,3,False,False,medium
+2025-08-27T00:11:25.792218,Deployment completed successfully,normal,backend,qa,TRACE,build,4296,True,33,3,False,False,False,False,False,0,2,False,False,medium
+2025-08-27T19:11:25.792218,Transaction completed successfully,normal,backend,sandbox,INFO,monitor,1305,True,34,3,False,False,False,False,False,19,2,False,False,medium
+2025-08-27T00:11:25.792218,Webpack build completed,normal,auth,dev,INFO,monitor,4108,True,23,3,False,False,False,False,False,0,2,False,False,medium
+2025-08-28T17:11:25.792218,Running end-to-end tests,normal,backend,test,INFO,deploy,4031,True,24,3,False,False,False,False,False,17,3,False,True,medium
+2025-08-28T01:11:25.792218,Load balancer health check passed,normal,api,dev,DEBUG,build,1030,True,33,5,False,False,False,False,False,1,3,False,False,medium
+2025-08-28T08:11:25.792218,Metrics collection enabled,normal,frontend,staging,TRACE,build,3693,True,26,3,False,False,False,False,False,8,3,False,False,medium
+2025-08-27T16:11:25.792218,Webpack build completed,normal,worker,staging,TRACE,deploy,4713,True,23,3,False,False,False,False,False,16,2,False,True,medium
+2025-08-27T19:11:25.792218,Linting completed with no issues,normal,cache,dev,TRACE,monitor,281,True,32,5,False,False,False,False,False,19,2,False,False,fast
+2025-08-27T06:11:25.792218,Compiling TypeScript files,normal,cache,qa,TRACE,monitor,2407,True,26,3,False,False,False,False,False,6,2,False,False,medium
+2025-08-27T06:11:25.792218,Secrets loaded successfully,normal,auth,qa,INFO,monitor,681,True,27,3,False,False,False,False,False,6,2,False,False,fast
+2025-08-27T23:11:25.792218,Pod status: Running,normal,scheduler,sandbox,INFO,monitor,3076,True,19,3,False,False,False,False,False,23,2,False,False,medium
+2025-08-28T05:11:25.792218,Deploying to staging environment,normal,scheduler,staging,INFO,deploy,3873,True,32,4,False,False,False,False,False,5,3,False,False,medium
+2025-08-27T10:11:25.792218,Service is healthy and responding,normal,auth,sandbox,INFO,test,4354,True,33,5,False,False,False,False,False,10,2,False,True,medium
+2025-08-28T13:11:25.792218,Health check passed,normal,frontend,staging,TRACE,monitor,1744,True,19,3,False,False,False,False,False,13,3,False,True,medium
+2025-08-28T18:11:25.792218,Database migration completed,normal,database,qa,INFO,build,4594,True,28,3,False,False,False,False,False,18,3,False,False,medium
+2025-08-28T20:11:25.792218,FATAL: Message broker connection lost,anomaly,scheduler,sandbox,CRITICAL,deploy,21201,False,37,5,False,False,False,False,True,20,3,False,False,slow
+2025-08-27T01:11:25.792218,Code coverage: 84%,normal,api,production,DEBUG,build,1987,True,18,3,False,False,False,False,False,1,2,False,False,medium
+2025-08-27T12:11:25.792218,Dependencies installed successfully in 208s,normal,cache,dev,DEBUG,test,933,True,43,5,False,False,False,False,False,12,2,False,True,fast
+2025-08-27T19:11:25.792218,Assets bundled successfully,normal,cache,test,DEBUG,deploy,4636,True,27,3,False,False,False,False,False,19,2,False,False,medium
+2025-08-27T00:11:25.792218,Rollout completed: 100% traffic routed,normal,frontend,dev,DEBUG,deploy,580,True,38,5,False,False,False,False,False,0,2,False,False,fast
+2025-08-28T01:11:25.792218,CRITICAL: Build timeout after 34 minutes,anomaly,frontend,production,CRITICAL,build,13316,False,40,6,False,False,True,False,False,1,3,False,False,slow
+2025-08-28T11:11:25.792218,CRITICAL: License check failed - invalid license,anomaly,scheduler,staging,ERROR,monitor,24867,False,48,7,True,False,False,False,False,11,3,False,True,slow
+2025-08-27T13:11:25.792218,Response time: 59ms,normal,api,staging,INFO,deploy,2795,True,19,3,False,False,False,False,False,13,2,False,True,medium
+2025-08-28T14:11:25.792218,Starting deployment to production,normal,worker,test,TRACE,monitor,2427,True,33,4,False,False,False,False,False,14,3,False,True,medium
+2025-08-28T07:11:25.792218,Service mesh health check passed,normal,frontend,dev,INFO,monitor,989,True,32,5,False,False,False,False,False,7,3,False,False,fast
+2025-08-28T11:11:25.792218,Service mesh health check passed,normal,scheduler,dev,INFO,deploy,774,True,32,5,False,False,False,False,False,11,3,False,True,fast
+2025-08-26T22:11:25.792218,Webhook triggered successfully,normal,api,sandbox,INFO,test,1672,True,30,3,False,False,False,False,False,22,1,False,False,medium
+2025-08-28T12:11:25.792218,Initializing build environment,normal,frontend,staging,TRACE,deploy,1284,True,30,3,False,False,False,False,False,12,3,False,True,medium
+2025-08-28T09:11:25.792218,ERROR: Memory usage critical: 98%,anomaly,database,production,ERROR,build,16147,False,33,5,True,False,False,True,False,9,3,False,True,slow
+2025-08-27T08:11:25.792218,Email report generated,normal,cache,production,INFO,test,1523,True,22,3,False,False,False,False,False,8,2,False,False,medium
+2025-08-28T07:11:25.792218,Secrets loaded successfully,normal,database,sandbox,DEBUG,monitor,4102,True,27,3,False,False,False,False,False,7,3,False,False,medium
+2025-08-26T23:11:25.792218,Pod status: Running,normal,backend,sandbox,TRACE,build,3892,True,19,3,False,False,False,False,False,23,1,False,False,medium
+2025-08-28T07:11:25.792218,Linting completed with no issues,normal,scheduler,staging,TRACE,build,3524,True,32,5,False,False,False,False,False,7,3,False,False,medium
+2025-08-28T10:11:25.792218,Assets bundled successfully,normal,backend,sandbox,DEBUG,monitor,2427,True,27,3,False,False,False,False,False,10,3,False,True,medium
+2025-08-28T06:11:25.792218,Linting completed with no issues,normal,api,staging,TRACE,build,1739,True,32,5,False,False,False,False,False,6,3,False,False,medium
+2025-08-27T03:11:25.792218,Deploying to production environment,normal,backend,production,TRACE,deploy,1021,True,35,4,False,False,False,False,False,3,2,False,False,medium
+2025-08-27T15:11:25.792218,Volume mounted successfully,normal,api,dev,INFO,build,3934,True,27,3,False,False,False,False,False,15,2,False,True,medium
+2025-08-27T21:11:25.792218,Test execution completed in 595s,normal,database,qa,TRACE,build,1868,True,32,5,False,False,False,False,False,21,2,False,False,medium
+2025-08-28T06:11:25.792218,ERROR: Service dependency unavailable,anomaly,scheduler,qa,ERROR,deploy,26324,False,37,4,True,False,False,False,False,6,3,False,False,slow
+2025-08-28T07:11:25.792218,Compiling TypeScript files,normal,frontend,production,INFO,deploy,4652,True,26,3,False,False,False,False,False,7,3,False,False,medium
+2025-08-27T03:11:25.792218,Code quality gate passed,normal,frontend,production,DEBUG,test,1729,True,24,4,False,False,False,False,False,3,2,False,False,medium
+2025-08-28T11:11:25.792218,FATAL: SSL certificate validation failed,anomaly,worker,production,WARN,build,11254,False,40,5,True,False,False,False,False,11,3,False,True,slow
+2025-08-27T20:11:25.792218,Service mesh health check passed,normal,worker,sandbox,INFO,test,4111,True,32,5,False,False,False,False,False,20,2,False,False,medium
+2025-08-27T02:11:25.792218,Health check passed,normal,api,dev,TRACE,build,3686,True,19,3,False,False,False,False,False,2,2,False,False,medium
+2025-08-27T06:11:25.792218,ERROR: Docker build failed - base image not found,anomaly,scheduler,staging,WARN,test,3225,False,49,9,True,False,False,False,False,6,2,False,False,medium
+2025-08-27T18:11:25.792218,Compilation successful,normal,api,qa,DEBUG,monitor,4027,True,22,2,False,False,False,False,False,18,2,False,False,medium
+2025-08-28T06:11:25.792218,Load testing completed successfully,normal,backend,sandbox,TRACE,build,1979,True,35,4,False,False,False,False,False,6,3,False,False,medium
+2025-08-27T10:11:25.792218,Docker image built successfully,normal,worker,dev,INFO,deploy,701,True,31,4,False,False,False,False,False,10,2,False,True,fast
+2025-08-27T15:11:25.792218,Build completed successfully in 208s,normal,frontend,test,INFO,deploy,4054,True,36,5,False,False,False,False,False,15,2,False,True,medium
+2025-08-28T01:11:25.792218,DEPLOY FAILED: Unable to connect to staging,anomaly,cache,sandbox,ERROR,test,4337,False,43,7,True,False,False,False,False,1,3,False,False,medium
+2025-08-27T12:11:25.792218,Data backup completed,normal,auth,dev,DEBUG,deploy,4813,True,21,3,False,False,False,False,False,12,2,False,True,medium
+2025-08-27T09:11:25.792218,Image tagged as v6.11.13,normal,backend,qa,DEBUG,test,4607,True,24,4,False,False,False,False,False,9,2,False,True,medium
+2025-08-27T08:11:25.792218,FATAL: Database deadlock detected,anomaly,frontend,production,ERROR,deploy,8935,False,33,4,False,False,False,False,False,8,2,False,False,slow
+2025-08-27T01:11:25.792218,SECURITY: Suspicious activity in logs,anomaly,auth,dev,WARN,monitor,1323,False,37,5,False,False,False,False,False,1,2,False,False,medium
+2025-08-28T14:11:25.792218,All tests passed successfully,normal,worker,qa,TRACE,test,3862,True,29,4,False,False,False,False,False,14,3,False,True,medium
+2025-08-27T08:11:25.792218,Starting build process for commit e547b54,normal,api,sandbox,INFO,deploy,3581,True,41,6,False,False,False,False,False,8,2,False,False,medium
+2025-08-26T21:11:25.792218,FATAL: Out of memory during compilation,anomaly,frontend,qa,ERROR,deploy,11667,False,39,6,False,False,False,True,False,21,1,False,False,slow
+2025-08-28T10:11:25.792218,Compiling TypeScript files,normal,cache,sandbox,DEBUG,monitor,1950,True,26,3,False,False,False,False,False,10,3,False,True,medium
+2025-08-28T01:11:25.792218,FATAL: Disk space insufficient for build,anomaly,auth,dev,ERROR,test,6994,False,40,6,False,False,False,False,False,1,3,False,False,slow
+2025-08-26T22:11:25.792218,CRITICAL: High CPU usage detected: 91%,anomaly,backend,test,CRITICAL,deploy,19599,False,38,6,False,False,False,False,False,22,1,False,False,slow
+2025-08-28T14:11:25.792218,Commit 33a2de3 validated,normal,cache,production,TRACE,test,3721,True,24,3,False,False,False,False,False,14,3,False,True,medium
+2025-08-28T07:11:25.792218,ERROR: Load balancer health check timeout,anomaly,scheduler,dev,FATAL,test,16704,False,41,6,True,False,True,False,False,7,3,False,False,slow
+2025-08-27T21:11:25.792218,Checked out branch main,normal,api,qa,INFO,monitor,4633,True,23,4,False,False,False,False,False,21,2,False,False,medium
+2025-08-27T13:11:25.792218,Query performance within limits,normal,api,production,DEBUG,deploy,4652,True,31,4,False,False,False,False,False,13,2,False,True,medium
+2025-08-27T22:11:25.792218,Dashboard metrics refreshed,normal,backend,test,TRACE,test,3770,True,27,3,False,False,False,False,False,22,2,False,False,medium
+2025-08-27T23:11:25.792218,Service is healthy and responding,normal,frontend,qa,TRACE,test,2511,True,33,5,False,False,False,False,False,23,2,False,False,medium
+2025-08-28T07:11:25.792218,Webpack build completed,normal,worker,sandbox,TRACE,deploy,2292,True,23,3,False,False,False,False,False,7,3,False,False,medium
+2025-08-28T12:11:25.792218,Teams webhook delivered,normal,scheduler,test,INFO,deploy,2541,True,23,3,False,False,False,False,False,12,3,False,True,medium
+2025-08-27T03:11:25.792218,Webhook triggered successfully,normal,api,staging,INFO,build,1700,True,30,3,False,False,False,False,False,3,2,False,False,medium
+2025-08-27T21:11:25.792218,Code coverage: 94%,normal,database,staging,DEBUG,test,362,True,18,3,False,False,False,False,False,21,2,False,False,fast
+2025-08-27T16:11:25.792218,FATAL: Kubernetes cluster unreachable,anomaly,scheduler,dev,ERROR,test,10991,False,37,4,False,False,False,False,False,16,2,False,True,slow
+2025-08-28T14:11:25.792218,ERROR: Integration test database connection failed,anomaly,database,production,ERROR,deploy,26541,False,50,6,True,False,False,False,True,14,3,False,True,slow
+2025-08-28T15:11:25.792218,Database migration completed,normal,worker,dev,TRACE,test,2182,True,28,3,False,False,False,False,False,15,3,False,True,medium
+2025-08-27T10:11:25.792218,Webhook triggered successfully,normal,scheduler,qa,INFO,monitor,1271,True,30,3,False,False,False,False,False,10,2,False,True,medium
+2025-08-28T15:11:25.792218,Installing dependencies from package.json,normal,database,dev,DEBUG,deploy,2851,True,41,4,False,False,False,False,False,15,3,False,True,medium
+2025-08-27T00:11:25.792218,CRITICAL: License check failed - invalid license,anomaly,api,sandbox,FATAL,monitor,14443,False,48,7,True,False,False,False,False,0,2,False,False,slow
+2025-08-27T13:11:25.792218,Throughput: 102 req/s,normal,worker,production,TRACE,build,3516,True,21,3,False,False,False,False,False,13,2,False,True,medium
+2025-08-28T12:11:25.792218,Query performance within limits,normal,frontend,dev,DEBUG,test,2950,True,31,4,False,False,False,False,False,12,3,False,True,medium
+2025-08-28T04:11:25.792218,Deploying to production environment,normal,frontend,production,DEBUG,build,3248,True,35,4,False,False,False,False,False,4,3,False,False,medium
+2025-08-27T15:11:25.792218,ERROR: Service dependency unavailable,anomaly,cache,test,FATAL,build,14347,False,37,4,True,False,False,False,False,15,2,False,True,slow
+2025-08-28T17:11:25.792218,Webpack build completed,normal,api,sandbox,DEBUG,build,657,True,23,3,False,False,False,False,False,17,3,False,True,fast
+2025-08-28T06:11:25.792218,Throughput: 597 req/s,normal,worker,staging,INFO,build,3589,True,21,3,False,False,False,False,False,6,3,False,False,medium
+2025-08-27T12:11:25.792218,Ingress rules applied,normal,frontend,sandbox,DEBUG,build,255,True,21,3,False,False,False,False,False,12,2,False,True,fast
+2025-08-27T04:11:25.792218,Webpack build completed,normal,worker,staging,INFO,monitor,4527,True,23,3,False,False,False,False,False,4,2,False,False,medium
+2025-08-28T13:11:25.792218,Installing dependencies from package.json,normal,database,sandbox,DEBUG,monitor,2629,True,41,4,False,False,False,False,False,13,3,False,True,medium
+2025-08-28T10:11:25.792218,Image tagged as v9.0.49,normal,frontend,dev,DEBUG,deploy,1924,True,23,4,False,False,False,False,False,10,3,False,True,medium
+2025-08-27T14:11:25.792218,CRITICAL: High CPU usage detected: 96%,anomaly,database,test,WARN,build,4205,False,38,6,False,False,False,False,False,14,2,False,True,medium
+2025-08-27T01:11:25.792218,Health check passed,normal,scheduler,staging,DEBUG,deploy,4203,True,19,3,False,False,False,False,False,1,2,False,False,medium
+2025-08-28T10:11:25.792218,Deploying to production environment,normal,backend,production,TRACE,test,757,True,35,4,False,False,False,False,False,10,3,False,True,fast
+2025-08-28T14:11:25.792218,DEPLOY FAILED: Unable to connect to sandbox,anomaly,api,dev,CRITICAL,build,27127,False,43,7,True,False,False,False,False,14,3,False,True,slow
+2025-08-28T12:11:25.792218,Checked out branch main,normal,cache,sandbox,TRACE,monitor,4979,True,23,4,False,False,False,False,False,12,3,False,True,medium
+2025-08-27T05:11:25.792218,ERROR: Worker process crashed,anomaly,database,test,ERROR,monitor,2805,False,29,4,True,False,False,False,False,5,2,False,False,medium
+2025-08-28T02:11:25.792218,ERROR: Load balancer health check timeout,anomaly,api,test,FATAL,deploy,29603,False,41,6,True,False,True,False,False,2,3,False,False,slow
+2025-08-28T18:11:25.792218,Database connection established,normal,cache,qa,INFO,build,2458,True,31,3,False,False,False,False,True,18,3,False,False,medium
+2025-08-27T01:11:25.792218,FATAL: End-to-end test environment unreachable,anomaly,worker,test,FATAL,test,18652,False,46,5,False,False,False,False,False,1,2,False,False,slow
+2025-08-28T12:11:25.792218,Service is healthy and responding,normal,database,test,INFO,build,4293,True,33,5,False,False,False,False,False,12,3,False,True,medium
+2025-08-28T08:11:25.792218,Teams webhook delivered,normal,frontend,sandbox,INFO,deploy,1970,True,23,3,False,False,False,False,False,8,3,False,False,medium
+2025-08-27T10:11:25.792218,CRITICAL: License check failed - invalid license,anomaly,frontend,dev,WARN,monitor,28536,False,48,7,True,False,False,False,False,10,2,False,True,slow
+2025-08-27T07:11:25.792218,Health check passed,normal,database,sandbox,DEBUG,deploy,1403,True,19,3,False,False,False,False,False,7,2,False,False,medium
+2025-08-27T19:11:25.792218,Compiling TypeScript files,normal,frontend,production,TRACE,build,1837,True,26,3,False,False,False,False,False,19,2,False,False,medium
+2025-08-27T08:11:25.792218,Deploying to staging environment,normal,frontend,dev,INFO,build,2261,True,32,4,False,False,False,False,False,8,2,False,False,medium
+2025-08-27T16:11:25.792218,Checked out branch release/v1.2.0,normal,frontend,qa,INFO,test,3053,True,33,4,False,False,False,False,False,16,2,False,True,medium
+2025-08-27T23:11:25.792218,Checked out branch feature/auth,normal,auth,dev,TRACE,test,4301,True,31,4,False,False,False,False,False,23,2,False,False,medium
+2025-08-27T02:11:25.792218,Service mesh health check passed,normal,frontend,sandbox,INFO,monitor,2562,True,32,5,False,False,False,False,False,2,2,False,False,medium
+2025-08-28T05:11:25.792218,Transaction completed successfully,normal,database,test,TRACE,build,727,True,34,3,False,False,False,False,False,5,3,False,False,fast
+2025-08-28T08:11:25.792218,CRITICAL: Health check failed after deployment,anomaly,database,staging,ERROR,monitor,24986,False,46,6,True,False,False,False,False,8,3,False,False,slow
+2025-08-26T20:11:25.792218,Throughput: 243 req/s,normal,backend,dev,INFO,test,2233,True,21,3,False,False,False,False,False,20,1,False,False,medium
+2025-08-27T16:11:25.792218,BUILD FAILED: Compilation errors detected,anomaly,scheduler,production,CRITICAL,test,23186,False,41,5,True,False,False,False,False,16,2,False,True,slow
+2025-08-27T13:11:25.792218,CRITICAL: Code coverage below threshold: 13%,anomaly,cache,sandbox,WARN,deploy,8829,False,44,6,False,False,False,False,False,13,2,False,True,slow
+2025-08-28T10:11:25.792218,SECURITY ALERT: Unauthorized access attempt,anomaly,worker,staging,CRITICAL,test,16275,False,43,5,False,False,False,False,False,10,3,False,True,slow
+2025-08-27T05:11:25.792218,Teams webhook delivered,normal,backend,dev,DEBUG,build,471,True,23,3,False,False,False,False,False,5,2,False,False,fast
+2025-08-27T15:11:25.792218,Service endpoints updated,normal,frontend,sandbox,INFO,monitor,1108,True,25,3,False,False,False,False,False,15,2,False,True,medium
+2025-08-27T10:11:25.792218,Assets bundled successfully,normal,worker,test,TRACE,monitor,1917,True,27,3,False,False,False,False,False,10,2,False,True,medium
+2025-08-27T22:11:25.792218,Pod status: Running,normal,frontend,staging,INFO,monitor,4540,True,19,3,False,False,False,False,False,22,2,False,False,medium
+2025-08-28T15:11:25.792218,ERROR: DNS resolution failure,anomaly,scheduler,qa,CRITICAL,deploy,28695,False,29,4,True,False,False,False,False,15,3,False,True,slow
+2025-08-28T07:11:25.792218,ERROR: Canary deployment showing errors,anomaly,api,qa,FATAL,monitor,27755,False,39,5,True,False,False,False,False,7,3,False,False,slow
+2025-08-27T14:11:25.792218,Starting deployment to staging,normal,worker,staging,TRACE,monitor,2801,True,30,4,False,False,False,False,False,14,2,False,True,medium
+2025-08-27T12:11:25.792218,ERROR: Container registry authentication failed,anomaly,backend,staging,FATAL,monitor,7372,False,47,5,True,False,False,False,False,12,2,False,True,slow
+2025-08-27T09:11:25.792218,Compilation successful,normal,worker,staging,DEBUG,build,3750,True,22,2,False,False,False,False,False,9,2,False,True,medium
+2025-08-26T22:11:25.792218,Compilation successful,normal,worker,sandbox,DEBUG,monitor,4822,True,22,2,False,False,False,False,False,22,1,False,False,medium
+2025-08-27T09:11:25.792218,Code coverage: 81%,normal,scheduler,dev,DEBUG,deploy,833,True,18,3,False,False,False,False,False,9,2,False,True,fast
+2025-08-27T02:11:25.792218,Code coverage: 85%,normal,auth,qa,INFO,test,4825,True,18,3,False,False,False,False,False,2,2,False,False,medium
+2025-08-28T00:11:25.792218,Secrets loaded successfully,normal,frontend,dev,INFO,build,1102,True,27,3,False,False,False,False,False,0,3,False,False,medium
+2025-08-27T22:11:25.792218,SECURITY ALERT: Unauthorized access attempt,anomaly,auth,production,WARN,monitor,19939,False,43,5,False,False,False,False,False,22,2,False,False,slow
+2025-08-27T20:11:25.792218,Compiling TypeScript files,normal,scheduler,production,INFO,test,1627,True,26,3,False,False,False,False,False,20,2,False,False,medium
+2025-08-28T04:11:25.792218,Volume mounted successfully,normal,database,sandbox,DEBUG,deploy,2404,True,27,3,False,False,False,False,False,4,3,False,False,medium
+2025-08-28T17:11:25.792218,ERROR: Database connection pool exhausted,anomaly,backend,qa,ERROR,deploy,1619,False,41,5,True,False,False,False,True,17,3,False,True,medium
+2025-08-27T00:11:25.792218,Teams webhook delivered,normal,frontend,staging,DEBUG,deploy,1964,True,23,3,False,False,False,False,False,0,2,False,False,medium
+2025-08-27T22:11:25.792218,Installing dependencies from requirements.txt,normal,auth,production,INFO,deploy,1089,True,45,4,False,False,False,False,False,22,2,False,False,medium
+2025-08-27T05:11:25.792218,Database connection established,normal,backend,dev,DEBUG,monitor,803,True,31,3,False,False,False,False,True,5,2,False,False,fast
+2025-08-28T17:11:25.792218,"Test suite completed: 167 passed, 0 failed",normal,auth,production,DEBUG,monitor,1159,True,42,7,True,False,False,False,False,17,3,False,True,medium
+2025-08-28T02:11:25.792218,Dashboard metrics refreshed,normal,scheduler,sandbox,DEBUG,deploy,4788,True,27,3,False,False,False,False,False,2,3,False,False,medium
+2025-08-28T02:11:25.792218,Load testing completed successfully,normal,backend,production,TRACE,deploy,3125,True,35,4,False,False,False,False,False,2,3,False,False,medium
+2025-08-26T22:11:25.792218,Deploying to production environment,normal,cache,staging,INFO,build,540,True,35,4,False,False,False,False,False,22,1,False,False,fast
+2025-08-28T16:11:25.792218,Assets bundled successfully,normal,backend,qa,TRACE,build,2324,True,27,3,False,False,False,False,False,16,3,False,True,medium
+2025-08-27T16:11:25.792218,Webpack build completed,normal,scheduler,production,TRACE,deploy,1823,True,23,3,False,False,False,False,False,16,2,False,True,medium
+2025-08-28T08:11:25.792218,Service is healthy and responding,normal,backend,staging,TRACE,monitor,864,True,33,5,False,False,False,False,False,8,3,False,False,fast
+2025-08-28T06:11:25.792218,Running integration tests,normal,frontend,dev,DEBUG,build,4749,True,25,3,False,False,False,False,False,6,3,False,False,medium
+2025-08-27T12:11:25.792218,Installing dependencies from package.json,normal,database,sandbox,INFO,monitor,2798,True,41,4,False,False,False,False,False,12,2,False,True,medium
+2025-08-27T19:11:25.792218,Database migration completed,normal,database,dev,TRACE,deploy,3613,True,28,3,False,False,False,False,False,19,2,False,False,medium
+2025-08-28T12:11:25.792218,Error rate: 1.21%,normal,scheduler,dev,TRACE,deploy,3745,True,17,3,True,False,False,False,False,12,3,False,True,medium
+2025-08-28T08:11:25.792218,Deployment completed successfully,normal,scheduler,production,DEBUG,test,4463,True,33,3,False,False,False,False,False,8,3,False,False,medium
+2025-08-27T07:11:25.792218,Installing dependencies from requirements.txt,normal,database,production,INFO,deploy,378,True,45,4,False,False,False,False,False,7,2,False,False,fast
+2025-08-28T08:11:25.792218,Data backup completed,normal,worker,qa,TRACE,build,3952,True,21,3,False,False,False,False,False,8,3,False,False,medium
+2025-08-27T09:11:25.792218,CRITICAL: Data consistency violation,anomaly,worker,sandbox,FATAL,monitor,27688,False,36,4,False,False,False,False,False,9,2,False,True,slow
+2025-08-27T05:11:25.792218,Teams webhook delivered,normal,cache,staging,TRACE,test,1798,True,23,3,False,False,False,False,False,5,2,False,False,medium
+2025-08-27T22:11:25.792218,Running unit tests,normal,scheduler,production,DEBUG,monitor,177,True,18,3,False,False,False,False,False,22,2,False,False,fast
+2025-08-28T04:11:25.792218,Service endpoints updated,normal,auth,test,DEBUG,deploy,469,True,25,3,False,False,False,False,False,4,3,False,False,fast
+2025-08-27T18:11:25.792218,TEST FAILED: 13 tests failed,anomaly,backend,production,WARN,build,14193,False,28,5,True,False,False,False,False,18,2,False,False,slow
+2025-08-28T07:11:25.792218,Schema validation passed,normal,scheduler,production,DEBUG,deploy,3632,True,24,3,False,False,False,False,False,7,3,False,False,medium
+2025-08-26T23:11:25.792218,Webhook triggered successfully,normal,frontend,test,INFO,build,272,True,30,3,False,False,False,False,False,23,1,False,False,fast
+2025-08-28T17:11:25.792218,Merged pull request #546,normal,auth,staging,TRACE,deploy,100,True,24,4,False,False,False,False,False,17,3,False,True,fast
+2025-08-28T19:11:25.792218,Security scan completed - no vulnerabilities found,normal,frontend,qa,INFO,build,1679,True,50,7,False,False,False,False,False,19,3,False,False,medium
+2025-08-28T00:11:25.792218,Load balancer health check passed,normal,frontend,dev,INFO,test,4882,True,33,5,False,False,False,False,False,0,3,False,False,medium
+2025-08-27T15:11:25.792218,Teams webhook delivered,normal,scheduler,sandbox,INFO,deploy,4913,True,23,3,False,False,False,False,False,15,2,False,True,medium
+2025-08-28T11:11:25.792218,Schema validation passed,normal,cache,test,INFO,deploy,3230,True,24,3,False,False,False,False,False,11,3,False,True,medium
+2025-08-28T15:11:25.792218,FATAL: Disk space critical: 1% remaining,anomaly,scheduler,sandbox,FATAL,build,25206,False,40,6,False,False,False,False,False,15,3,False,True,slow
+2025-08-27T15:11:25.792218,Email report generated,normal,api,staging,TRACE,test,2142,True,22,3,False,False,False,False,False,15,2,False,True,medium
+2025-08-27T01:11:25.792218,Installing dependencies from package.json,normal,api,sandbox,TRACE,build,3566,True,41,4,False,False,False,False,False,1,2,False,False,medium
+2025-08-28T18:11:25.792218,ERROR: Code signing failed - certificate expired,anomaly,backend,sandbox,FATAL,test,1601,False,48,7,True,False,False,False,False,18,3,False,False,medium
+2025-08-28T08:11:25.792218,Throughput: 376 req/s,normal,backend,sandbox,INFO,test,320,True,21,3,False,False,False,False,False,8,3,False,False,fast
+2025-08-28T08:11:25.792218,Load testing completed successfully,normal,frontend,test,TRACE,monitor,3698,True,35,4,False,False,False,False,False,8,3,False,False,medium
+2025-08-27T08:11:25.792218,Query performance within limits,normal,scheduler,dev,DEBUG,deploy,2479,True,31,4,False,False,False,False,False,8,2,False,False,medium
+2025-08-28T10:11:25.792218,Starting build process for commit 18cd238,normal,frontend,staging,TRACE,monitor,3170,True,41,6,False,False,False,False,False,10,3,False,True,medium
+2025-08-28T03:11:25.792218,Compilation successful,normal,cache,test,DEBUG,test,2483,True,22,2,False,False,False,False,False,3,3,False,False,medium
+2025-08-27T13:11:25.792218,Deployment completed successfully,normal,api,sandbox,INFO,deploy,1686,True,33,3,False,False,False,False,False,13,2,False,True,medium
+2025-08-27T23:11:25.792218,Container started successfully,normal,worker,dev,DEBUG,build,1738,True,30,3,False,False,False,False,False,23,2,False,False,medium
+2025-08-28T12:11:25.792218,CPU usage: 38%,normal,api,dev,DEBUG,build,2504,True,14,3,False,False,False,False,False,12,3,False,True,medium
+2025-08-28T03:11:25.792218,Dashboard metrics refreshed,normal,backend,production,DEBUG,build,1298,True,27,3,False,False,False,False,False,3,3,False,False,medium
+2025-08-27T23:11:25.792218,Cache warmed up successfully,normal,frontend,dev,DEBUG,deploy,4868,True,28,4,False,False,False,False,False,23,2,False,False,medium
+2025-08-27T17:11:25.792218,Dependencies installed successfully in 292s,normal,auth,qa,DEBUG,monitor,523,True,43,5,False,False,False,False,False,17,2,False,True,fast
+2025-08-28T14:11:25.792218,Compilation successful,normal,api,qa,DEBUG,monitor,4990,True,22,2,False,False,False,False,False,14,3,False,True,medium
+2025-08-28T01:11:25.792218,Load testing completed successfully,normal,scheduler,sandbox,DEBUG,monitor,1039,True,35,4,False,False,False,False,False,1,3,False,False,medium
+2025-08-28T18:11:25.792218,Checked out branch hotfix/urgent,normal,database,production,INFO,build,3648,True,32,4,False,False,False,False,False,18,3,False,False,medium
+2025-08-27T03:11:25.792218,FATAL: Data breach attempt detected,anomaly,database,sandbox,FATAL,monitor,7790,False,35,5,False,False,False,False,False,3,2,False,False,slow
+2025-08-28T14:11:25.792218,CRITICAL: High CPU usage detected: 86%,anomaly,cache,sandbox,CRITICAL,build,19203,False,38,6,False,False,False,False,False,14,3,False,True,slow
+2025-08-28T09:11:25.792218,Dashboard metrics refreshed,normal,frontend,production,DEBUG,build,1189,True,27,3,False,False,False,False,False,9,3,False,True,medium
+2025-08-27T13:11:25.792218,Performance tests passed,normal,frontend,qa,DEBUG,test,3235,True,24,3,False,False,False,False,False,13,2,False,True,medium
+2025-08-28T15:11:25.792218,Running integration tests,normal,api,qa,INFO,monitor,107,True,25,3,False,False,False,False,False,15,3,False,True,fast
+2025-08-28T18:11:25.792218,Dependencies installed successfully in 42s,normal,scheduler,staging,INFO,monitor,2358,True,42,5,False,False,False,False,False,18,3,False,False,medium
+2025-08-28T06:11:25.792218,Installing dependencies from package.json,normal,backend,sandbox,TRACE,test,3580,True,41,4,False,False,False,False,False,6,3,False,False,medium
+2025-08-28T11:11:25.792218,Indexes optimized,normal,scheduler,dev,INFO,monitor,628,True,17,2,False,False,False,False,False,11,3,False,True,fast
+2025-08-27T05:11:25.792218,Schema validation passed,normal,auth,qa,DEBUG,deploy,4103,True,24,3,False,False,False,False,False,5,2,False,False,medium
+2025-08-27T11:11:25.792218,Dashboard metrics refreshed,normal,cache,dev,INFO,test,3959,True,27,3,False,False,False,False,False,11,2,False,True,medium
+2025-08-27T10:11:25.792218,Running integration tests,normal,frontend,staging,INFO,deploy,3826,True,25,3,False,False,False,False,False,10,2,False,True,medium
+2025-08-28T06:11:25.792218,Running integration tests,normal,backend,dev,DEBUG,monitor,164,True,25,3,False,False,False,False,False,6,3,False,False,fast
+2025-08-28T09:11:25.792218,Compiling TypeScript files,normal,cache,test,TRACE,deploy,4479,True,26,3,False,False,False,False,False,9,3,False,True,medium
+2025-08-28T13:11:25.792218,Health check passed,normal,scheduler,qa,DEBUG,monitor,277,True,19,3,False,False,False,False,False,13,3,False,True,fast
+2025-08-27T21:11:25.792218,Service is healthy and responding,normal,frontend,test,DEBUG,test,968,True,33,5,False,False,False,False,False,21,2,False,False,fast
+2025-08-28T04:11:25.792218,Slack notification sent,normal,worker,test,INFO,build,1874,True,23,3,False,False,False,False,False,4,3,False,False,medium
+2025-08-27T13:11:25.792218,Running integration tests,normal,frontend,staging,INFO,deploy,1245,True,25,3,False,False,False,False,False,13,2,False,True,medium
+2025-08-27T08:11:25.792218,Load balancer health check passed,normal,worker,qa,DEBUG,test,4854,True,33,5,False,False,False,False,False,8,2,False,False,medium
+2025-08-28T17:11:25.792218,Pod status: Running,normal,frontend,dev,INFO,deploy,2605,True,19,3,False,False,False,False,False,17,3,False,True,medium
+2025-08-27T07:11:25.792218,Service endpoints updated,normal,backend,sandbox,DEBUG,deploy,1324,True,25,3,False,False,False,False,False,7,2,False,False,medium
+2025-08-28T18:11:25.792218,Service mesh health check passed,normal,worker,test,TRACE,build,2128,True,32,5,False,False,False,False,False,18,3,False,False,medium
+2025-08-26T23:11:25.792218,Logging configured successfully,normal,database,sandbox,TRACE,deploy,945,True,31,3,False,False,False,False,False,23,1,False,False,fast
+2025-08-27T04:11:25.792218,Linting completed with no issues,normal,frontend,production,DEBUG,build,1293,True,32,5,False,False,False,False,False,4,2,False,False,medium
+2025-08-26T23:11:25.792218,Deployment completed successfully,normal,backend,dev,DEBUG,test,2879,True,33,3,False,False,False,False,False,23,1,False,False,medium
+2025-08-28T00:11:25.792218,CPU usage: 31%,normal,worker,dev,TRACE,monitor,1864,True,14,3,False,False,False,False,False,0,3,False,False,medium
+2025-08-26T21:11:25.792218,Security scan completed - no vulnerabilities found,normal,database,production,DEBUG,deploy,3295,True,50,7,False,False,False,False,False,21,1,False,False,medium
+2025-08-28T12:11:25.792218,Data backup completed,normal,backend,production,INFO,build,4605,True,21,3,False,False,False,False,False,12,3,False,True,medium
+2025-08-27T08:11:25.792218,ERROR: Resource limits exceeded,anomaly,auth,staging,ERROR,test,15560,False,31,4,True,False,False,False,False,8,2,False,False,slow
+2025-08-27T03:11:25.792218,Linting completed with no issues,normal,cache,dev,INFO,monitor,3531,True,32,5,False,False,False,False,False,3,2,False,False,medium
+2025-08-28T12:11:25.792218,Indexes optimized,normal,scheduler,dev,DEBUG,deploy,4272,True,17,2,False,False,False,False,False,12,3,False,True,medium
+2025-08-27T15:11:25.792218,"Test suite completed: 115 passed, 0 failed",normal,api,dev,DEBUG,build,1344,True,42,7,True,False,False,False,False,15,2,False,True,medium
+2025-08-27T22:11:25.792218,Service mesh health check passed,normal,cache,test,DEBUG,deploy,2847,True,32,5,False,False,False,False,False,22,2,False,False,medium
+2025-08-28T03:11:25.792218,APPLICATION ERROR: Invalid configuration,anomaly,auth,dev,ERROR,deploy,6476,False,40,4,True,False,False,False,False,3,3,False,False,slow
+2025-08-28T17:11:25.792218,Health check passed,normal,database,sandbox,DEBUG,build,581,True,19,3,False,False,False,False,False,17,3,False,True,fast
+2025-08-27T08:11:25.792218,Dependencies installed successfully in 385s,normal,database,production,TRACE,monitor,817,True,43,5,False,False,False,False,False,8,2,False,False,fast
+2025-08-28T15:11:25.792218,Starting deployment to production,normal,api,qa,TRACE,test,4169,True,33,4,False,False,False,False,False,15,3,False,True,medium
+2025-08-27T05:11:25.792218,"Test suite completed: 114 passed, 0 failed",normal,frontend,test,TRACE,deploy,4772,True,42,7,True,False,False,False,False,5,2,False,False,medium
+2025-08-27T11:11:25.792218,Secrets loaded successfully,normal,frontend,dev,INFO,monitor,3108,True,27,3,False,False,False,False,False,11,2,False,True,medium
+2025-08-28T00:11:25.792218,Deployment completed successfully,normal,backend,dev,DEBUG,deploy,1655,True,33,3,False,False,False,False,False,0,3,False,False,medium
+2025-08-27T08:11:25.792218,FATAL: Data breach attempt detected,anomaly,api,production,WARN,monitor,14862,False,35,5,False,False,False,False,False,8,2,False,False,slow
+2025-08-28T14:11:25.792218,Running pip install -r requirements.txt,normal,scheduler,sandbox,TRACE,build,1065,True,39,5,False,False,False,False,False,14,3,False,True,medium
+2025-08-28T05:11:25.792218,Metrics collection enabled,normal,database,test,DEBUG,test,1213,True,26,3,False,False,False,False,False,5,3,False,False,medium
+2025-08-27T05:11:25.792218,CRITICAL: Payment gateway failure,anomaly,scheduler,staging,WARN,test,5530,False,33,4,True,False,False,False,False,5,2,False,False,slow
+2025-08-27T17:11:25.792218,ERROR: Database migration failed,anomaly,api,test,CRITICAL,deploy,27978,False,32,4,True,False,False,False,False,17,2,False,True,slow
+2025-08-28T12:11:25.792218,Deploying to staging environment,normal,auth,staging,TRACE,deploy,591,True,32,4,False,False,False,False,False,12,3,False,True,fast
+2025-08-28T04:11:25.792218,Running integration tests,normal,scheduler,sandbox,DEBUG,monitor,3063,True,25,3,False,False,False,False,False,4,3,False,False,medium
+2025-08-27T13:11:25.792218,Starting test suite execution,normal,cache,qa,TRACE,test,1319,True,29,4,False,False,False,False,False,13,2,False,True,medium
+2025-08-27T21:11:25.792218,Checked out branch hotfix/urgent,normal,cache,production,INFO,build,4467,True,32,4,False,False,False,False,False,21,2,False,False,medium
+2025-08-28T11:11:25.792218,Test execution completed in 441s,normal,scheduler,dev,INFO,build,2894,True,32,5,False,False,False,False,False,11,3,False,True,medium
+2025-08-27T22:11:25.792218,Slack notification sent,normal,scheduler,qa,DEBUG,build,1763,True,23,3,False,False,False,False,False,22,2,False,False,medium
+2025-08-28T15:11:25.792218,Installing dependencies from requirements.txt,normal,frontend,test,DEBUG,build,4631,True,45,4,False,False,False,False,False,15,3,False,True,medium
+2025-08-27T01:11:25.792218,Checked out branch master,normal,frontend,production,TRACE,build,1131,True,25,4,False,False,False,False,False,1,2,False,False,medium
+2025-08-27T07:11:25.792218,Branch protection rules satisfied,normal,cache,production,DEBUG,monitor,4584,True,33,4,False,False,False,False,False,7,2,False,False,medium
+2025-08-27T09:11:25.792218,Installing dependencies from package.json,normal,frontend,test,DEBUG,test,2475,True,41,4,False,False,False,False,False,9,2,False,True,medium
+2025-08-27T08:11:25.792218,Code coverage: 86%,normal,backend,staging,DEBUG,test,2531,True,18,3,False,False,False,False,False,8,2,False,False,medium
+2025-08-28T02:11:25.792218,ERROR: pip install failed - package not found,anomaly,backend,dev,ERROR,build,13038,False,45,8,True,False,False,False,False,2,3,False,False,slow
+2025-08-28T15:11:25.792218,Container started successfully,normal,backend,dev,INFO,monitor,3290,True,30,3,False,False,False,False,False,15,3,False,True,medium
+2025-08-27T00:11:25.792218,Linting completed with no issues,normal,scheduler,production,TRACE,deploy,2215,True,32,5,False,False,False,False,False,0,2,False,False,medium
+2025-08-26T23:11:25.792218,Service is healthy and responding,normal,database,test,TRACE,monitor,3415,True,33,5,False,False,False,False,False,23,1,False,False,medium
+2025-08-28T09:11:25.792218,Slack notification sent,normal,auth,staging,DEBUG,test,2460,True,23,3,False,False,False,False,False,9,3,False,True,medium
+2025-08-27T05:11:25.792218,Dashboard metrics refreshed,normal,backend,qa,TRACE,monitor,4854,True,27,3,False,False,False,False,False,5,2,False,False,medium
+2025-08-27T01:11:25.792218,Security scan completed - no vulnerabilities found,normal,backend,staging,DEBUG,build,2293,True,50,7,False,False,False,False,False,1,2,False,False,medium
+2025-08-28T12:11:25.792218,Running integration tests,normal,api,qa,DEBUG,test,1073,True,25,3,False,False,False,False,False,12,3,False,True,medium
+2025-08-28T19:11:25.792218,Merged pull request #79,normal,scheduler,staging,TRACE,deploy,1595,True,23,4,False,False,False,False,False,19,3,False,False,medium
+2025-08-26T22:11:25.792218,Metrics collection enabled,normal,frontend,staging,DEBUG,monitor,4888,True,26,3,False,False,False,False,False,22,1,False,False,medium
+2025-08-27T21:11:25.792218,Service is healthy and responding,normal,scheduler,staging,TRACE,test,1631,True,33,5,False,False,False,False,False,21,2,False,False,medium
+2025-08-28T14:11:25.792218,CRITICAL: DDoS attack detected,anomaly,worker,test,ERROR,deploy,8219,False,30,4,False,False,False,False,False,14,3,False,True,slow
+2025-08-27T18:11:25.792218,CRITICAL: Code coverage below threshold: 63%,anomaly,api,staging,CRITICAL,monitor,1977,False,44,6,False,False,False,False,False,18,2,False,False,medium
+2025-08-28T09:11:25.792218,Application started successfully,normal,database,test,INFO,deploy,221,True,32,3,False,False,False,False,False,9,3,False,True,fast
+2025-08-27T01:11:25.792218,Indexes optimized,normal,auth,qa,TRACE,test,957,True,17,2,False,False,False,False,False,1,2,False,False,fast
+2025-08-27T19:11:25.792218,Load balancer health check passed,normal,scheduler,dev,DEBUG,deploy,3141,True,33,5,False,False,False,False,False,19,2,False,False,medium
+2025-08-28T03:11:25.792218,Dashboard metrics refreshed,normal,frontend,test,DEBUG,deploy,1024,True,27,3,False,False,False,False,False,3,3,False,False,medium
+2025-08-27T14:11:25.792218,Build completed successfully in 524s,normal,scheduler,test,INFO,monitor,1064,True,36,5,False,False,False,False,False,14,2,False,True,medium
+2025-08-27T11:11:25.792218,Volume mounted successfully,normal,database,sandbox,DEBUG,deploy,860,True,27,3,False,False,False,False,False,11,2,False,True,fast
+2025-08-27T16:11:25.792218,Load testing completed successfully,normal,database,test,TRACE,deploy,4601,True,35,4,False,False,False,False,False,16,2,False,True,medium
+2025-08-28T19:11:25.792218,Service endpoints updated,normal,api,production,INFO,build,4786,True,25,3,False,False,False,False,False,19,3,False,False,medium
+2025-08-27T04:11:25.792218,Slack notification sent,normal,scheduler,sandbox,TRACE,test,2154,True,23,3,False,False,False,False,False,4,2,False,False,medium
+2025-08-27T06:11:25.792218,Query performance within limits,normal,worker,production,TRACE,deploy,3540,True,31,4,False,False,False,False,False,6,2,False,False,medium
+2025-08-27T09:11:25.792218,Code quality gate passed,normal,auth,production,DEBUG,monitor,3797,True,24,4,False,False,False,False,False,9,2,False,True,medium
+2025-08-28T10:11:25.792218,Checked out branch release/v1.2.0,normal,auth,qa,INFO,deploy,1525,True,33,4,False,False,False,False,False,10,3,False,True,medium
+2025-08-28T14:11:25.792218,Application started successfully,normal,auth,production,DEBUG,monitor,761,True,32,3,False,False,False,False,False,14,3,False,True,fast
+2025-08-27T01:11:25.792218,Starting build process for commit 19f2522,normal,cache,staging,DEBUG,deploy,1392,True,41,6,False,False,False,False,False,1,2,False,False,medium
+2025-08-27T06:11:25.792218,Branch protection rules satisfied,normal,database,production,INFO,test,1242,True,33,4,False,False,False,False,False,6,2,False,False,medium
+2025-08-27T11:11:25.792218,Running unit tests,normal,cache,production,DEBUG,build,281,True,18,3,False,False,False,False,False,11,2,False,True,fast
+2025-08-26T20:11:25.792218,Commit b366c28 validated,normal,frontend,qa,TRACE,deploy,3309,True,24,3,False,False,False,False,False,20,1,False,False,medium
+2025-08-26T20:11:25.792218,Application started successfully,normal,auth,test,INFO,monitor,2699,True,32,3,False,False,False,False,False,20,1,False,False,medium
+2025-08-28T09:11:25.792218,Query performance within limits,normal,auth,sandbox,TRACE,deploy,3250,True,31,4,False,False,False,False,False,9,3,False,True,medium
+2025-08-27T01:11:25.792218,Commit 8c605bf validated,normal,frontend,test,INFO,build,481,True,24,3,False,False,False,False,False,1,2,False,False,fast
+2025-08-28T15:11:25.792218,Branch protection rules satisfied,normal,worker,sandbox,DEBUG,build,655,True,33,4,False,False,False,False,False,15,3,False,True,fast
+2025-08-27T23:11:25.792218,Query performance within limits,normal,auth,sandbox,TRACE,monitor,3837,True,31,4,False,False,False,False,False,23,2,False,False,medium
+2025-08-28T20:11:25.792218,Service mesh health check passed,normal,frontend,staging,TRACE,deploy,4635,True,32,5,False,False,False,False,False,20,3,False,False,medium
+2025-08-27T07:11:25.792218,Linting completed with no issues,normal,frontend,sandbox,TRACE,test,2165,True,32,5,False,False,False,False,False,7,2,False,False,medium
+2025-08-28T12:11:25.792218,Service mesh health check passed,normal,scheduler,sandbox,INFO,monitor,1043,True,32,5,False,False,False,False,False,12,3,False,True,medium
+2025-08-28T13:11:25.792218,Metrics collection enabled,normal,cache,production,DEBUG,build,2100,True,26,3,False,False,False,False,False,13,3,False,True,medium
+2025-08-27T16:11:25.792218,CPU usage: 31%,normal,api,sandbox,DEBUG,deploy,212,True,14,3,False,False,False,False,False,16,2,False,True,fast
+2025-08-28T16:11:25.792218,Security scan completed - no vulnerabilities found,normal,api,sandbox,TRACE,monitor,1711,True,50,7,False,False,False,False,False,16,3,False,True,medium
+2025-08-27T10:11:25.792218,Build completed successfully in 411s,normal,frontend,sandbox,TRACE,build,4980,True,36,5,False,False,False,False,False,10,2,False,True,medium
+2025-08-27T20:11:25.792218,Webhook triggered successfully,normal,cache,staging,DEBUG,deploy,4401,True,30,3,False,False,False,False,False,20,2,False,False,medium
+2025-08-28T04:11:25.792218,Installing dependencies from requirements.txt,normal,cache,qa,TRACE,test,1303,True,45,4,False,False,False,False,False,4,3,False,False,medium
+2025-08-27T13:11:25.792218,Memory usage: 51%,normal,cache,test,TRACE,monitor,4015,True,17,3,False,False,False,True,False,13,2,False,True,medium
+2025-08-27T15:11:25.792218,Database connection established,normal,database,qa,TRACE,deploy,2743,True,31,3,False,False,False,False,True,15,2,False,True,medium
+2025-08-27T09:11:25.792218,Deploying to staging environment,normal,auth,qa,DEBUG,test,1423,True,32,4,False,False,False,False,False,9,2,False,True,medium
+2025-08-27T05:11:25.792218,Volume mounted successfully,normal,api,dev,DEBUG,test,3625,True,27,3,False,False,False,False,False,5,2,False,False,medium
+2025-08-27T17:11:25.792218,Application started successfully,normal,worker,qa,TRACE,test,1477,True,32,3,False,False,False,False,False,17,2,False,True,medium
+2025-08-28T16:11:25.792218,Pod status: Running,normal,worker,sandbox,INFO,monitor,2328,True,19,3,False,False,False,False,False,16,3,False,True,medium
+2025-08-26T23:11:25.792218,Cache warmed up successfully,normal,backend,dev,DEBUG,test,1257,True,28,4,False,False,False,False,False,23,1,False,False,medium
+2025-08-28T09:11:25.792218,ERROR: Performance test failed - response time 7853ms,anomaly,worker,dev,WARN,monitor,10349,False,53,8,True,False,False,False,False,9,3,False,True,slow
+2025-08-28T03:11:25.792218,Volume mounted successfully,normal,scheduler,dev,TRACE,monitor,1977,True,27,3,False,False,False,False,False,3,3,False,False,medium
+2025-08-28T02:11:25.792218,Build completed successfully in 51s,normal,cache,test,INFO,deploy,1860,True,35,5,False,False,False,False,False,2,3,False,False,medium
+2025-08-28T18:11:25.792218,Health check passed,normal,auth,qa,DEBUG,build,3132,True,19,3,False,False,False,False,False,18,3,False,False,medium
+2025-08-27T07:11:25.792218,Rollout completed: 100% traffic routed,normal,cache,dev,DEBUG,test,2056,True,38,5,False,False,False,False,False,7,2,False,False,medium
+2025-08-27T23:11:25.792218,Schema validation passed,normal,backend,sandbox,INFO,test,2035,True,24,3,False,False,False,False,False,23,2,False,False,medium
+2025-08-27T22:11:25.792218,Secrets loaded successfully,normal,database,staging,TRACE,monitor,2402,True,27,3,False,False,False,False,False,22,2,False,False,medium
+2025-08-27T18:11:25.792218,Code coverage: 85%,normal,database,sandbox,INFO,test,2846,True,18,3,False,False,False,False,False,18,2,False,False,medium
+2025-08-28T01:11:25.792218,Checked out branch feature/auth,normal,api,dev,TRACE,deploy,207,True,31,4,False,False,False,False,False,1,3,False,False,fast
+2025-08-28T12:11:25.792218,Branch protection rules satisfied,normal,worker,staging,TRACE,build,478,True,33,4,False,False,False,False,False,12,3,False,True,fast
+2025-08-28T00:11:25.792218,Error rate: 1.6%,normal,worker,sandbox,TRACE,monitor,2313,True,16,3,True,False,False,False,False,0,3,False,False,medium
+2025-08-27T16:11:25.792218,Starting test suite execution,normal,frontend,production,TRACE,build,3517,True,29,4,False,False,False,False,False,16,2,False,True,medium
+2025-08-27T20:11:25.792218,Indexes optimized,normal,api,dev,TRACE,build,3817,True,17,2,False,False,False,False,False,20,2,False,False,medium
+2025-08-27T22:11:25.792218,Metrics collection enabled,normal,frontend,qa,INFO,test,532,True,26,3,False,False,False,False,False,22,2,False,False,fast
+2025-08-27T20:11:25.792218,Application started successfully,normal,worker,staging,DEBUG,monitor,2968,True,32,3,False,False,False,False,False,20,2,False,False,medium
+2025-08-28T17:11:25.792218,Initializing build environment,normal,auth,dev,INFO,deploy,2942,True,30,3,False,False,False,False,False,17,3,False,True,medium
+2025-08-28T01:11:25.792218,Cache warmed up successfully,normal,api,dev,TRACE,test,1507,True,28,4,False,False,False,False,False,1,3,False,False,medium
+2025-08-27T10:11:25.792218,Test execution completed in 496s,normal,cache,test,INFO,deploy,1219,True,32,5,False,False,False,False,False,10,2,False,True,medium
+2025-08-27T07:11:25.792218,Load testing completed successfully,normal,auth,production,INFO,monitor,746,True,35,4,False,False,False,False,False,7,2,False,False,fast
+2025-08-28T14:11:25.792218,Container started successfully,normal,database,qa,TRACE,deploy,1007,True,30,3,False,False,False,False,False,14,3,False,True,medium
+2025-08-27T14:11:25.792218,"Test suite completed: 112 passed, 0 failed",normal,database,production,INFO,build,4030,True,42,7,True,False,False,False,False,14,2,False,True,medium
+2025-08-28T06:11:25.792218,CRITICAL: API rate limit exceeded,anomaly,scheduler,staging,ERROR,test,11217,False,33,5,False,False,False,False,False,6,3,False,False,slow
+2025-08-27T01:11:25.792218,Schema validation passed,normal,frontend,sandbox,INFO,monitor,4830,True,24,3,False,False,False,False,False,1,2,False,False,medium
+2025-08-28T14:11:25.792218,ERROR: Session store corruption,anomaly,api,dev,ERROR,deploy,14705,False,31,4,True,False,False,False,False,14,3,False,True,slow
+2025-08-27T12:11:25.792218,Database migration completed,normal,worker,staging,INFO,deploy,1710,True,28,3,False,False,False,False,False,12,2,False,True,medium
+2025-08-27T07:11:25.792218,Application started successfully,normal,worker,staging,DEBUG,monitor,4784,True,32,3,False,False,False,False,False,7,2,False,False,medium
+2025-08-27T19:11:25.792218,Email report generated,normal,worker,dev,TRACE,deploy,2242,True,22,3,False,False,False,False,False,19,2,False,False,medium
+2025-08-27T19:11:25.792218,Code coverage: 90%,normal,cache,staging,INFO,deploy,910,True,18,3,False,False,False,False,False,19,2,False,False,fast
+2025-08-28T04:11:25.792218,ERROR: Canary deployment showing errors,anomaly,frontend,qa,FATAL,test,1890,False,39,5,True,False,False,False,False,4,3,False,False,medium
+2025-08-27T09:11:25.792218,FATAL: Cache cluster failure,anomaly,worker,staging,CRITICAL,test,14847,False,28,4,True,False,False,False,False,9,2,False,True,slow
+2025-08-26T20:11:25.792218,Load testing completed successfully,normal,cache,production,INFO,deploy,4919,True,35,4,False,False,False,False,False,20,1,False,False,medium
+2025-08-26T21:11:25.792218,Docker image built successfully,normal,api,production,INFO,monitor,4131,True,31,4,False,False,False,False,False,21,1,False,False,medium
+2025-08-27T00:11:25.792218,Memory usage: 44%,normal,worker,test,DEBUG,deploy,1283,True,17,3,False,False,False,True,False,0,2,False,False,medium
+2025-08-27T19:11:25.792218,ERROR: Session store corruption,anomaly,api,sandbox,CRITICAL,test,18678,False,31,4,True,False,False,False,False,19,2,False,False,slow
+2025-08-27T09:11:25.792218,Running integration tests,normal,database,dev,DEBUG,monitor,926,True,25,3,False,False,False,False,False,9,2,False,True,fast
+2025-08-27T05:11:25.792218,Deployment completed successfully,normal,frontend,dev,TRACE,deploy,271,True,33,3,False,False,False,False,False,5,2,False,False,fast
+2025-08-28T09:11:25.792218,Code quality gate passed,normal,frontend,production,INFO,monitor,4131,True,24,4,False,False,False,False,False,9,3,False,True,medium
+2025-08-26T23:11:25.792218,Query performance within limits,normal,frontend,production,INFO,deploy,3493,True,31,4,False,False,False,False,False,23,1,False,False,medium
+2025-08-28T17:11:25.792218,Running unit tests,normal,scheduler,dev,DEBUG,monitor,4078,True,18,3,False,False,False,False,False,17,3,False,True,medium
+2025-08-27T10:11:25.792218,TEST FAILED: 47 tests failed,anomaly,backend,staging,CRITICAL,monitor,21804,False,28,5,True,False,False,False,False,10,2,False,True,slow
+2025-08-28T19:11:25.792218,Database migration completed,normal,database,qa,TRACE,deploy,4235,True,28,3,False,False,False,False,False,19,3,False,False,medium
+2025-08-26T20:11:25.792218,Code quality gate passed,normal,frontend,qa,TRACE,build,2661,True,24,4,False,False,False,False,False,20,1,False,False,medium
+2025-08-26T23:11:25.792218,TEST FAILED: 35 tests failed,anomaly,worker,dev,FATAL,deploy,16322,False,28,5,True,False,False,False,False,23,1,False,False,slow
+2025-08-28T14:11:25.792218,Deploying to staging environment,normal,database,qa,INFO,monitor,503,True,32,4,False,False,False,False,False,14,3,False,True,fast
+2025-08-27T19:11:25.792218,Docker image built successfully,normal,api,staging,INFO,build,2388,True,31,4,False,False,False,False,False,19,2,False,False,medium
+2025-08-26T20:11:25.792218,Running unit tests,normal,api,sandbox,TRACE,test,4805,True,18,3,False,False,False,False,False,20,1,False,False,medium
+2025-08-28T17:11:25.792218,Transaction completed successfully,normal,auth,staging,TRACE,monitor,3955,True,34,3,False,False,False,False,False,17,3,False,True,medium
+2025-08-27T18:11:25.792218,Query performance within limits,normal,auth,test,DEBUG,test,3295,True,31,4,False,False,False,False,False,18,2,False,False,medium
+2025-08-28T12:11:25.792218,Database migration completed,normal,backend,dev,DEBUG,test,2870,True,28,3,False,False,False,False,False,12,3,False,True,medium
+2025-08-27T21:11:25.792218,APPLICATION ERROR: Unhandled exception,anomaly,api,dev,CRITICAL,deploy,27421,False,38,4,True,False,False,False,False,21,2,False,False,slow
+2025-08-28T05:11:25.792218,Starting deployment to qa,normal,cache,qa,DEBUG,deploy,1920,True,25,4,False,False,False,False,False,5,3,False,False,medium
+2025-08-28T19:11:25.792218,Compilation successful,normal,cache,staging,TRACE,deploy,1308,True,22,2,False,False,False,False,False,19,3,False,False,medium
+2025-08-28T16:11:25.792218,CPU usage: 44%,normal,backend,dev,INFO,build,881,True,14,3,False,False,False,False,False,16,3,False,True,fast
+2025-08-27T00:11:25.792218,Performance tests passed,normal,backend,dev,DEBUG,monitor,4593,True,24,3,False,False,False,False,False,0,2,False,False,medium
+2025-08-28T15:11:25.792218,Load testing completed successfully,normal,frontend,test,TRACE,test,4602,True,35,4,False,False,False,False,False,15,3,False,True,medium
+2025-08-27T01:11:25.792218,Assets bundled successfully,normal,cache,staging,INFO,monitor,4312,True,27,3,False,False,False,False,False,1,2,False,False,medium
+2025-08-27T12:11:25.792218,Code quality gate passed,normal,database,test,DEBUG,deploy,1918,True,24,4,False,False,False,False,False,12,2,False,True,medium
+2025-08-27T18:11:25.792218,FATAL: Database deadlock detected,anomaly,scheduler,staging,FATAL,build,26265,False,33,4,False,False,False,False,False,18,2,False,False,slow
+2025-08-27T04:11:25.792218,Image tagged as v1.9.50,normal,worker,qa,DEBUG,test,3110,True,23,4,False,False,False,False,False,4,2,False,False,medium
+2025-08-27T21:11:25.792218,Health check passed,normal,auth,dev,INFO,test,2004,True,19,3,False,False,False,False,False,21,2,False,False,medium
+2025-08-28T17:11:25.792218,APPLICATION ERROR: Invalid configuration,anomaly,auth,test,FATAL,build,6282,False,40,4,True,False,False,False,False,17,3,False,True,slow
+2025-08-28T02:11:25.792218,ERROR: Resource limits exceeded,anomaly,database,qa,CRITICAL,monitor,18393,False,31,4,True,False,False,False,False,2,3,False,False,slow
+2025-08-27T15:11:25.792218,Email report generated,normal,auth,staging,DEBUG,test,4660,True,22,3,False,False,False,False,False,15,2,False,True,medium
+2025-08-27T11:11:25.792218,Webpack build completed,normal,cache,test,INFO,deploy,1520,True,23,3,False,False,False,False,False,11,2,False,True,medium
+2025-08-27T08:11:25.792218,Docker image built successfully,normal,backend,production,TRACE,deploy,3334,True,31,4,False,False,False,False,False,8,2,False,False,medium
+2025-08-28T16:11:25.792218,Database migration completed,normal,auth,qa,INFO,deploy,1050,True,28,3,False,False,False,False,False,16,3,False,True,medium
+2025-08-27T23:11:25.792218,Volume mounted successfully,normal,backend,sandbox,INFO,test,1031,True,27,3,False,False,False,False,False,23,2,False,False,medium
+2025-08-28T07:11:25.792218,Memory usage: 55%,normal,frontend,production,INFO,build,4666,True,17,3,False,False,False,True,False,7,3,False,False,medium
+2025-08-27T18:11:25.792218,Service is healthy and responding,normal,scheduler,sandbox,DEBUG,deploy,2072,True,33,5,False,False,False,False,False,18,2,False,False,medium
+2025-08-27T06:11:25.792218,Dashboard metrics refreshed,normal,cache,qa,TRACE,deploy,2888,True,27,3,False,False,False,False,False,6,2,False,False,medium
+2025-08-28T12:11:25.792218,ERROR: Terraform apply failed,anomaly,frontend,test,WARN,deploy,25490,False,29,4,True,False,False,False,False,12,3,False,True,slow
+2025-08-27T10:11:25.792218,Webhook triggered successfully,normal,auth,staging,DEBUG,build,4762,True,30,3,False,False,False,False,False,10,2,False,True,medium
+2025-08-27T05:11:25.792218,Initializing build environment,normal,database,staging,INFO,build,3931,True,30,3,False,False,False,False,False,5,2,False,False,medium
+2025-08-27T13:11:25.792218,Deploying to production environment,normal,cache,sandbox,DEBUG,build,3783,True,35,4,False,False,False,False,False,13,2,False,True,medium
+2025-08-26T22:11:25.792218,Compilation successful,normal,frontend,qa,TRACE,test,2979,True,22,2,False,False,False,False,False,22,1,False,False,medium
+2025-08-28T02:11:25.792218,Compiling TypeScript files,normal,api,test,DEBUG,monitor,2423,True,26,3,False,False,False,False,False,2,3,False,False,medium
+2025-08-28T19:11:25.792218,Application started successfully,normal,api,production,INFO,monitor,2073,True,32,3,False,False,False,False,False,19,3,False,False,medium
+2025-08-27T09:11:25.792218,Slack notification sent,normal,database,test,DEBUG,test,381,True,23,3,False,False,False,False,False,9,2,False,True,fast
+2025-08-27T22:11:25.792218,Compiling TypeScript files,normal,scheduler,dev,INFO,monitor,2232,True,26,3,False,False,False,False,False,22,2,False,False,medium
+2025-08-27T22:11:25.792218,Commit 504f84f validated,normal,scheduler,staging,TRACE,test,2013,True,24,3,False,False,False,False,False,22,2,False,False,medium
+2025-08-27T00:11:25.792218,Teams webhook delivered,normal,scheduler,test,DEBUG,test,652,True,23,3,False,False,False,False,False,0,2,False,False,fast
+2025-08-28T05:11:25.792218,CRITICAL: Service mesh failure detected,anomaly,api,staging,WARN,test,19700,False,39,5,True,False,False,False,False,5,3,False,False,slow
+2025-08-27T07:11:25.792218,FATAL: Database deadlock detected,anomaly,scheduler,qa,CRITICAL,monitor,14285,False,33,4,False,False,False,False,False,7,2,False,False,slow
+2025-08-27T03:11:25.792218,Image tagged as v6.5.11,normal,api,production,DEBUG,deploy,2756,True,23,4,False,False,False,False,False,3,2,False,False,medium
+2025-08-27T08:11:25.792218,Database migration completed,normal,frontend,qa,INFO,test,304,True,28,3,False,False,False,False,False,8,2,False,False,fast
+2025-08-27T20:11:25.792218,CRITICAL: High CPU usage detected: 95%,anomaly,auth,production,ERROR,monitor,11770,False,38,6,False,False,False,False,False,20,2,False,False,slow
+2025-08-26T21:11:25.792218,Starting build process for commit 383456c,normal,scheduler,sandbox,INFO,deploy,1068,True,41,6,False,False,False,False,False,21,1,False,False,medium
+2025-08-28T06:11:25.792218,SECURITY: Privilege escalation attempt,anomaly,backend,staging,CRITICAL,build,2692,False,38,4,False,False,False,False,False,6,3,False,False,medium
+2025-08-28T10:11:25.792218,Deploying to production environment,normal,api,production,INFO,build,3893,True,35,4,False,False,False,False,False,10,3,False,True,medium
+2025-08-28T01:11:25.792218,Webpack build completed,normal,auth,staging,TRACE,deploy,785,True,23,3,False,False,False,False,False,1,3,False,False,fast
+2025-08-27T16:11:25.792218,Service mesh health check passed,normal,backend,qa,INFO,deploy,2469,True,32,5,False,False,False,False,False,16,2,False,True,medium
+2025-08-27T08:11:25.792218,Security scan completed - no vulnerabilities found,normal,cache,production,DEBUG,test,2982,True,50,7,False,False,False,False,False,8,2,False,False,medium
+2025-08-27T08:11:25.792218,Merged pull request #110,normal,scheduler,test,DEBUG,deploy,3221,True,24,4,False,False,False,False,False,8,2,False,False,medium
+2025-08-26T20:11:25.792218,Build completed successfully in 553s,normal,cache,dev,DEBUG,monitor,3010,True,36,5,False,False,False,False,False,20,1,False,False,medium
+2025-08-27T10:11:25.792218,Health check passed,normal,api,qa,INFO,build,157,True,19,3,False,False,False,False,False,10,2,False,True,fast
+2025-08-28T05:11:25.792218,Application started successfully,normal,cache,qa,DEBUG,monitor,812,True,32,3,False,False,False,False,False,5,3,False,False,fast
+2025-08-27T19:11:25.792218,Linting completed with no issues,normal,auth,staging,INFO,monitor,607,True,32,5,False,False,False,False,False,19,2,False,False,fast
+2025-08-28T13:11:25.792218,Indexes optimized,normal,auth,qa,DEBUG,test,896,True,17,2,False,False,False,False,False,13,3,False,True,fast
+2025-08-27T07:11:25.792218,Docker image built successfully,normal,frontend,production,TRACE,test,3914,True,31,4,False,False,False,False,False,7,2,False,False,medium
+2025-08-26T23:11:25.792218,Merged pull request #734,normal,api,test,DEBUG,deploy,2597,True,24,4,False,False,False,False,False,23,1,False,False,medium
+2025-08-27T03:11:25.792218,APPLICATION ERROR: Invalid configuration,anomaly,worker,production,FATAL,build,12318,False,40,4,True,False,False,False,False,3,2,False,False,slow
+2025-08-28T16:11:25.792218,Starting test suite execution,normal,api,test,INFO,build,1336,True,29,4,False,False,False,False,False,16,3,False,True,medium
+2025-08-28T01:11:25.792218,Merged pull request #531,normal,backend,test,INFO,monitor,1593,True,24,4,False,False,False,False,False,1,3,False,False,medium
+2025-08-28T09:11:25.792218,Health check passed,normal,worker,sandbox,TRACE,monitor,2964,True,19,3,False,False,False,False,False,9,3,False,True,medium
+2025-08-27T10:11:25.792218,Security scan completed - no vulnerabilities found,normal,backend,qa,TRACE,test,3774,True,50,7,False,False,False,False,False,10,2,False,True,medium
+2025-08-28T09:11:25.792218,Starting test suite execution,normal,scheduler,staging,DEBUG,monitor,4426,True,29,4,False,False,False,False,False,9,3,False,True,medium
+2025-08-27T11:11:25.792218,Deploying to production environment,normal,frontend,production,DEBUG,monitor,1173,True,35,4,False,False,False,False,False,11,2,False,True,medium
+2025-08-28T16:11:25.792218,Schema validation passed,normal,scheduler,qa,INFO,deploy,802,True,24,3,False,False,False,False,False,16,3,False,True,fast
+2025-08-27T05:11:25.792218,ERROR: Container registry authentication failed,anomaly,frontend,test,ERROR,test,7338,False,47,5,True,False,False,False,False,5,2,False,False,slow
+2025-08-28T16:11:25.792218,FATAL: Cache cluster failure,anomaly,scheduler,staging,WARN,monitor,23391,False,28,4,True,False,False,False,False,16,3,False,True,slow
+2025-08-26T22:11:25.792218,Docker image built successfully,normal,backend,staging,TRACE,build,2046,True,31,4,False,False,False,False,False,22,1,False,False,medium
+2025-08-28T11:11:25.792218,ERROR: Authentication service unavailable,anomaly,frontend,sandbox,ERROR,monitor,24319,False,41,4,True,False,False,False,False,11,3,False,True,slow
+2025-08-26T22:11:25.792218,Running pip install -r requirements.txt,normal,frontend,test,TRACE,deploy,3451,True,39,5,False,False,False,False,False,22,1,False,False,medium
+2025-08-28T06:11:25.792218,FATAL: Cloud provider API rate limited,anomaly,worker,sandbox,ERROR,deploy,15883,False,38,6,False,False,False,False,False,6,3,False,False,slow
+2025-08-27T01:11:25.792218,FATAL: Disk space insufficient for build,anomaly,database,production,WARN,deploy,10545,False,40,6,False,False,False,False,False,1,2,False,False,slow
+2025-08-27T16:11:25.792218,Deploying to production environment,normal,cache,production,INFO,deploy,2313,True,35,4,False,False,False,False,False,16,2,False,True,medium
+2025-08-27T21:11:25.792218,Image tagged as v1.3.7,normal,scheduler,production,TRACE,deploy,2010,True,22,4,False,False,False,False,False,21,2,False,False,medium
+2025-08-26T20:11:25.792218,Code quality gate passed,normal,frontend,production,TRACE,monitor,3109,True,24,4,False,False,False,False,False,20,1,False,False,medium
+2025-08-27T08:11:25.792218,Deploying to staging environment,normal,worker,test,DEBUG,deploy,3988,True,32,4,False,False,False,False,False,8,2,False,False,medium
+2025-08-28T12:11:25.792218,Webpack build completed,normal,scheduler,dev,INFO,monitor,1845,True,23,3,False,False,False,False,False,12,3,False,True,medium
+2025-08-27T07:11:25.792218,"Test suite completed: 194 passed, 0 failed",normal,backend,qa,DEBUG,deploy,4716,True,42,7,True,False,False,False,False,7,2,False,False,medium
+2025-08-28T08:11:25.792218,Response time: 133ms,normal,frontend,qa,INFO,monitor,840,True,20,3,False,False,False,False,False,8,3,False,False,fast
+2025-08-26T23:11:25.792218,Email report generated,normal,backend,test,TRACE,build,625,True,22,3,False,False,False,False,False,23,1,False,False,fast
+2025-08-27T04:11:25.792218,Database migration completed,normal,database,qa,TRACE,deploy,1036,True,28,3,False,False,False,False,False,4,2,False,False,medium
+2025-08-26T22:11:25.792218,ERROR: Integration test database connection failed,anomaly,database,dev,WARN,monitor,18581,False,50,6,True,False,False,False,True,22,1,False,False,slow
+2025-08-28T12:11:25.792218,ERROR: Service dependency unavailable,anomaly,database,dev,ERROR,build,18723,False,37,4,True,False,False,False,False,12,3,False,True,slow
+2025-08-28T03:11:25.792218,Webpack build completed,normal,cache,production,DEBUG,build,780,True,23,3,False,False,False,False,False,3,3,False,False,fast
+2025-08-27T00:11:25.792218,Security scan completed - no vulnerabilities found,normal,database,qa,TRACE,deploy,1538,True,50,7,False,False,False,False,False,0,2,False,False,medium
+2025-08-27T16:11:25.792218,ERROR: Test timeout after 102 minutes,anomaly,worker,test,WARN,monitor,23860,False,37,6,True,False,True,False,False,16,2,False,True,slow
+2025-08-27T13:11:25.792218,Container started successfully,normal,worker,test,TRACE,test,4423,True,30,3,False,False,False,False,False,13,2,False,True,medium
+2025-08-26T23:11:25.792218,FATAL: Build environment corrupted,anomaly,worker,test,FATAL,monitor,25352,False,34,4,False,False,False,False,False,23,1,False,False,slow
+2025-08-28T03:11:25.792218,Linting completed with no issues,normal,scheduler,test,TRACE,monitor,3720,True,32,5,False,False,False,False,False,3,3,False,False,medium
+2025-08-28T05:11:25.792218,Running integration tests,normal,frontend,qa,INFO,build,3224,True,25,3,False,False,False,False,False,5,3,False,False,medium
+2025-08-28T06:11:25.792218,Linting completed with no issues,normal,api,test,INFO,deploy,3202,True,32,5,False,False,False,False,False,6,3,False,False,medium
+2025-08-27T16:11:25.792218,Running pip install -r requirements.txt,normal,backend,sandbox,INFO,monitor,1371,True,39,5,False,False,False,False,False,16,2,False,True,medium
+2025-08-26T22:11:25.792218,ERROR: Dependency conflict detected,anomaly,cache,production,CRITICAL,deploy,3480,False,35,4,True,False,False,False,False,22,1,False,False,medium
+2025-08-27T09:11:25.792218,Security scan completed - no vulnerabilities found,normal,worker,staging,INFO,build,3897,True,50,7,False,False,False,False,False,9,2,False,True,medium
+2025-08-28T10:11:25.792218,APPLICATION ERROR: Invalid configuration,anomaly,scheduler,staging,FATAL,test,17530,False,40,4,True,False,False,False,False,10,3,False,True,slow
+2025-08-27T09:11:25.792218,ERROR: TypeScript compilation failed,anomaly,api,qa,FATAL,monitor,25019,False,36,4,True,False,False,False,False,9,2,False,True,slow
+2025-08-28T07:11:25.792218,Installing dependencies from requirements.txt,normal,backend,sandbox,DEBUG,build,3101,True,45,4,False,False,False,False,False,7,3,False,False,medium
+2025-08-28T00:11:25.792218,Compilation successful,normal,backend,staging,TRACE,build,1961,True,22,2,False,False,False,False,False,0,3,False,False,medium
+2025-08-26T21:11:25.792218,ERROR: TypeScript compilation failed,anomaly,backend,test,WARN,deploy,18863,False,36,4,True,False,False,False,False,21,1,False,False,slow
+2025-08-27T14:11:25.792218,ERROR: Canary deployment showing errors,anomaly,worker,staging,CRITICAL,monitor,29435,False,39,5,True,False,False,False,False,14,2,False,True,slow
+2025-08-28T10:11:25.792218,Indexes optimized,normal,auth,test,TRACE,deploy,169,True,17,2,False,False,False,False,False,10,3,False,True,fast
+2025-08-28T15:11:25.792218,Security scan completed - no vulnerabilities found,normal,api,sandbox,TRACE,test,555,True,50,7,False,False,False,False,False,15,3,False,True,fast
+2025-08-27T00:11:25.792218,SECURITY: Suspicious activity in logs,anomaly,worker,sandbox,CRITICAL,monitor,11132,False,37,5,False,False,False,False,False,0,2,False,False,slow
+2025-08-28T12:11:25.792218,Starting deployment to staging,normal,backend,staging,DEBUG,monitor,3445,True,30,4,False,False,False,False,False,12,3,False,True,medium
+2025-08-27T23:11:25.792218,Assets bundled successfully,normal,backend,sandbox,TRACE,deploy,593,True,27,3,False,False,False,False,False,23,2,False,False,fast
+2025-08-27T06:11:25.792218,Email report generated,normal,cache,test,INFO,build,1832,True,22,3,False,False,False,False,False,6,2,False,False,medium
+2025-08-26T22:11:25.792218,Application started successfully,normal,cache,production,INFO,deploy,1310,True,32,3,False,False,False,False,False,22,1,False,False,medium
+2025-08-28T06:11:25.792218,Service endpoints updated,normal,worker,qa,DEBUG,monitor,3650,True,25,3,False,False,False,False,False,6,3,False,False,medium
+2025-08-27T00:11:25.792218,Image tagged as v5.11.25,normal,worker,qa,DEBUG,monitor,2112,True,24,4,False,False,False,False,False,0,2,False,False,medium
+2025-08-27T22:11:25.792218,Test execution completed in 226s,normal,auth,dev,DEBUG,monitor,409,True,32,5,False,False,False,False,False,22,2,False,False,fast
+2025-08-27T16:11:25.792218,Dependencies installed successfully in 311s,normal,worker,sandbox,INFO,monitor,4866,True,43,5,False,False,False,False,False,16,2,False,True,medium
+2025-08-26T23:11:25.792218,CRITICAL: Malware signature detected,anomaly,database,staging,CRITICAL,deploy,2909,False,36,4,False,False,False,False,False,23,1,False,False,medium
+2025-08-28T09:11:25.792218,FATAL: Disk space critical: 4% remaining,anomaly,worker,staging,FATAL,monitor,27252,False,40,6,False,False,False,False,False,9,3,False,True,slow
+2025-08-28T17:11:25.792218,Rollout completed: 100% traffic routed,normal,api,qa,DEBUG,deploy,1853,True,38,5,False,False,False,False,False,17,3,False,True,medium
+2025-08-27T06:11:25.792218,Deploying to production environment,normal,database,production,INFO,monitor,1681,True,35,4,False,False,False,False,False,6,2,False,False,medium
+2025-08-28T00:11:25.792218,ERROR: Build tool version mismatch,anomaly,database,sandbox,CRITICAL,build,26820,False,34,5,True,False,False,False,False,0,3,False,False,slow
+2025-08-26T20:11:25.792218,Rollout completed: 100% traffic routed,normal,frontend,test,TRACE,deploy,2948,True,38,5,False,False,False,False,False,20,1,False,False,medium
+2025-08-27T17:11:25.792218,Volume mounted successfully,normal,cache,production,TRACE,test,1923,True,27,3,False,False,False,False,False,17,2,False,True,medium
+2025-08-27T21:11:25.792218,Installing dependencies from package.json,normal,worker,test,TRACE,deploy,3680,True,41,4,False,False,False,False,False,21,2,False,False,medium
+2025-08-27T13:11:25.792218,Linting completed with no issues,normal,backend,staging,DEBUG,build,4576,True,32,5,False,False,False,False,False,13,2,False,True,medium
+2025-08-27T11:11:25.792218,All tests passed successfully,normal,auth,sandbox,TRACE,deploy,3994,True,29,4,False,False,False,False,False,11,2,False,True,medium
+2025-08-28T01:11:25.792218,Installing dependencies from requirements.txt,normal,scheduler,sandbox,DEBUG,build,2889,True,45,4,False,False,False,False,False,1,3,False,False,medium
+2025-08-28T04:11:25.792218,ERROR: Session store corruption,anomaly,backend,sandbox,CRITICAL,build,18937,False,31,4,True,False,False,False,False,4,3,False,False,slow
+2025-08-28T11:11:25.792218,Security scan completed - no vulnerabilities found,normal,cache,test,TRACE,test,4866,True,50,7,False,False,False,False,False,11,3,False,True,medium
+2025-08-28T20:11:25.792218,Application started successfully,normal,api,dev,INFO,monitor,3668,True,32,3,False,False,False,False,False,20,3,False,False,medium
+2025-08-27T21:11:25.792218,Deploying to staging environment,normal,cache,staging,TRACE,build,1701,True,32,4,False,False,False,False,False,21,2,False,False,medium
+2025-08-27T03:11:25.792218,ERROR: Session store corruption,anomaly,cache,qa,ERROR,build,14902,False,31,4,True,False,False,False,False,3,2,False,False,slow
+2025-08-27T11:11:25.792218,ERROR: Build tool version mismatch,anomaly,api,qa,FATAL,deploy,18065,False,34,5,True,False,False,False,False,11,2,False,True,slow
+2025-08-28T04:11:25.792218,Query performance within limits,normal,database,test,DEBUG,monitor,359,True,31,4,False,False,False,False,False,4,3,False,False,fast
+2025-08-27T11:11:25.792218,Dashboard metrics refreshed,normal,scheduler,staging,TRACE,monitor,1502,True,27,3,False,False,False,False,False,11,2,False,True,medium
+2025-08-27T22:11:25.792218,Webhook triggered successfully,normal,scheduler,production,TRACE,test,482,True,30,3,False,False,False,False,False,22,2,False,False,fast
+2025-08-26T21:11:25.792218,Compilation successful,normal,api,sandbox,INFO,deploy,3249,True,22,2,False,False,False,False,False,21,1,False,False,medium
+2025-08-28T12:11:25.792218,Indexes optimized,normal,frontend,qa,DEBUG,monitor,643,True,17,2,False,False,False,False,False,12,3,False,True,fast
+2025-08-27T21:11:25.792218,Code coverage: 83%,normal,frontend,staging,DEBUG,build,137,True,18,3,False,False,False,False,False,21,2,False,False,fast
+2025-08-27T22:11:25.792218,Running end-to-end tests,normal,frontend,qa,INFO,test,4679,True,24,3,False,False,False,False,False,22,2,False,False,medium
+2025-08-28T07:11:25.792218,FATAL: Webpack build crashed with OOM error,anomaly,api,staging,ERROR,test,17342,False,43,7,True,False,False,True,False,7,3,False,False,slow
+2025-08-28T11:11:25.792218,Docker image built successfully,normal,backend,qa,DEBUG,deploy,2647,True,31,4,False,False,False,False,False,11,3,False,True,medium
+2025-08-27T15:11:25.792218,Schema validation passed,normal,database,sandbox,DEBUG,monitor,2295,True,24,3,False,False,False,False,False,15,2,False,True,medium
+2025-08-27T00:11:25.792218,Volume mounted successfully,normal,frontend,qa,INFO,build,2133,True,27,3,False,False,False,False,False,0,2,False,False,medium
+2025-08-28T19:11:25.792218,Deployment completed successfully,normal,backend,qa,TRACE,build,201,True,33,3,False,False,False,False,False,19,3,False,False,fast
+2025-08-28T01:11:25.792218,Image tagged as v3.13.49,normal,scheduler,production,DEBUG,monitor,1623,True,24,4,False,False,False,False,False,1,3,False,False,medium
+2025-08-28T14:11:25.792218,Secrets loaded successfully,normal,worker,test,DEBUG,build,1824,True,27,3,False,False,False,False,False,14,3,False,True,medium
+2025-08-28T01:11:25.792218,Webhook triggered successfully,normal,frontend,staging,TRACE,monitor,2968,True,30,3,False,False,False,False,False,1,3,False,False,medium
+2025-08-26T21:11:25.792218,Schema validation passed,normal,auth,staging,INFO,deploy,2781,True,24,3,False,False,False,False,False,21,1,False,False,medium
+2025-08-28T19:11:25.792218,Installing dependencies from requirements.txt,normal,scheduler,sandbox,TRACE,build,3806,True,45,4,False,False,False,False,False,19,3,False,False,medium
+2025-08-27T17:11:25.792218,Running npm install,normal,cache,sandbox,DEBUG,monitor,4436,True,19,3,False,False,False,False,False,17,2,False,True,medium
+2025-08-28T20:11:25.792218,Application started successfully,normal,backend,sandbox,DEBUG,test,2753,True,32,3,False,False,False,False,False,20,3,False,False,medium
+2025-08-27T18:11:25.792218,FATAL: Encryption key rotation failed,anomaly,auth,dev,WARN,deploy,5333,False,37,5,True,False,False,False,False,18,2,False,False,slow
+2025-08-27T03:11:25.792218,ERROR: Mock service unavailable,anomaly,worker,test,WARN,monitor,1848,False,31,4,True,False,False,False,False,3,2,False,False,medium
+2025-08-27T13:11:25.792218,Running end-to-end tests,normal,scheduler,sandbox,DEBUG,build,2471,True,24,3,False,False,False,False,False,13,2,False,True,medium

@@ -1,0 +1,259 @@
+name: 🚀 Self-Healing CI/CD Pipeline
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+    inputs:
+      fail_test:
+        description: 'Force test failure (1 for fail, 0 for pass)'
+        required: false
+        default: '0'
+
+env:
+  AWS_REGION: ${{ secrets.AWS_REGION || 'ap-south-1' }}
+  ECR_REPO: ${{ secrets.ECR_REPO }}
+  ECS_CLUSTER: ${{ secrets.ECS_CLUSTER }}
+  ECS_SERVICE: ${{ secrets.ECS_SERVICE }}
+  LOG_BUCKET: ${{ secrets.LOG_BUCKET }}
+
+permissions:
+  contents: write
+  pull-requests: write
+  issues: write
+  actions: read
+
+jobs:
+  test-and-build:
+    name: 🧪 Test & Build
+    runs-on: ubuntu-latest
+    
+    outputs:
+      test-result: ${{ steps.test.outcome }}
+      run-id: ${{ github.run_id }}
+      
+    steps:
+    - name: 📥 Checkout code
+      uses: actions/checkout@v4
+      
+    - name: 🔧 Setup Node.js 18
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+        cache: 'npm'
+        cache-dependency-path: app/package-lock.json
+        
+    - name: 📦 Install dependencies
+      working-directory: ./app
+      run: npm ci
+      
+    - name: 🏃‍♂️ Start application in background
+      working-directory: ./app
+      run: |
+        npm start &
+        sleep 3
+        # Verify server is running
+        curl -f http://localhost:3000/ || exit 1
+      
+    - name: 🧪 Run tests
+      id: test
+      working-directory: ./app
+      env:
+        # Check for manual override, repository variable, or default to 0
+        FAIL_TEST: ${{ github.event.inputs.fail_test || vars.FAIL_TEST || '0' }}
+      run: |
+        echo "🔍 FAIL_TEST setting: $FAIL_TEST"
+        
+        # Create detailed log file
+        echo "=== CI/CD Pipeline Execution Log ===" > ../ci_log.txt
+        echo "Repository: ${{ github.repository }}" >> ../ci_log.txt
+        echo "Branch: ${{ github.ref_name }}" >> ../ci_log.txt
+        echo "Commit: ${{ github.sha }}" >> ../ci_log.txt
+        echo "Run ID: ${{ github.run_id }}" >> ../ci_log.txt
+        echo "Trigger: ${{ github.event_name }}" >> ../ci_log.txt
+        echo "FAIL_TEST: $FAIL_TEST" >> ../ci_log.txt
+        echo "Timestamp: $(date -u)" >> ../ci_log.txt
+        echo "" >> ../ci_log.txt
+        echo "=== Test Execution ===" >> ../ci_log.txt
+        
+        # Run tests and capture output
+        if npm test 2>&1 | tee -a ../ci_log.txt; then
+          echo "EXIT_CODE=0" >> ../ci_log.txt
+          echo "✅ Tests passed successfully"
+        else
+          echo "EXIT_CODE=1" >> ../ci_log.txt
+          echo "❌ Tests failed"
+          exit 1
+        fi
+        
+    - name: 📤 Upload logs to S3
+      if: always()
+      env:
+        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+      run: |
+        # Install AWS CLI
+        curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+        unzip awscliv2.zip
+        sudo ./aws/install
+        
+        # Upload log file
+        aws s3 cp ci_log.txt s3://${{ env.LOG_BUCKET }}/logs/${{ github.run_id }}.txt \
+          --region ${{ env.AWS_REGION }}
+        
+        echo "📋 Log uploaded to s3://${{ env.LOG_BUCKET }}/logs/${{ github.run_id }}.txt"
+        
+    - name: 🤖 Trigger AI Analysis (on test failure)
+      if: failure() && steps.test.outcome == 'failure'
+      env:
+        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+      run: |
+        echo "🔍 Tests failed - triggering AI analysis..."
+        
+        # Invoke Lambda function for AI analysis
+        aws lambda invoke \
+          --function-name self-healing-ai-analyzer \
+          --region ${{ env.AWS_REGION }} \
+          --payload '{
+            "run_id": "${{ github.run_id }}",
+            "repo": "${{ github.repository }}",
+            "branch": "${{ github.ref_name }}",
+            "commit_sha": "${{ github.sha }}",
+            "trigger": "${{ github.event_name }}"
+          }' \
+          --output text \
+          lambda_response.txt
+          
+        echo "🤖 AI Analysis triggered - response:"
+        cat lambda_response.txt
+        
+        # Still fail the job to show the failure in GitHub
+        echo "❌ Build marked as failed - check your email and PRs for AI analysis"
+        exit 1
+
+  build-and-deploy:
+    name: 🐳 Build & Deploy
+    runs-on: ubuntu-latest
+    needs: test-and-build
+    if: success()
+    
+    steps:
+    - name: 📥 Checkout code
+      uses: actions/checkout@v4
+      
+    - name: 🔑 Configure AWS credentials
+      uses: aws-actions/configure-aws-credentials@v4
+      with:
+        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        aws-region: ${{ env.AWS_REGION }}
+        
+    - name: 🏷️ Login to Amazon ECR
+      id: login-ecr
+      uses: aws-actions/amazon-ecr-login@v2
+      
+    - name: 🐳 Build and push Docker image
+      working-directory: ./app
+      env:
+        ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
+        IMAGE_TAG: ${{ github.sha }}
+      run: |
+        echo "🔨 Building Docker image..."
+        docker build -t $ECR_REGISTRY/$ECR_REPO:$IMAGE_TAG .
+        docker build -t $ECR_REGISTRY/$ECR_REPO:latest .
+        
+        echo "📤 Pushing to ECR..."
+        docker push $ECR_REGISTRY/$ECR_REPO:$IMAGE_TAG
+        docker push $ECR_REGISTRY/$ECR_REPO:latest
+        
+        echo "✅ Image pushed: $ECR_REGISTRY/$ECR_REPO:$IMAGE_TAG"
+        
+    - name: 🚀 Deploy to ECS
+      env:
+        ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
+        IMAGE_TAG: ${{ github.sha }}
+      run: |
+        echo "🚀 Updating ECS service..."
+        
+        # Update ECS service to use new image
+        aws ecs update-service \
+          --cluster $ECS_CLUSTER \
+          --service $ECS_SERVICE \
+          --force-new-deployment \
+          --region ${{ env.AWS_REGION }}
+          
+        echo "⏳ Waiting for deployment to complete..."
+        aws ecs wait services-stable \
+          --cluster $ECS_CLUSTER \
+          --services $ECS_SERVICE \
+          --region ${{ env.AWS_REGION }}
+          
+        echo "✅ Deployment completed successfully!"
+        
+        # Get service URL if available
+        SERVICE_INFO=$(aws ecs describe-services \
+          --cluster $ECS_CLUSTER \
+          --services $ECS_SERVICE \
+          --region ${{ env.AWS_REGION }})
+          
+        echo "🌐 Application deployed to ECS Fargate"
+        echo "📊 Monitor at: https://${{ env.AWS_REGION }}.console.aws.amazon.com/ecs/home?region=${{ env.AWS_REGION }}#/clusters/$ECS_CLUSTER/services"
+
+    - name: 📧 Send success notification
+      if: success()
+      env:
+        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+      run: |
+        echo "📧 Sending success notification..."
+        
+        aws ses send-email \
+          --region ${{ env.AWS_REGION }} \
+          --source "${{ secrets.SES_FROM_EMAIL }}" \
+          --destination "ToAddresses=${{ secrets.SES_TO_EMAIL }}" \
+          --message '{
+            "Subject": {
+              "Data": "✅ Deployment Success: ${{ github.repository }} #${{ github.run_id }}"
+            },
+            "Body": {
+              "Text": {
+                "Data": "🚀 Deployment Successful!\n\nRepository: ${{ github.repository }}\nBranch: ${{ github.ref_name }}\nCommit: ${{ github.sha }}\nRun ID: ${{ github.run_id }}\n\nThe application has been successfully deployed to ECS Fargate.\n\nView details: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+              }
+            }
+          }' || echo "⚠️ Failed to send email notification"
+
+  cleanup:
+    name: 🧹 Cleanup
+    runs-on: ubuntu-latest
+    needs: [test-and-build, build-and-deploy]
+    if: always()
+    
+    steps:
+    - name: 📊 Job Summary
+      run: |
+        echo "## 📋 Pipeline Summary" >> $GITHUB_STEP_SUMMARY
+        echo "" >> $GITHUB_STEP_SUMMARY
+        echo "- **Repository**: ${{ github.repository }}" >> $GITHUB_STEP_SUMMARY
+        echo "- **Branch**: ${{ github.ref_name }}" >> $GITHUB_STEP_SUMMARY
+        echo "- **Commit**: ${{ github.sha }}" >> $GITHUB_STEP_SUMMARY
+        echo "- **Run ID**: ${{ github.run_id }}" >> $GITHUB_STEP_SUMMARY
+        echo "- **Test Result**: ${{ needs.test-and-build.outputs.test-result }}" >> $GITHUB_STEP_SUMMARY
+        
+        if [ "${{ needs.test-and-build.outputs.test-result }}" = "failure" ]; then
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "### 🤖 AI Analysis Triggered" >> $GITHUB_STEP_SUMMARY
+          echo "The AI analyzer has been invoked to:" >> $GITHUB_STEP_SUMMARY
+          echo "- Analyze the failure logs" >> $GITHUB_STEP_SUMMARY
+          echo "- Identify the root cause" >> $GITHUB_STEP_SUMMARY
+          echo "- Create a Pull Request with proposed fixes" >> $GITHUB_STEP_SUMMARY
+          echo "- Send an email summary" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "Check your email and repository PRs for the AI analysis results." >> $GITHUB_STEP_SUMMARY
+        elif [ "${{ needs.build-and-deploy.result }}" = "success" ]; then
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "### ✅ Deployment Successful" >> $GITHUB_STEP_SUMMARY
+          echo "The application has been deployed to AWS ECS Fargate." >> $GITHUB_STEP_SUMMARY
+        fi
